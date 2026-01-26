@@ -51,7 +51,7 @@ jobs:
       - name: Build with Next.js
         run: npx next build
       - name: Find output directory (debug)
-        run: find . -name "index.html" -o -name "out" -maxdepth 3
+        run: find . -name "index.html" -o -name "out"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
