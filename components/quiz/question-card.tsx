@@ -40,7 +40,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
     const [isCorrect, setIsCorrect] = useState(false);
     const [hasAttempted, setHasAttempted] = useState(false);
 
-    const { playClick, playSuccess } = useSound();
+    const { playClick, playSuccess, playError } = useSound();
 
     const bgImage = question.part === 'josiah' ? '/bible-quiz-kids/images/josiah.jpg' : '/bible-quiz-kids/images/jeremiah.jpg';
 
@@ -288,22 +288,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                     )}
                 </AnimatePresence>
 
-                {!showResult && isMulti && selectedOptions.length > 0 && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mt-8 text-center"
-                    >
-                        <button
-                            onClick={checkAnswer}
-                            className="px-12 py-5 bg-primary text-primary-foreground rounded-full text-xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105"
-                        >
-                            {isMulti && selectedOptions.length < requiredCount
-                                ? `Обрано ${selectedOptions.length} з ${requiredCount}`
-                                : 'Перевірити'}
-                        </button>
-                    </motion.div>
-                )}
+
             </div>
         </motion.div>
     );
