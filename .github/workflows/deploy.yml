@@ -50,8 +50,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ci
       - name: Build with Next.js
         run: npx next build
-      - name: Find output directory (debug)
-        run: find . -name "index.html" -o -name "out"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
