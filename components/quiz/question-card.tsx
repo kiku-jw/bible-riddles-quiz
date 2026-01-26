@@ -287,6 +287,21 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         </motion.div>
                     )}
                 </AnimatePresence>
+
+                {!showResult && isMulti && selectedOptions.length >= requiredCount && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-8 text-center"
+                    >
+                        <button
+                            onClick={() => validateAnswer(selectedOptions)}
+                            className="px-12 py-5 bg-primary text-primary-foreground rounded-full text-xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105"
+                        >
+                            Перевірити
+                        </button>
+                    </motion.div>
+                )}
             </div>
         </motion.div>
     );
