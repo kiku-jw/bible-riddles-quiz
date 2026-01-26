@@ -1,6 +1,7 @@
 
 const nextConfig = {
     output: 'export',
+    basePath: '/bible-quiz-kids',
     typescript: {
         ignoreBuildErrors: true,
     },

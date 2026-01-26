@@ -20,7 +20,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
     const bgMusicRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
-        bgMusicRef.current = new Audio('/music.mp3');
+        bgMusicRef.current = new Audio('/bible-quiz-kids/music.mp3');
         bgMusicRef.current.loop = true;
         bgMusicRef.current.volume = 0.3;
 
@@ -59,11 +59,11 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
     };
 
     const value = {
-        playClick: () => playSound('/sounds/click.mp3'),
-        playSuccess: () => playSound('/sounds/success.mp3'),
+        playClick: () => playSound('/bible-quiz-kids/sounds/click.mp3'),
+        playSuccess: () => playSound('/bible-quiz-kids/sounds/success.mp3'),
         playError: () => { }, // No error sound as per instructions
-        playContinue: () => playSound('/sounds/continue.mp3'),
-        playComplete: () => playSound('/sounds/complete.mp3'),
+        playContinue: () => playSound('/bible-quiz-kids/sounds/continue.mp3'),
+        playComplete: () => playSound('/bible-quiz-kids/sounds/complete.mp3'),
         toggleSound,
         isEnabled,
         startBackgroundMusic
