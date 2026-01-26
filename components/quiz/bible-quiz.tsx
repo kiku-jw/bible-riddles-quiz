@@ -1,0 +1,126 @@
+'use client';
+
+import { useState, useCallback, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { quizData, totalQuestions } from '@/lib/quiz-data';
+import { SoundProvider, useSound } from './sound-manager';
+import { QuestionCard } from './question-card';
+import { StoryScreen } from './story-screen';
+
+function QuizContent() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [answeredCount, setAnsweredCount] = useState(0);
+    const [isStarted, setIsStarted] = useState(false);
+
+    const { playContinue, playComplete, isEnabled, toggleSound, startBackgroundMusic } = useSound();
+
+    const currentScreen = quizData[currentIndex];
+    const isQuestion = currentScreen.type === 'single' || currentScreen.type === 'multi';
+
+    const handleStart = useCallback(() => {
+        setIsStarted(true);
+        startBackgroundMusic();
+    }, [startBackgroundMusic]);
+
+    const handleContinue = useCallback(() => {
+        playContinue();
+        if (currentIndex < quizData.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+        } else {
+            playComplete();
+        }
+    }, [currentIndex, playContinue, playComplete]);
+
+    const handleAnswer = useCallback((isCorrect: boolean) => {
+        if (isCorrect) {
+            setAnsweredCount(prev => prev + 1);
+        }
+    }, []);
+
+    const currentPart = currentScreen.part || 'josiah';
+
+    return (
+        <div className={cn(
+            "min-h-screen relative flex flex-col items-center justify-center p-4 md:p-8 transition-colors duration-1000",
+            currentPart === 'josiah' ? "bg-orange-50/50" : "bg-blue-50/50"
+        )}>
+            {/* Decorative background effects */}
+            <div className="fixed inset-0 pointer-events-none opacity-20 pointer-events-none overflow-hidden">
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/20 blur-[120px] rounded-full" />
+            </div>
+
+            <header className="fixed top-0 left-0 right-0 p-6 flex justify-between items-center z-50">
+                <div className="flex flex-col">
+                    <h1 className="text-xl font-bold text-primary tracking-tight">KikuAI Bible Quiz</h1>
+                    {isStarted && isQuestion && (
+                        <div className="text-sm font-medium text-muted-foreground">
+                            Питання {answeredCount + 1} з {totalQuestions}
+                        </div>
+                    )}
+                </div>
+
+                <button
+                    onClick={toggleSound}
+                    className="p-3 rounded-full bg-card/80 border border-border shadow-sm hover:shadow-md transition-all active:scale-90"
+                >
+                    {isEnabled ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><line x1="22" y1="9" x2="16" y2="15" /><line x1="16" y1="9" x2="22" y2="15" />
+                        </svg>
+                    )}
+                </button>
+            </header>
+
+            <main className="w-full max-w-4xl z-10">
+                <AnimatePresence mode="wait">
+                    {!isStarted ? (
+                        <StoryScreen key="start" screen={quizData[0]} onContinue={handleStart} />
+                    ) : (
+                        isQuestion ? (
+                            <QuestionCard
+                                key={`q-${currentIndex}`}
+                                question={currentScreen}
+                                onAnswer={handleAnswer}
+                                onContinue={handleContinue}
+                            />
+                        ) : (
+                            <StoryScreen
+                                key={`s-${currentIndex}`}
+                                screen={currentScreen}
+                                onContinue={handleContinue}
+                            />
+                        )
+                    )}
+                </AnimatePresence>
+            </main>
+
+            {isStarted && isQuestion && (
+                <footer className="fixed bottom-0 left-0 right-0 p-8 flex justify-center z-50">
+                    <div className="w-full max-w-md h-3 bg-muted rounded-full overflow-hidden border border-border/50 shadow-inner">
+                        <motion.div
+                            className="h-full bg-primary"
+                            initial={{ width: 0 }}
+                            animate={{ width: `${(answeredCount / totalQuestions) * 100}%` }}
+                            transition={{ type: 'spring', stiffness: 50, damping: 15 }}
+                        />
+                    </div>
+                </footer>
+            )}
+        </div>
+    );
+}
+
+import { cn } from '@/lib/utils';
+
+export function BibleQuiz() {
+    return (
+        <SoundProvider>
+            <QuizContent />
+        </SoundProvider>
+    );
+}

@@ -1,0 +1,40 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import type { QuizQuestion } from '@/lib/quiz-data';
+
+interface StoryScreenProps {
+    screen: QuizQuestion;
+    onContinue: () => void;
+}
+
+export function StoryScreen({ screen, onContinue }: StoryScreenProps) {
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="max-w-3xl mx-auto text-center px-4"
+        >
+            <div className="bg-card/90 backdrop-blur-md border-2 border-border rounded-[2.5rem] p-10 shadow-2xl watercolor-texture mb-10 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
+
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
+                    {screen.type === 'intro' ? 'Початок подорожі' :
+                        screen.type === 'transition' ? 'Час перепочити' : 'Ти молодець!'}
+                </h2>
+
+                <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-10 text-balance italic">
+                    {screen.text}
+                </p>
+
+                <button
+                    onClick={onContinue}
+                    className="px-12 py-6 bg-primary text-primary-foreground rounded-full text-2xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
+                >
+                    {screen.type === 'intro' ? 'Розпочати подорож' : 'Продовжити'}
+                </button>
+            </div>
+        </motion.div>
+    );
+}

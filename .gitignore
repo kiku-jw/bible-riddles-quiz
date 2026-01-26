@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+/.next/
+/out/
+
+# IDE files
+.DS_Store
+*.swp
+*.swo
+
+# Project source materials (folders 1 and 2 provided by user)
+/1/
+/2/
+
+# Local env files
+.env*.local
+
+# Build artifacts
+build
+dist
