@@ -69,52 +69,13 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
         ? question.options?.filter(o => o.isCorrect).length || 0
         : 1;
 
-    const handleOptionClick = (index: number) => {
-        if (showResult && isCorrect) return; // Block only if already solved correctly
+    const validateAnswer = (currentSelection: number[]) => {
+        if (!question.options || currentSelection.length === 0) return;
 
-        playClick();
-
-        if (isSingle) {
-            // Immediate check for single choice
-            const isAnswerCorrect = question.options?.[index].isCorrect || false;
-
-            if (isAnswerCorrect) {
-                setSelectedOptions([index]);
-                setIsCorrect(true);
-                setShowResult(true);
-                confetti({
-                    particleCount: 150,
-                    spread: 70,
-                    origin: { y: 0.6 },
-                    colors: ['#fbbf24', '#f59e0b', '#d97706']
-                });
-                playSuccess();
-                onAnswer(true);
-            } else {
-                // Wrong answer logic for single choice
-                // Highlight just this option as wrong, allow retry
-                setSelectedOptions([index]); // Select checking
-                setIsCorrect(false);
-                setShowResult(true);
-                // We keep showResult true to show the red color, but we need to reset it if they click another
-                // Actually, if we set ShowResult, we lock the UI in current implementation.
-                // Let's modify the UI rendering to allow clicking others if !isCorrect
-            }
-        } else {
-            // Multi behavior stays same
-            if (showResult) return;
-            setSelectedOptions(prev =>
-                prev.includes(index)
-                    ? prev.filter(i => i !== index)
-                    : [...prev, index]
-            );
-        }
-    };
-
-    const checkAnswer = () => {
-        if (!question.options || selectedOptions.length === 0) return;
-
-        if (isAnswerCorrect) {
+        // Special handling for summary questions (always correct)
+        if (isSpecialSummary) {
+            setIsCorrect(true);
+            setShowResult(true);
             confetti({
                 particleCount: 200,
                 spread: 100,
@@ -130,8 +91,8 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             .filter(idx => idx !== -1);
 
         const isAnswerCorrect =
-            selectedOptions.length === correctIndices.length &&
-            selectedOptions.every(idx => correctIndices.includes(idx));
+            currentSelection.length === correctIndices.length &&
+            currentSelection.every(idx => correctIndices.includes(idx));
 
         setIsCorrect(isAnswerCorrect);
         setShowResult(true);
@@ -146,6 +107,45 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             });
             // playSuccess() removed
             onAnswer(true);
+        } else {
+            playError();
+        }
+    };
+
+    const handleOptionClick = (index: number) => {
+        if (showResult && isCorrect) return; // Block only if already solved correctly
+
+        playClick();
+
+        let newSelection: number[];
+
+        if (isSingle) {
+            // Immediate check for single choice
+            newSelection = [index];
+            setSelectedOptions(newSelection);
+            validateAnswer(newSelection);
+        } else {
+            // Multi behavior
+            // Allow toggling even if currently showing error
+            const isSelected = selectedOptions.includes(index);
+            if (isSelected) {
+                newSelection = selectedOptions.filter(i => i !== index);
+            } else {
+                newSelection = [...selectedOptions, index];
+            }
+
+            setSelectedOptions(newSelection);
+
+            if (newSelection.length === requiredCount) {
+                validateAnswer(newSelection);
+            } else {
+                // If selection changed but not enough options, we should probably HIDE the result 
+                // if they are retrying? 
+                if (showResult && !isCorrect) {
+                    setShowResult(false);
+                    setIsCorrect(false);
+                }
+            }
         }
     };
 
@@ -287,8 +287,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         </motion.div>
                     )}
                 </AnimatePresence>
-
-
             </div>
         </motion.div>
     );
