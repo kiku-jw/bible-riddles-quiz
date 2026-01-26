@@ -19,7 +19,8 @@ function QuizContent() {
 
     const handleStart = useCallback(() => {
         setIsStarted(true);
-        startBackgroundMusic();
+        // Using a timeout to ensure audio context is ready or non-blocking
+        setTimeout(() => startBackgroundMusic(), 100);
     }, [startBackgroundMusic]);
 
     const handleContinue = useCallback(() => {
@@ -48,11 +49,21 @@ function QuizContent() {
             </div>
 
             <header className="fixed top-0 left-0 right-0 p-6 flex justify-between items-center z-50">
-                <div className="flex flex-col">
-                    <h1 className="text-xl font-bold text-primary tracking-tight">KikuAI Bible Quiz</h1>
+                <div className="flex flex-col w-full max-w-xl mx-auto">
+                    {/* Progress bar moved to header */}
                     {isStarted && isQuestion && (
-                        <div className="text-sm font-medium text-muted-foreground bg-card/50 px-2 py-0.5 rounded-full backdrop-blur-sm mt-1">
-                            Питання {answeredCount + 1} з {totalQuestions}
+                        <div className="w-full space-y-2">
+                            <div className="flex justify-between items-center text-sm font-medium text-muted-foreground px-1">
+                                <span>Питання {answeredCount + 1} з {totalQuestions}</span>
+                            </div>
+                            <div className="h-3 bg-muted/50 backdrop-blur-md rounded-full overflow-hidden border border-white/20 shadow-inner">
+                                <motion.div
+                                    className="h-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${(answeredCount / totalQuestions) * 100}%` }}
+                                    transition={{ type: 'spring', stiffness: 50, damping: 15 }}
+                                />
+                            </div>
                         </div>
                     )}
                 </div>
@@ -96,18 +107,7 @@ function QuizContent() {
                 </AnimatePresence>
             </main>
 
-            {isStarted && isQuestion && (
-                <footer className="fixed bottom-0 left-0 right-0 p-8 flex justify-center z-50">
-                    <div className="w-full max-w-md h-3 bg-muted/50 backdrop-blur-md rounded-full overflow-hidden border border-white/20 shadow-inner">
-                        <motion.div
-                            className="h-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${(answeredCount / totalQuestions) * 100}%` }}
-                            transition={{ type: 'spring', stiffness: 50, damping: 15 }}
-                        />
-                    </div>
-                </footer>
-            )}
+
         </div>
     );
 }

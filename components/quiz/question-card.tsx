@@ -70,12 +70,39 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
         : 1;
 
     const handleOptionClick = (index: number) => {
-        if (showResult) return;
+        if (showResult && isCorrect) return; // Block only if already solved correctly
+
         playClick();
 
         if (isSingle) {
-            setSelectedOptions([index]);
+            // Immediate check for single choice
+            const isAnswerCorrect = question.options?.[index].isCorrect || false;
+
+            if (isAnswerCorrect) {
+                setSelectedOptions([index]);
+                setIsCorrect(true);
+                setShowResult(true);
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#fbbf24', '#f59e0b', '#d97706']
+                });
+                playSuccess();
+                onAnswer(true);
+            } else {
+                // Wrong answer logic for single choice
+                // Highlight just this option as wrong, allow retry
+                setSelectedOptions([index]); // Select checking
+                setIsCorrect(false);
+                setShowResult(true);
+                // We keep showResult true to show the red color, but we need to reset it if they click another
+                // Actually, if we set ShowResult, we lock the UI in current implementation.
+                // Let's modify the UI rendering to allow clicking others if !isCorrect
+            }
         } else {
+            // Multi behavior stays same
+            if (showResult) return;
             setSelectedOptions(prev =>
                 prev.includes(index)
                     ? prev.filter(i => i !== index)
@@ -175,13 +202,18 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
 
                         let optionStyle = 'bg-card/80 hover:bg-card border-border hover:border-primary/40';
 
+                        // Logic:
+                        // If solved (isCorrect && showResult): Show Green on Correct choice.
+                        // If failing (showResult && !isCorrect): Show Red on Selected choice. Do NOT show Green on others.
+
                         if (showResult) {
-                            if (isSelected && isCorrect) {
-                                optionStyle = 'bg-correct/40 border-correct shadow-md';
-                            } else if (isSelected && !isCorrect) {
-                                optionStyle = 'bg-destructive/20 border-destructive/40';
-                            } else if (isThisCorrect && !isCorrect && hasAttempted) {
-                                optionStyle = 'bg-card/40 border-border opacity-60';
+                            if (isCorrect) {
+                                // Game won state
+                                if (isThisCorrect) optionStyle = 'bg-correct/40 border-correct shadow-md';
+                            } else {
+                                // Wrong attempt state
+                                if (isSelected) optionStyle = 'bg-destructive/20 border-destructive/40';
+                                // We intentionally do NOT highlight the correct answer here
                             }
                         } else if (isSelected) {
                             optionStyle = 'bg-primary/15 border-primary shadow-sm';
@@ -190,10 +222,9 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         return (
                             <motion.button
                                 key={index}
-                                whileHover={!showResult ? { scale: 1.02, y: -2 } : {}}
-                                whileTap={!showResult ? { scale: 0.98 } : {}}
+                                whileHover={{ scale: 1.02, y: -2 }}
+                                whileTap={{ scale: 0.98 }}
                                 onClick={() => handleOptionClick(index)}
-                                disabled={showResult}
                                 className={cn(
                                     'w-full p-5 rounded-2xl border-2 text-left transition-all duration-300',
                                     'flex items-center gap-4 backdrop-blur-sm',
@@ -202,7 +233,9 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                             >
                                 <span className={cn(
                                     'w-10 h-10 rounded-full border-2 flex items-center justify-center text-lg font-bold shrink-0 transition-all',
-                                    isSelected ? 'bg-primary text-primary-foreground border-primary' : 'bg-muted border-border'
+                                    (showResult && isCorrect && isThisCorrect) ? 'bg-correct text-correct-foreground border-correct' :
+                                        (showResult && !isCorrect && isSelected) ? 'bg-destructive text-destructive-foreground border-destructive' :
+                                            isSelected ? 'bg-primary text-primary-foreground border-primary' : 'bg-muted border-border'
                                 )}>
                                     {String.fromCharCode(1040 + index)}
                                 </span>
@@ -257,7 +290,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                     )}
                 </AnimatePresence>
 
-                {!showResult && selectedOptions.length > 0 && (
+                {!showResult && isMulti && selectedOptions.length > 0 && (
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}

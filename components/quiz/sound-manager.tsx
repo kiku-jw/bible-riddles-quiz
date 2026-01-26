@@ -61,7 +61,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
     const value = {
         playClick: () => playSound('/bible-quiz-kids/sounds/click.mp3'),
         playSuccess: () => playSound('/bible-quiz-kids/sounds/success.mp3'),
-        playError: () => { }, // No error sound as per instructions
+        playError: () => playSound('/bible-quiz-kids/sounds/click.mp3'), // Using click as placeholder for error to ensure feedback
         playContinue: () => playSound('/bible-quiz-kids/sounds/continue.mp3'),
         playComplete: () => playSound('/bible-quiz-kids/sounds/complete.mp3'),
         toggleSound,
