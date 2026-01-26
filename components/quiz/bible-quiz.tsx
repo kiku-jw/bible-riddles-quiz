@@ -107,6 +107,9 @@ function QuizContent() {
             </main>
 
 
+            <div className="fixed bottom-2 right-2 text-[10px] text-muted-foreground/30 pointer-events-none z-50">
+                v1.2 (SoundFix)
+            </div>
         </div>
     );
 }
