@@ -37,7 +37,7 @@ export function StoryScreen({ screen, onContinue }: StoryScreenProps) {
 
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
                         {screen.type === 'intro' ? 'Початок подорожі' :
-                            screen.type === 'transition' ? 'Час перепочити' : 'Ти молодець!'}
+                            screen.type === 'transition' ? (screen.part === 'jeremiah' ? 'Нова історія' : 'Час перепочити') : 'Ти молодець!'}
                     </h2>
 
                     <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-10 text-balance italic">
