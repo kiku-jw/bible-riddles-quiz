@@ -19,8 +19,7 @@ function QuizContent() {
 
     const handleStart = useCallback(() => {
         setIsStarted(true);
-        // Using a timeout to ensure audio context is ready or non-blocking
-        setTimeout(() => startBackgroundMusic(), 100);
+        startBackgroundMusic();
     }, [startBackgroundMusic]);
 
     const handleContinue = useCallback(() => {

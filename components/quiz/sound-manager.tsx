@@ -32,38 +32,46 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
         };
     }, []);
 
-    const playSound = useCallback((path: string) => {
+    const playTone = (freq: number, type: OscillatorType, duration: number) => {
         if (!isEnabled) return;
-        const audio = new Audio(path);
-        audio.play().catch(() => { });
-    }, [isEnabled]);
+        const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+        if (!AudioContext) return;
 
-    const toggleSound = () => {
-        setIsEnabled(prev => {
-            const next = !prev;
-            if (bgMusicRef.current) {
-                if (next) {
-                    bgMusicRef.current.play().catch(() => { });
-                } else {
-                    bgMusicRef.current.pause();
-                }
-            }
-            return next;
-        });
-    };
+        const ctx = new AudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
 
-    const startBackgroundMusic = () => {
-        if (isEnabled && bgMusicRef.current) {
-            bgMusicRef.current.play().catch(() => { });
-        }
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        osc.type = type;
+
+        gain.gain.setValueAtTime(0.1, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start();
+        osc.stop(ctx.currentTime + duration);
     };
 
     const value = {
-        playClick: () => playSound('/bible-quiz-kids/sounds/click.mp3'),
-        playSuccess: () => playSound('/bible-quiz-kids/sounds/success.mp3'),
-        playError: () => playSound('/bible-quiz-kids/sounds/click.mp3'), // Using click as placeholder for error to ensure feedback
-        playContinue: () => playSound('/bible-quiz-kids/sounds/continue.mp3'),
-        playComplete: () => playSound('/bible-quiz-kids/sounds/complete.mp3'),
+        playClick: () => playTone(800, 'sine', 0.1),
+        playSuccess: () => {
+            if (!isEnabled) return;
+            // Little major triad arpeggio
+            setTimeout(() => playTone(600, 'sine', 0.1), 0);
+            setTimeout(() => playTone(750, 'sine', 0.1), 100);
+            setTimeout(() => playTone(900, 'sine', 0.2), 200);
+        },
+        playError: () => playTone(200, 'sawtooth', 0.3),
+        playContinue: () => playTone(1200, 'sine', 0.15),
+        playComplete: () => {
+            // Victory fanfare
+            setTimeout(() => playTone(500, 'sine', 0.2), 0);
+            setTimeout(() => playTone(500, 'sine', 0.2), 150);
+            setTimeout(() => playTone(500, 'sine', 0.2), 300);
+            setTimeout(() => playTone(800, 'sine', 0.6), 450);
+        },
         toggleSound,
         isEnabled,
         startBackgroundMusic
