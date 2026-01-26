@@ -54,30 +54,54 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
         osc.stop(ctx.currentTime + duration);
     };
 
-    const value = {
-        playClick: () => playTone(800, 'sine', 0.1),
-        playSuccess: () => {
-            if (!isEnabled) return;
-            // Little major triad arpeggio
-            setTimeout(() => playTone(600, 'sine', 0.1), 0);
-            setTimeout(() => playTone(750, 'sine', 0.1), 100);
-            setTimeout(() => playTone(900, 'sine', 0.2), 200);
-        },
-        playError: () => playTone(200, 'sawtooth', 0.3),
-        playContinue: () => playTone(1200, 'sine', 0.15),
-        playComplete: () => {
-            // Victory fanfare
-            setTimeout(() => playTone(500, 'sine', 0.2), 0);
-            setTimeout(() => playTone(500, 'sine', 0.2), 150);
-            setTimeout(() => playTone(500, 'sine', 0.2), 300);
-            setTimeout(() => playTone(800, 'sine', 0.6), 450);
-        },
-        toggleSound,
-        isEnabled,
-        startBackgroundMusic
-    };
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+};
 
-    return <SoundContext.Provider value={value}>{children}</SoundContext.Provider>;
+const toggleSound = () => {
+    setIsEnabled(prev => {
+        const next = !prev;
+        if (bgMusicRef.current) {
+            if (next) {
+                bgMusicRef.current.play().catch(() => { });
+            } else {
+                bgMusicRef.current.pause();
+            }
+        }
+        return next;
+    });
+};
+
+const startBackgroundMusic = () => {
+    if (isEnabled && bgMusicRef.current) {
+        bgMusicRef.current.play().catch(() => { });
+    }
+};
+
+const value = {
+    playClick: () => playTone(800, 'sine', 0.1),
+    playSuccess: () => {
+        if (!isEnabled) return;
+        // Little major triad arpeggio
+        setTimeout(() => playTone(600, 'sine', 0.1), 0);
+        setTimeout(() => playTone(750, 'sine', 0.1), 100);
+        setTimeout(() => playTone(900, 'sine', 0.2), 200);
+    },
+    playError: () => playTone(200, 'sawtooth', 0.3),
+    playContinue: () => playTone(1200, 'sine', 0.15),
+    playComplete: () => {
+        // Victory fanfare
+        setTimeout(() => playTone(500, 'sine', 0.2), 0);
+        setTimeout(() => playTone(500, 'sine', 0.2), 150);
+        setTimeout(() => playTone(500, 'sine', 0.2), 300);
+        setTimeout(() => playTone(800, 'sine', 0.6), 450);
+    },
+    toggleSound,
+    isEnabled,
+    startBackgroundMusic
+};
+
+return <SoundContext.Provider value={value}>{children}</SoundContext.Provider>;
 }
 
 export const useSound = () => {
