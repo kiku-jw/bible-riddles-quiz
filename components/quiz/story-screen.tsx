@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { QuizQuestion } from '@/lib/quiz-data';
+import Image from 'next/image';
 
 interface StoryScreenProps {
     screen: QuizQuestion;
@@ -9,31 +10,47 @@ interface StoryScreenProps {
 }
 
 export function StoryScreen({ screen, onContinue }: StoryScreenProps) {
+    const bgImage = screen.type === 'intro' ? '/bible-quiz-kids/images/intro.jpg' :
+        screen.type === 'transition' ? '/bible-quiz-kids/images/transition.jpg' : '/bible-quiz-kids/images/finale.jpg';
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="max-w-3xl mx-auto text-center px-4"
+            className="min-h-screen w-full flex items-center justify-center relative overflow-hidden"
         >
-            <div className="bg-card/90 backdrop-blur-md border-2 border-border rounded-[2.5rem] p-10 shadow-2xl watercolor-texture mb-10 overflow-hidden relative">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={bgImage}
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+            </div>
 
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
-                    {screen.type === 'intro' ? 'Початок подорожі' :
-                        screen.type === 'transition' ? 'Час перепочити' : 'Ти молодець!'}
-                </h2>
+            <div className="max-w-3xl mx-auto text-center px-4 relative z-10">
+                <div className="bg-card/90 backdrop-blur-md border-2 border-border rounded-[2.5rem] p-10 shadow-2xl watercolor-texture mb-10 overflow-hidden relative">
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
 
-                <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-10 text-balance italic">
-                    {screen.text}
-                </p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
+                        {screen.type === 'intro' ? 'Початок подорожі' :
+                            screen.type === 'transition' ? 'Час перепочити' : 'Ти молодець!'}
+                    </h2>
 
-                <button
-                    onClick={onContinue}
-                    className="px-12 py-6 bg-primary text-primary-foreground rounded-full text-2xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
-                >
-                    {screen.type === 'intro' ? 'Розпочати подорож' : 'Продовжити'}
-                </button>
+                    <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-10 text-balance italic">
+                        {screen.text}
+                    </p>
+
+                    <button
+                        onClick={onContinue}
+                        className="px-12 py-6 bg-primary text-primary-foreground rounded-full text-2xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
+                    >
+                        {screen.type === 'intro' ? 'Розпочати подорож' : 'Продовжити'}
+                    </button>
+                </div>
             </div>
         </motion.div>
     );

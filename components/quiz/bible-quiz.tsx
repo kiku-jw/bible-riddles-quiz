@@ -40,12 +40,9 @@ function QuizContent() {
     const currentPart = currentScreen.part || 'josiah';
 
     return (
-        <div className={cn(
-            "min-h-screen relative flex flex-col items-center justify-center p-4 md:p-8 transition-colors duration-1000",
-            currentPart === 'josiah' ? "bg-orange-50/50" : "bg-blue-50/50"
-        )}>
+        <div className="min-h-screen relative flex flex-col items-center justify-center overflow-x-hidden">
             {/* Decorative background effects */}
-            <div className="fixed inset-0 pointer-events-none opacity-20 pointer-events-none overflow-hidden">
+            <div className="fixed inset-0 pointer-events-none opacity-20 z-20">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/20 blur-[120px] rounded-full" />
             </div>
@@ -54,7 +51,7 @@ function QuizContent() {
                 <div className="flex flex-col">
                     <h1 className="text-xl font-bold text-primary tracking-tight">KikuAI Bible Quiz</h1>
                     {isStarted && isQuestion && (
-                        <div className="text-sm font-medium text-muted-foreground">
+                        <div className="text-sm font-medium text-muted-foreground bg-card/50 px-2 py-0.5 rounded-full backdrop-blur-sm mt-1">
                             Питання {answeredCount + 1} з {totalQuestions}
                         </div>
                     )}
@@ -76,7 +73,7 @@ function QuizContent() {
                 </button>
             </header>
 
-            <main className="w-full max-w-4xl z-10">
+            <main className="w-full z-10">
                 <AnimatePresence mode="wait">
                     {!isStarted ? (
                         <StoryScreen key="start" screen={quizData[0]} onContinue={handleStart} />
@@ -101,9 +98,9 @@ function QuizContent() {
 
             {isStarted && isQuestion && (
                 <footer className="fixed bottom-0 left-0 right-0 p-8 flex justify-center z-50">
-                    <div className="w-full max-w-md h-3 bg-muted rounded-full overflow-hidden border border-border/50 shadow-inner">
+                    <div className="w-full max-w-md h-3 bg-muted/50 backdrop-blur-md rounded-full overflow-hidden border border-white/20 shadow-inner">
                         <motion.div
-                            className="h-full bg-primary"
+                            className="h-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
                             initial={{ width: 0 }}
                             animate={{ width: `${(answeredCount / totalQuestions) * 100}%` }}
                             transition={{ type: 'spring', stiffness: 50, damping: 15 }}
@@ -114,8 +111,6 @@ function QuizContent() {
         </div>
     );
 }
-
-import { cn } from '@/lib/utils';
 
 export function BibleQuiz() {
     return (
