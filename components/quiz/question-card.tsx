@@ -114,15 +114,13 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
     const checkAnswer = () => {
         if (!question.options || selectedOptions.length === 0) return;
 
-        if (isSpecialSummary) {
-            setIsCorrect(true);
-            setShowResult(true);
+        if (isAnswerCorrect) {
             confetti({
                 particleCount: 200,
                 spread: 100,
                 origin: { y: 0.6 }
             });
-            playSuccess();
+            // playSuccess() removed as per user request to disable confetti sound
             onAnswer(true);
             return;
         }
@@ -146,7 +144,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 origin: { y: 0.6 },
                 colors: ['#fbbf24', '#f59e0b', '#d97706']
             });
-            playSuccess();
+            // playSuccess() removed
             onAnswer(true);
         }
     };

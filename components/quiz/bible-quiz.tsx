@@ -6,11 +6,13 @@ import { quizData, totalQuestions } from '@/lib/quiz-data';
 import { SoundProvider, useSound } from './sound-manager';
 import { QuestionCard } from './question-card';
 import { StoryScreen } from './story-screen';
+import { CompletionScreen } from './completion-screen';
 
 function QuizContent() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answeredCount, setAnsweredCount] = useState(0);
     const [isStarted, setIsStarted] = useState(false);
+    const [isCompleted, setIsCompleted] = useState(false);
 
     const { playContinue, playComplete, isEnabled, toggleSound, startBackgroundMusic } = useSound();
 
@@ -28,6 +30,7 @@ function QuizContent() {
             setCurrentIndex(prev => prev + 1);
         } else {
             playComplete();
+            setIsCompleted(true);
         }
     }, [currentIndex, playContinue, playComplete]);
 
@@ -87,6 +90,8 @@ function QuizContent() {
                 <AnimatePresence mode="wait">
                     {!isStarted ? (
                         <StoryScreen key="start" screen={quizData[0]} onContinue={handleStart} />
+                    ) : isCompleted ? (
+                        <CompletionScreen />
                     ) : (
                         isQuestion ? (
                             <QuestionCard
@@ -108,7 +113,7 @@ function QuizContent() {
 
 
             <div className="fixed bottom-2 right-2 text-[10px] text-muted-foreground/30 pointer-events-none z-50">
-                v1.3
+                v1.4
             </div>
         </div>
     );
