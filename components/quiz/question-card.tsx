@@ -193,7 +193,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                     </h2>
                 </div>
 
-                <div className="grid gap-4">
+                <div className="grid gap-3">
                     {question.options?.map((option, index) => {
                         const isSelected = selectedOptions.includes(index);
                         const isThisCorrect = option.isCorrect;
@@ -220,24 +220,24 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         return (
                             <motion.button
                                 key={index}
-                                whileHover={{ scale: 1.02, y: -2 }}
-                                whileTap={{ scale: 0.98 }}
+                                whileHover={{ scale: 1.01, y: -1 }}
+                                whileTap={{ scale: 0.99 }}
                                 onClick={() => handleOptionClick(index)}
                                 className={cn(
-                                    'w-full p-5 rounded-2xl border-2 text-left transition-all duration-300',
-                                    'flex items-center gap-4 backdrop-blur-sm',
+                                    'w-full p-4 rounded-xl border-2 text-left transition-all duration-300',
+                                    'flex items-center gap-3 backdrop-blur-sm',
                                     optionStyle
                                 )}
                             >
                                 <span className={cn(
-                                    'w-10 h-10 rounded-full border-2 flex items-center justify-center text-lg font-bold shrink-0 transition-all',
+                                    'w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-bold shrink-0 transition-all',
                                     (showResult && isCorrect && isThisCorrect) ? 'bg-correct text-correct-foreground border-correct' :
                                         (showResult && !isCorrect && isSelected) ? 'bg-destructive text-destructive-foreground border-destructive' :
                                             isSelected ? 'bg-primary text-primary-foreground border-primary' : 'bg-muted border-border'
                                 )}>
                                     {String.fromCharCode(1040 + index)}
                                 </span>
-                                <span className="text-xl font-medium">{option.text}</span>
+                                <span className="text-lg font-medium leading-tight">{option.text}</span>
                             </motion.button>
                         );
                     })}
