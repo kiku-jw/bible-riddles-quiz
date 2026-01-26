@@ -172,23 +172,23 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
             </div>
 
-            <div className="w-full max-w-2xl mx-auto relative z-10 px-4 py-12">
-                <div className="text-center mb-6">
+            <div className="w-full max-w-2xl mx-auto relative z-10 px-4 py-4 md:py-8 transition-all duration-300">
+                <div className="text-center mb-4">
                     {isMulti ? (
-                        <div className="inline-flex flex-col items-center gap-2 px-6 py-3 bg-primary/10 border-2 border-primary/20 rounded-2xl">
-                            <span className="text-base font-medium text-primary">
+                        <div className="inline-flex flex-col items-center gap-1.5 px-4 py-2 bg-primary/10 border-2 border-primary/20 rounded-2xl">
+                            <span className="text-sm md:text-base font-medium text-primary">
                                 🔹 Обери ВСІ правильні відповіді
                             </span>
                         </div>
                     ) : (
-                        <span className="inline-block px-5 py-2 bg-secondary/60 rounded-full text-sm text-muted-foreground font-medium">
+                        <span className="inline-block px-4 py-1.5 bg-secondary/60 rounded-full text-xs md:text-sm text-muted-foreground font-medium">
                             🔹 Обери одну правильну відповідь
                         </span>
                     )}
                 </div>
 
-                <div className="relative bg-card/90 backdrop-blur-md border-2 border-border rounded-3xl p-8 shadow-xl mb-8 overflow-hidden watercolor-texture">
-                    <h2 className="text-2xl md:text-3xl text-foreground text-center leading-relaxed text-balance relative z-10 font-bold">
+                <div className="relative bg-card/90 backdrop-blur-md border-2 border-border rounded-2xl p-6 shadow-xl mb-6 overflow-hidden watercolor-texture">
+                    <h2 className="text-xl md:text-2xl text-foreground text-center leading-relaxed text-balance relative z-10 font-bold">
                         {question.question}
                     </h2>
                 </div>
