@@ -10,8 +10,8 @@ interface StoryScreenProps {
 }
 
 export function StoryScreen({ screen, onContinue }: StoryScreenProps) {
-    const bgImage = screen.type === 'intro' ? '/bible-quiz-kids/images/intro.jpg' :
-        screen.type === 'transition' ? '/bible-quiz-kids/images/transition.jpg' : '/bible-quiz-kids/images/finale.jpg';
+    const bgImage = screen.bgImage || (screen.type === 'intro' ? '/bible-quiz-kids/images/intro.jpg' :
+        screen.type === 'transition' ? '/bible-quiz-kids/images/transition.jpg' : '/bible-quiz-kids/images/finale.jpg');
 
     return (
         <motion.div

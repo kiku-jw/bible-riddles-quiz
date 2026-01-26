@@ -11,6 +11,7 @@ export interface QuizQuestion {
     }[];
     afterReveal?: string;
     part?: 'josiah' | 'jeremiah';
+    bgImage?: string;
 }
 
 export const quizData: QuizQuestion[] = [
@@ -169,17 +170,27 @@ export const quizData: QuizQuestion[] = [
         ]
     },
 
-    // TRANSITION
+    // TRANSITION 1 - JOSIAH END (Photo from folder 2)
     {
         id: 13,
         type: 'transition',
         text: 'Щоб краще все згадати, можна подивитися фільм про Йосію.',
-        part: 'jeremiah'
+        part: 'josiah',
+        bgImage: '/bible-quiz-kids/images/josiah-king.jpg'
+    },
+
+    // TRANSITION 2 - TIME PASSING (Animation/Image from folder 1)
+    {
+        id: 14,
+        type: 'transition',
+        text: 'Час минав... І ось на сцену виходить новий пророк.',
+        part: 'jeremiah',
+        bgImage: '/bible-quiz-kids/images/transition.jpg'
     },
 
     // PART 2 - JEREMIAH (12 questions)
     {
-        id: 14,
+        id: 15,
         type: 'single',
         part: 'jeremiah',
         question: 'Хто такий Єремія?',
@@ -191,7 +202,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 15,
+        id: 16,
         type: 'single',
         part: 'jeremiah',
         question: 'До кого Єгова послав Єремію?',
@@ -203,7 +214,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 16,
+        id: 17,
         type: 'single',
         part: 'jeremiah',
         question: 'Чому Єремія спочатку хвилювався проповідувати?',
@@ -215,7 +226,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 17,
+        id: 18,
         type: 'single',
         part: 'jeremiah',
         question: 'Що пообіцяв Єгова Єремії?',
@@ -227,7 +238,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 18,
+        id: 19,
         type: 'single',
         part: 'jeremiah',
         question: 'Що Єгова наказав зробити Єремії перед старійшинами?',
@@ -239,7 +250,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 19,
+        id: 20,
         type: 'single',
         part: 'jeremiah',
         question: 'Що означав розбитий глечик?',
@@ -251,7 +262,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 20,
+        id: 21,
         type: 'multi',
         part: 'jeremiah',
         question: 'Куди посадили Єремію після цього?',
@@ -263,7 +274,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 21,
+        id: 22,
         type: 'single',
         part: 'jeremiah',
         question: 'Що допомогло Єремії не припинити проповідувати?',
@@ -275,7 +286,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 22,
+        id: 23,
         type: 'single',
         part: 'jeremiah',
         question: 'Хто витягнув Єремію з колодязя?',
@@ -287,7 +298,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 23,
+        id: 24,
         type: 'multi',
         part: 'jeremiah',
         question: 'Чому, незважаючи на молодий вік, Єремія послухався Єгову?',
@@ -299,7 +310,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 24,
+        id: 25,
         type: 'multi',
         part: 'jeremiah',
         question: 'Хто не хотів, щоб Єремія проповідував?',
@@ -311,7 +322,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 25,
+        id: 26,
         type: 'single',
         part: 'jeremiah',
         question: 'Який урок можна взяти з цієї історії?',
@@ -326,7 +337,7 @@ export const quizData: QuizQuestion[] = [
 
     // FINALE
     {
-        id: 26,
+        id: 27,
         type: 'finale',
         text: 'Йосія і Єремія довіряли Єгові навіть тоді, коли було важко. А як ти можеш показати свою довіру сьогодні?',
         part: 'jeremiah'
