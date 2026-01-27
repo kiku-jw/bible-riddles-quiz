@@ -81,26 +81,34 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
     const [showResult, setShowResult] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [hasAttempted, setHasAttempted] = useState(false);
+    const [lastClickedIndex, setLastClickedIndex] = useState<number | null>(null);
 
     const { playClick, playError } = useSound();
 
     const bgImage = question.part === 'josiah' ? '/bible-quiz-kids/images/josiah.jpg' : '/bible-quiz-kids/images/jeremiah.jpg';
 
-    const correctPhrase = useMemo(() => {
-        const phrases = CORRECT_PHRASES[language];
-        return phrases[Math.floor(Math.random() * phrases.length)];
-    }, [question.id, language]);
+    const feedbackText = useMemo(() => {
+        if (showResult && lastClickedIndex !== null) {
+            const optionFeedback = question.options?.[lastClickedIndex]?.feedback?.[language];
+            if (optionFeedback) return optionFeedback;
+        }
 
-    const tryAgainPhrase = useMemo(() => {
-        const phrases = TRY_AGAIN_PHRASES[language];
-        return phrases[Math.floor(Math.random() * phrases.length)];
-    }, [question.id, hasAttempted, language]);
+        // Fallback to random phrases if no specific feedback
+        if (isCorrect) {
+            const phrases = CORRECT_PHRASES[language];
+            return phrases[Math.floor(Math.random() * phrases.length)];
+        } else {
+            const phrases = TRY_AGAIN_PHRASES[language];
+            return phrases[Math.floor(Math.random() * phrases.length)];
+        }
+    }, [question.id, language, showResult, isCorrect, lastClickedIndex]);
 
     useEffect(() => {
         setSelectedOptions([]);
         setShowResult(false);
         setIsCorrect(false);
         setHasAttempted(false);
+        setLastClickedIndex(null);
     }, [question.id]);
 
     const isSingle = question.type === 'single';
@@ -111,8 +119,10 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
         ? question.options?.filter(o => o.isCorrect).length || 0
         : 1;
 
-    const validateAnswer = (currentSelection: number[]) => {
+    const validateAnswer = (currentSelection: number[], lastIdx: number) => {
         if (!question.options || currentSelection.length === 0) return;
+
+        setLastClickedIndex(lastIdx);
 
         if (isSpecialSummary) {
             setIsCorrect(true);
@@ -159,7 +169,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
         if (isSingle) {
             newSelection = [index];
             setSelectedOptions(newSelection);
-            validateAnswer(newSelection);
+            validateAnswer(newSelection, index);
         } else {
             const isSelected = selectedOptions.includes(index);
             if (isSelected) {
@@ -168,8 +178,15 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                 newSelection = [...selectedOptions, index];
             }
             setSelectedOptions(newSelection);
+
+            // For multi, we only show result when clicking the explicit check button
+            // But we keep track of the last clicked for the feedback text
+            setLastClickedIndex(index);
+
             if (newSelection.length === requiredCount) {
-                validateAnswer(newSelection);
+                // We keep it as is, but maybe don't trigger validation automatically?
+                // The user requested "auto-check" in v1.5, so I'll keep it.
+                validateAnswer(newSelection, index);
             } else if (showResult && !isCorrect) {
                 setShowResult(false);
                 setIsCorrect(false);
@@ -181,6 +198,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
         setSelectedOptions([]);
         setShowResult(false);
         setIsCorrect(false);
+        setLastClickedIndex(null);
     };
 
     const labels = {
@@ -196,7 +214,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
             exit={{ opacity: 0 }}
             className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden"
         >
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 text-white">
                 <Image
                     src={bgImage}
                     alt="Background"
@@ -276,40 +294,40 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                             animate={{ opacity: 1, height: 'auto' }}
                             className="mt-4"
                         >
-                            {isCorrect ? (
-                                <div className="text-center">
-                                    <div className="bg-correct/10 border border-correct/30 rounded-2xl p-3 md:p-4 mb-3 md:mb-4">
-                                        <p className="text-lg md:text-xl text-foreground font-bold mb-1">
-                                            {correctPhrase}
+                            <div className="text-center">
+                                <div className={cn(
+                                    "border rounded-2xl p-3 md:p-4 mb-3 md:mb-4 transition-colors",
+                                    isCorrect ? "bg-correct/10 border-correct/30" : "bg-secondary/40 border-border"
+                                )}>
+                                    <p className={cn(
+                                        "text-lg md:text-xl font-bold mb-1",
+                                        !isCorrect && "italic"
+                                    )}>
+                                        {feedbackText}
+                                    </p>
+                                    {isCorrect && question.afterReveal?.[language] && (
+                                        <p className="text-sm text-muted-foreground leading-tight">
+                                            {question.afterReveal[language]}
                                         </p>
-                                        {question.afterReveal?.[language] && (
-                                            <p className="text-sm text-muted-foreground leading-tight">
-                                                {question.afterReveal[language]}
-                                            </p>
-                                        )}
-                                    </div>
+                                    )}
+                                </div>
+
+                                {isCorrect ? (
                                     <button
                                         onClick={onContinue}
                                         className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                                     >
                                         {labels.next}
                                     </button>
-                                </div>
-                            ) : (
-                                <div className="text-center">
-                                    <div className="bg-secondary/40 border border-border rounded-2xl p-3 md:p-4 mb-3 md:mb-4">
-                                        <p className="text-lg md:text-xl text-foreground font-bold italic">
-                                            {tryAgainPhrase}
-                                        </p>
-                                    </div>
+                                ) : (
                                     <button
                                         onClick={tryAgain}
                                         className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full text-lg font-bold hover:bg-secondary/80 transition-all border border-border"
                                     >
                                         {labels.retry}
                                     </button>
-                                </div>
-                            )}
+                                )}
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -321,7 +339,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                         className="mt-4 text-center"
                     >
                         <button
-                            onClick={() => validateAnswer(selectedOptions)}
+                            onClick={() => validateAnswer(selectedOptions, selectedOptions[selectedOptions.length - 1])}
                             className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                         >
                             {labels.check}
