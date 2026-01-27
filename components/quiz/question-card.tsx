@@ -63,7 +63,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
 
     const isSingle = question.type === 'single';
     const isMulti = question.type === 'multi';
-    const isSpecialSummary = question.id === 12 || question.id === 25;
+    const isSpecialSummary = question.id === 12 || question.id === 26;
 
     const requiredCount = isMulti
         ? question.options?.filter(o => o.isCorrect).length || 0
@@ -72,7 +72,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
     const validateAnswer = (currentSelection: number[]) => {
         if (!question.options || currentSelection.length === 0) return;
 
-        // Special handling for summary questions (always correct)
+        // Special handling for summary questions (always correct if any selected)
         if (isSpecialSummary) {
             setIsCorrect(true);
             setShowResult(true);
@@ -90,9 +90,12 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             .map((opt, idx) => opt.isCorrect ? idx : -1)
             .filter(idx => idx !== -1);
 
-        const isAnswerCorrect =
-            currentSelection.length === correctIndices.length &&
-            currentSelection.every(idx => correctIndices.includes(idx));
+        // For single choice, we just need the one selected to be among correct ones
+        // For multi choice, we need exact match (all correct ones selected)
+        const isAnswerCorrect = isSingle
+            ? question.options[currentSelection[0]]?.isCorrect
+            : (currentSelection.length === correctIndices.length &&
+                currentSelection.every(idx => correctIndices.includes(idx)));
 
         setIsCorrect(isAnswerCorrect);
         setShowResult(true);
@@ -105,7 +108,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 origin: { y: 0.6 },
                 colors: ['#fbbf24', '#f59e0b', '#d97706']
             });
-            // playSuccess() removed
+            // playSuccess() removed to satisfy "disable sound on confetti" request
             onAnswer(true);
         } else {
             playError();
@@ -126,7 +129,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             validateAnswer(newSelection);
         } else {
             // Multi behavior
-            // Allow toggling even if currently showing error
             const isSelected = selectedOptions.includes(index);
             if (isSelected) {
                 newSelection = selectedOptions.filter(i => i !== index);
@@ -139,8 +141,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             if (newSelection.length === requiredCount) {
                 validateAnswer(newSelection);
             } else {
-                // If selection changed but not enough options, we should probably HIDE the result 
-                // if they are retrying? 
+                // If selection changed but not enough options, reset error state if picking again
                 if (showResult && !isCorrect) {
                     setShowResult(false);
                     setIsCorrect(false);
@@ -201,7 +202,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         let optionStyle = 'bg-card/80 hover:bg-card border-border hover:border-primary/40';
 
                         // Logic:
-                        // If solved (isCorrect && showResult): Show Green on Correct choice.
+                        // If solved (isCorrect && showResult): Show Green on ALL Correct choices.
                         // If failing (showResult && !isCorrect): Show Red on Selected choice. Do NOT show Green on others.
 
                         if (showResult) {
