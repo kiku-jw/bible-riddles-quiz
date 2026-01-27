@@ -72,7 +72,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
     const validateAnswer = (currentSelection: number[]) => {
         if (!question.options || currentSelection.length === 0) return;
 
-        // Special handling for summary questions (always correct if any selected)
         if (isSpecialSummary) {
             setIsCorrect(true);
             setShowResult(true);
@@ -81,7 +80,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 spread: 100,
                 origin: { y: 0.6 }
             });
-            // playSuccess() removed as per user request to disable confetti sound
             onAnswer(true);
             return;
         }
@@ -90,8 +88,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
             .map((opt, idx) => opt.isCorrect ? idx : -1)
             .filter(idx => idx !== -1);
 
-        // For single choice, we just need the one selected to be among correct ones
-        // For multi choice, we need exact match (all correct ones selected)
         const isAnswerCorrect = isSingle
             ? question.options[currentSelection[0]]?.isCorrect
             : (currentSelection.length === correctIndices.length &&
@@ -108,7 +104,6 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 origin: { y: 0.6 },
                 colors: ['#fbbf24', '#f59e0b', '#d97706']
             });
-            // playSuccess() removed to satisfy "disable sound on confetti" request
             onAnswer(true);
         } else {
             playError();
@@ -116,36 +111,26 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
     };
 
     const handleOptionClick = (index: number) => {
-        if (showResult && isCorrect) return; // Block only if already solved correctly
-
+        if (showResult && isCorrect) return;
         playClick();
-
         let newSelection: number[];
-
         if (isSingle) {
-            // Immediate check for single choice
             newSelection = [index];
             setSelectedOptions(newSelection);
             validateAnswer(newSelection);
         } else {
-            // Multi behavior
             const isSelected = selectedOptions.includes(index);
             if (isSelected) {
                 newSelection = selectedOptions.filter(i => i !== index);
             } else {
                 newSelection = [...selectedOptions, index];
             }
-
             setSelectedOptions(newSelection);
-
             if (newSelection.length === requiredCount) {
                 validateAnswer(newSelection);
-            } else {
-                // If selection changed but not enough options, reset error state if picking again
-                if (showResult && !isCorrect) {
-                    setShowResult(false);
-                    setIsCorrect(false);
-                }
+            } else if (showResult && !isCorrect) {
+                setShowResult(false);
+                setIsCorrect(false);
             }
         }
     };
@@ -173,72 +158,64 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                 <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
             </div>
 
-            <div className="w-full max-w-2xl mx-auto relative z-10 px-4 py-4 md:py-8 transition-all duration-300">
-                <div className="text-center mb-4">
+            <div className="w-full max-w-2xl mx-auto relative z-10 px-4 py-2 md:py-4 transition-all duration-300">
+                <div className="text-center mb-2 md:mb-3">
                     {isMulti ? (
-                        <div className="inline-flex flex-col items-center gap-1.5 px-4 py-2 bg-primary/10 border-2 border-primary/20 rounded-2xl">
-                            <span className="text-sm md:text-base font-medium text-primary">
+                        <div className="inline-flex flex-col items-center gap-1 px-3 py-1 bg-primary/10 border border-primary/20 rounded-xl">
+                            <span className="text-[10px] md:text-xs font-medium text-primary">
                                 🔹 Обери ВСІ правильні відповіді
                             </span>
                         </div>
                     ) : (
-                        <span className="inline-block px-4 py-1.5 bg-secondary/60 rounded-full text-xs md:text-sm text-muted-foreground font-medium">
+                        <span className="inline-block px-3 py-1 bg-secondary/60 rounded-full text-[10px] md:text-xs text-muted-foreground font-medium">
                             🔹 Обери одну правильну відповідь
                         </span>
                     )}
                 </div>
 
-                <div className="relative bg-card/90 backdrop-blur-md border-2 border-border rounded-2xl p-6 shadow-xl mb-6 overflow-hidden watercolor-texture">
-                    <h2 className="text-xl md:text-2xl text-foreground text-center leading-relaxed text-balance relative z-10 font-bold">
+                <div className="relative bg-card/90 backdrop-blur-md border border-border rounded-xl p-3 md:p-5 shadow-lg mb-3 md:mb-5 overflow-hidden watercolor-texture">
+                    <h2 className="text-lg md:text-xl text-foreground text-center leading-snug text-balance relative z-10 font-bold">
                         {question.question}
                     </h2>
                 </div>
 
-                <div className="grid gap-3">
+                <div className="grid gap-2">
                     {question.options?.map((option, index) => {
                         const isSelected = selectedOptions.includes(index);
                         const isThisCorrect = option.isCorrect;
 
                         let optionStyle = 'bg-card/80 hover:bg-card border-border hover:border-primary/40';
-
-                        // Logic:
-                        // If solved (isCorrect && showResult): Show Green on ALL Correct choices.
-                        // If failing (showResult && !isCorrect): Show Red on Selected choice. Do NOT show Green on others.
-
                         if (showResult) {
                             if (isCorrect) {
-                                // Game won state
-                                if (isThisCorrect) optionStyle = 'bg-correct/40 border-correct shadow-md';
-                            } else {
-                                // Wrong attempt state
-                                if (isSelected) optionStyle = 'bg-destructive/20 border-destructive/40';
-                                // We intentionally do NOT highlight the correct answer here
+                                if (isThisCorrect) optionStyle = 'bg-correct/40 border-correct shadow-sm';
+                            } else if (isSelected) {
+                                optionStyle = 'bg-destructive/20 border-destructive/40';
                             }
                         } else if (isSelected) {
-                            optionStyle = 'bg-primary/15 border-primary shadow-sm';
+                            optionStyle = 'bg-primary/10 border-primary shadow-sm';
                         }
 
                         return (
                             <motion.button
                                 key={index}
-                                whileHover={{ scale: 1.01, y: -1 }}
-                                whileTap={{ scale: 0.99 }}
+                                whileHover={{ scale: 1.005, y: -0.5 }}
+                                whileTap={{ scale: 0.995 }}
                                 onClick={() => handleOptionClick(index)}
                                 className={cn(
-                                    'w-full p-4 rounded-xl border-2 text-left transition-all duration-300',
+                                    'w-full p-3 rounded-lg border text-left transition-all duration-300',
                                     'flex items-center gap-3 backdrop-blur-sm',
                                     optionStyle
                                 )}
                             >
                                 <span className={cn(
-                                    'w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-bold shrink-0 transition-all',
+                                    'w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 transition-all',
                                     (showResult && isCorrect && isThisCorrect) ? 'bg-correct text-correct-foreground border-correct' :
                                         (showResult && !isCorrect && isSelected) ? 'bg-destructive text-destructive-foreground border-destructive' :
                                             isSelected ? 'bg-primary text-primary-foreground border-primary' : 'bg-muted border-border'
                                 )}>
                                     {String.fromCharCode(1040 + index)}
                                 </span>
-                                <span className="text-lg font-medium leading-tight">{option.text}</span>
+                                <span className="text-base font-medium leading-tight">{option.text}</span>
                             </motion.button>
                         );
                     })}
@@ -249,37 +226,37 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                         <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
-                            className="mt-8"
+                            className="mt-4"
                         >
                             {isCorrect ? (
                                 <div className="text-center">
-                                    <div className="bg-correct/20 border-2 border-correct/40 rounded-3xl p-6 mb-6">
-                                        <p className="text-2xl text-foreground font-bold mb-2">
+                                    <div className="bg-correct/10 border border-correct/30 rounded-2xl p-3 md:p-4 mb-3 md:mb-4">
+                                        <p className="text-lg md:text-xl text-foreground font-bold mb-1">
                                             {correctPhrase}
                                         </p>
                                         {question.afterReveal && (
-                                            <p className="text-lg text-muted-foreground">
+                                            <p className="text-sm text-muted-foreground leading-tight">
                                                 {question.afterReveal}
                                             </p>
                                         )}
                                     </div>
                                     <button
                                         onClick={onContinue}
-                                        className="px-12 py-5 bg-primary text-primary-foreground rounded-full text-xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105"
+                                        className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                                     >
                                         Далі
                                     </button>
                                 </div>
                             ) : (
                                 <div className="text-center">
-                                    <div className="bg-secondary/60 border-2 border-border rounded-3xl p-6 mb-6">
-                                        <p className="text-2xl text-foreground font-bold italic">
+                                    <div className="bg-secondary/40 border border-border rounded-2xl p-3 md:p-4 mb-3 md:mb-4">
+                                        <p className="text-lg md:text-xl text-foreground font-bold italic">
                                             {tryAgainPhrase}
                                         </p>
                                     </div>
                                     <button
                                         onClick={tryAgain}
-                                        className="px-12 py-5 bg-secondary text-secondary-foreground rounded-full text-xl font-bold hover:bg-secondary/80 transition-all border-2 border-border"
+                                        className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full text-lg font-bold hover:bg-secondary/80 transition-all border border-border"
                                     >
                                         Спробувати ще
                                     </button>
@@ -291,13 +268,13 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
 
                 {!showResult && isMulti && selectedOptions.length >= requiredCount && (
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 5 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mt-8 text-center"
+                        className="mt-4 text-center"
                     >
                         <button
                             onClick={() => validateAnswer(selectedOptions)}
-                            className="px-12 py-5 bg-primary text-primary-foreground rounded-full text-xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105"
+                            className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                         >
                             Перевірити
                         </button>

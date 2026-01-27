@@ -32,21 +32,21 @@ export function StoryScreen({ screen, onContinue }: StoryScreenProps) {
             </div>
 
             <div className="max-w-3xl mx-auto text-center px-4 relative z-10">
-                <div className="bg-card/90 backdrop-blur-md border-2 border-border rounded-[2rem] p-6 md:p-8 shadow-2xl watercolor-texture mb-6 overflow-hidden relative">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
+                <div className="bg-card/90 backdrop-blur-md border border-border rounded-2xl p-4 md:p-6 shadow-xl watercolor-texture mb-4 overflow-hidden relative">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
 
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-5 leading-tight">
                         {screen.type === 'intro' ? 'Початок подорожі' :
                             screen.type === 'transition' ? (screen.part === 'jeremiah' ? 'Нова історія' : 'Час перепочити') : 'Ти молодець!'}
                     </h2>
 
-                    <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-6 md:mb-8 text-balance italic">
+                    <p className="text-base md:text-lg text-foreground/90 leading-relaxed mb-4 md:mb-6 text-balance italic">
                         {screen.text}
                     </p>
 
                     <button
                         onClick={onContinue}
-                        className="px-8 py-4 bg-primary text-primary-foreground rounded-full text-xl font-bold shadow-xl hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
+                        className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
                     >
                         {screen.type === 'intro' ? 'Розпочати подорож' : 'Продовжити'}
                     </button>
