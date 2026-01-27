@@ -32,7 +32,6 @@ export const quizData: QuizQuestion[] = [
             ru: 'Сегодня ты отправляешься в путешествие в библейские времена. Ты познакомишься с двумя смелыми служителями Иеговы — царем Иосией и пророком Иеремией.',
             en: 'Today you set off on a journey into biblical times. You will meet two brave servants of Jehovah — King Josiah and the prophet Jeremiah.'
         },
-        image: '/bible-quiz-kids/illustrations/intro.png',
         part: 'josiah'
     },
 
