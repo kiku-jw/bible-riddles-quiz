@@ -23,6 +23,7 @@ export function StoryScreen({ screen, onContinue, language, onLanguageChange }: 
     const bgImage = screen.bgImage || (screen.type === 'intro' ? '/bible-quiz-kids/images/intro.jpg' :
         screen.type === 'transition' ? '/bible-quiz-kids/images/transition.jpg' : '/bible-quiz-kids/images/finale.jpg');
 
+    const illustration = screen.image;
     const isIntro = screen.type === 'intro';
 
     const getTitle = () => {
@@ -66,6 +67,18 @@ export function StoryScreen({ screen, onContinue, language, onLanguageChange }: 
             <div className="max-w-3xl mx-auto text-center px-4 relative z-10">
                 <div className="bg-card/90 backdrop-blur-md border border-border rounded-2xl p-4 md:p-6 shadow-xl watercolor-texture mb-4 overflow-hidden relative">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 via-primary/80 to-primary/40" />
+
+                    {illustration && (
+                        <div className="relative w-full aspect-video mb-4 md:mb-6 rounded-xl overflow-hidden shadow-lg border-2 border-primary/10">
+                            <Image
+                                src={illustration}
+                                alt=""
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                    )}
 
                     {isIntro && onLanguageChange && (
                         <div className="flex justify-center gap-2 mb-6">

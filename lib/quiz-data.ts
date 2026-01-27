@@ -19,6 +19,7 @@ export interface QuizQuestion {
     afterReveal?: LocalizedString;
     part?: 'josiah' | 'jeremiah';
     bgImage?: string;
+    image?: string;
 }
 
 export const quizData: QuizQuestion[] = [
@@ -31,6 +32,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Сегодня ты отправляешься в путешествие в библейские времена. Ты познакомишься с двумя смелыми служителями Иеговы — царем Иосией и пророком Иеремией.',
             en: 'Today you set off on a journey into biblical times. You will meet two brave servants of Jehovah — King Josiah and the prophet Jeremiah.'
         },
+        image: '/illustrations/intro.png',
         part: 'josiah'
     },
 
@@ -44,6 +46,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Кто такой Иосия?',
             en: 'Who was Josiah?'
         },
+        image: '/illustrations/q1.png',
         options: [
             {
                 text: { uk: 'Пророк', ru: 'Пророк', en: 'Prophet' },
@@ -92,6 +95,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Сколько лет было Иосии, когда он стал царем?',
             en: 'How old was Josiah when he became king?'
         },
+        image: '/illustrations/q2.png',
         options: [
             {
                 text: { uk: '8 років', ru: '8 лет', en: '8 years old' },
@@ -140,6 +144,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что начал делать Иосия, когда ему было 16 лет?',
             en: 'What did Josiah start doing when he was 16?'
         },
+        image: '/illustrations/q3.png',
         options: [
             {
                 text: { uk: 'Став будувати дім', ru: 'Стал строить дом', en: 'Started building a house' },
@@ -188,6 +193,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что начал делать Иосия в 20 лет?',
             en: 'What did Josiah start doing at age 20?'
         },
+        image: '/illustrations/q4.png',
         options: [
             {
                 text: { uk: 'Знищувати ідолів та жертовники', ru: 'Уничтожать идолов и жертвенники', en: 'Destroying idols and altars' },

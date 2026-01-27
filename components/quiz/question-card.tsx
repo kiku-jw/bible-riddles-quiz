@@ -240,6 +240,23 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                 </div>
 
                 <div className="relative bg-card/90 backdrop-blur-md border border-border rounded-xl p-3 md:p-5 shadow-lg mb-3 md:mb-5 overflow-hidden watercolor-texture">
+                    {/* Question Image if exists */}
+                    {question.image && (
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="relative w-full aspect-video mb-3 md:mb-5 rounded-lg overflow-hidden shadow-inner border border-primary/10"
+                        >
+                            <Image
+                                src={question.image}
+                                alt=""
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </motion.div>
+                    )}
+
                     <h2 className="text-lg md:text-xl text-foreground text-center leading-snug text-balance relative z-10 font-bold">
                         {question.question?.[language]}
                     </h2>

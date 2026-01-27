@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import type { Language } from './bible-quiz';
+import { quizData } from '@/lib/quiz-data';
 
 const GALLERY_IMAGES = [
     {
@@ -99,6 +100,33 @@ export function CompletionScreen({ language }: CompletionScreenProps) {
                         {labels.desc}
                     </p>
                 </div>
+
+                {/* Journey Memories */}
+                {quizData.some(q => q.image) && (
+                    <div className="space-y-4 md:space-y-6">
+                        <h2 className="text-xl md:text-2xl font-bold text-center">
+                            {{ uk: 'Спогади з подорожі', ru: 'Воспоминания из путешествия', en: 'Journey Memories' }[language]}
+                        </h2>
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 overflow-x-auto pb-4 no-scrollbar">
+                            {quizData.filter(q => q.image).map((img, idx) => (
+                                <motion.div
+                                    key={img.id}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden shadow-md border-4 border-white shrink-0"
+                                >
+                                    <Image
+                                        src={img.image!}
+                                        alt=""
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 {/* Gallery */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
