@@ -8,32 +8,32 @@ import { quizData } from '@/lib/quiz-data';
 
 const GALLERY_IMAGES = [
     {
-        src: '/bible-quiz-kids/images/intro.jpg',
+        src: '/bible-quiz-kids/illustrations/intro.png',
         alt: { uk: 'Початок подорожі', ru: 'Начало путешествия', en: 'The Beginning' },
         title: { uk: 'Початок подорожі', ru: 'Начало путешествия', en: 'The Beginning' }
     },
     {
-        src: '/bible-quiz-kids/images/josiah.jpg',
-        alt: { uk: 'Юний Йосія', ru: 'Юный Иосия', en: 'Young Josiah' },
-        title: { uk: 'Юний Йосія', ru: 'Юный Иосия', en: 'Young Josiah' }
+        src: '/bible-quiz-kids/illustrations/q1.png',
+        alt: { uk: 'Помазання на царство', ru: 'Помазание на царство', en: 'Anointing as King' },
+        title: { uk: 'Помазання на царство', ru: 'Помазание на царство', en: 'Anointing as King' }
     },
     {
-        src: '/bible-quiz-kids/images/josiah-king.jpg',
-        alt: { uk: 'Цар Йосія', ru: 'Царь Иосия', en: 'King Josiah' },
-        title: { uk: 'Цар Йосія', ru: 'Царь Иосия', en: 'King Josiah' }
+        src: '/bible-quiz-kids/illustrations/q7.png',
+        alt: { uk: 'Знайдена Книга Закону', ru: 'Найденная Книга Закона', en: 'Found Book of Law' },
+        title: { uk: 'Знайдена Книга Закону', ru: 'Найденная Книга Закона', en: 'Found Book of Law' }
     },
     {
-        src: '/bible-quiz-kids/images/transition.jpg',
-        alt: { uk: 'Час минає', ru: 'Время идет', en: 'Time Passes' },
-        title: { uk: 'Час минає', ru: 'Время идет', en: 'Time Passes' }
-    },
-    {
-        src: '/bible-quiz-kids/images/jeremiah.jpg',
+        src: '/bible-quiz-kids/illustrations/q15.png',
         alt: { uk: 'Пророк Єремія', ru: 'Пророк Иеремия', en: 'Prophet Jeremiah' },
         title: { uk: 'Пророк Єремія', ru: 'Пророк Иеремия', en: 'Prophet Jeremiah' }
     },
     {
-        src: '/bible-quiz-kids/images/finale.jpg',
+        src: '/bible-quiz-kids/illustrations/q22.png',
+        alt: { uk: 'Вогонь у серці', ru: 'Огонь в сердце', en: 'Fire in the Heart' },
+        title: { uk: 'Вогонь у серці', ru: 'Огонь в сердце', en: 'Fire in the Heart' }
+    },
+    {
+        src: '/bible-quiz-kids/illustrations/finale.png',
         alt: { uk: 'Радісне майбутнє', ru: 'Радостное будущее', en: 'Joyful Future' },
         title: { uk: 'Радісне майбутнє', ru: 'Радостное будущее', en: 'Joyful Future' }
     },
@@ -70,11 +70,11 @@ export function CompletionScreen({ language }: CompletionScreenProps) {
         document.body.removeChild(link);
     };
 
-    const labels = {
+    const labels = ({
         uk: { badge: '🏆 НАГОРОДА ЗА СТАРАННІСТЬ 🏆', title: 'Ти справжній знавець Біблії!', desc: 'Твої старання не залишилися непоміченими. В подарунок ти отримуєш колекцію красивих шпалер для твого пристрою.', learn: 'Продовжуй дізнаватися нове', close: 'Закрити', download: 'Скачати шпалери', subline: 'Чудова картинка для твого робочого столу' },
         ru: { badge: '🏆 НАГРАДА ЗА СТАРАНИЕ 🏆', title: 'Ты настоящий знаток Библии!', desc: 'Твои старания не остались незамеченными. В подарок ты получаешь коллекцию красивых обоев для твоего устройства.', learn: 'Продолжай узнавать новое', close: 'Закрыть', download: 'Скачать обои', subline: 'Отличная картинка для твоего рабочего стола' },
         en: { badge: '🏆 REWARD FOR DILIGENCE 🏆', title: 'You are a Bible expert!', desc: 'Your efforts did not go unnoticed. As a gift, you receive a collection of beautiful wallpapers for your device.', learn: 'Keep learning new things', close: 'Close', download: 'Download wallpaper', subline: 'A beautiful picture for your desktop' },
-    }[language];
+    } as Record<Language, any>)[language] || { badge: '', title: '', desc: '', learn: '', close: '', download: '', subline: '' };
 
     return (
         <motion.div
@@ -153,7 +153,7 @@ export function CompletionScreen({ language }: CompletionScreenProps) {
                 <div className="space-y-4 md:space-y-6">
                     <h2 className="text-xl md:text-2xl font-bold text-center">{labels.learn}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto w-full">
-                        {EXTERNAL_LINKS[language].map((link, idx) => (
+                        {(EXTERNAL_LINKS[language] || EXTERNAL_LINKS.en).map((link, idx) => (
                             <a
                                 key={idx}
                                 href={link.url}
