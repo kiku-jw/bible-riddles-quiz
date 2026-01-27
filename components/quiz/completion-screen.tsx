@@ -3,48 +3,61 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import type { Language } from './bible-quiz';
 
 const GALLERY_IMAGES = [
-    { src: '/bible-quiz-kids/images/intro.jpg', alt: 'Начало пути', title: 'Початок подорожі' },
-    { src: '/bible-quiz-kids/images/josiah.jpg', alt: 'Юний Йосія', title: 'Юний Йосія' },
-    { src: '/bible-quiz-kids/images/josiah-king.jpg', alt: 'Цар Йосія', title: 'Цар Йосія' },
-    { src: '/bible-quiz-kids/images/transition.jpg', alt: 'Час минає', title: 'Час минає...' },
-    { src: '/bible-quiz-kids/images/jeremiah.jpg', alt: 'Пророк Єремія', title: 'Пророк Єремія' },
-    { src: '/bible-quiz-kids/images/finale.jpg', alt: 'Радісне майбутнє', title: 'Радісне майбутнє' },
-];
-
-const EXTERNAL_LINKS = [
     {
-        title: 'Фільм про Йосію',
-        url: 'https://www.jw.org/finder?wtlocale=K&docid=1102019289&srcid=share',
-        color: 'bg-orange-600 hover:bg-orange-700',
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="18" height="18" x="3" y="3" rx="2" />
-                <path d="M7 3v18" />
-                <path d="M3 7.5h4" />
-                <path d="M3 12h18" />
-                <path d="M3 16.5h4" />
-                <path d="M17 3v18" />
-                <path d="M17 7.5h4" />
-                <path d="M17 16.5h4" />
-            </svg>
-        )
+        src: '/bible-quiz-kids/images/intro.jpg',
+        alt: { uk: 'Початок подорожі', ru: 'Начало путешествия', en: 'The Beginning' },
+        title: { uk: 'Початок подорожі', ru: 'Начало путешествия', en: 'The Beginning' }
     },
     {
-        title: 'Мультик про Єремію',
-        url: 'https://www.jw.org/finder?wtlocale=K&docid=503000104&srcid=share',
-        color: 'bg-blue-600 hover:bg-blue-700',
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="10 8 16 12 10 16 10 8" />
-            </svg>
-        )
-    }
+        src: '/bible-quiz-kids/images/josiah.jpg',
+        alt: { uk: 'Юний Йосія', ru: 'Юный Иосия', en: 'Young Josiah' },
+        title: { uk: 'Юний Йосія', ru: 'Юный Иосия', en: 'Young Josiah' }
+    },
+    {
+        src: '/bible-quiz-kids/images/josiah-king.jpg',
+        alt: { uk: 'Цар Йосія', ru: 'Царь Иосия', en: 'King Josiah' },
+        title: { uk: 'Цар Йосія', ru: 'Царь Иосия', en: 'King Josiah' }
+    },
+    {
+        src: '/bible-quiz-kids/images/transition.jpg',
+        alt: { uk: 'Час минає', ru: 'Время идет', en: 'Time Passes' },
+        title: { uk: 'Час минає', ru: 'Время идет', en: 'Time Passes' }
+    },
+    {
+        src: '/bible-quiz-kids/images/jeremiah.jpg',
+        alt: { uk: 'Пророк Єремія', ru: 'Пророк Иеремия', en: 'Prophet Jeremiah' },
+        title: { uk: 'Пророк Єремія', ru: 'Пророк Иеремия', en: 'Prophet Jeremiah' }
+    },
+    {
+        src: '/bible-quiz-kids/images/finale.jpg',
+        alt: { uk: 'Радісне майбутнє', ru: 'Радостное будущее', en: 'Joyful Future' },
+        title: { uk: 'Радісне майбутнє', ru: 'Радостное будущее', en: 'Joyful Future' }
+    },
 ];
 
-export function CompletionScreen() {
+const EXTERNAL_LINKS = {
+    uk: [
+        { title: 'Фільм про Йосію', url: 'https://www.jw.org/finder?wtlocale=K&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
+        { title: 'Мультик про Єремію', url: 'https://www.jw.org/finder?wtlocale=K&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+    ],
+    ru: [
+        { title: 'Фильм об Иосии', url: 'https://www.jw.org/finder?wtlocale=U&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
+        { title: 'Мультик об Иеремии', url: 'https://www.jw.org/finder?wtlocale=U&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+    ],
+    en: [
+        { title: 'Josiah Movie', url: 'https://www.jw.org/finder?wtlocale=E&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
+        { title: 'Jeremiah Video', url: 'https://www.jw.org/finder?wtlocale=E&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+    ]
+};
+
+interface CompletionScreenProps {
+    language: Language;
+}
+
+export function CompletionScreen({ language }: CompletionScreenProps) {
     const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null);
 
     const handleDownload = (img: typeof GALLERY_IMAGES[0]) => {
@@ -55,6 +68,12 @@ export function CompletionScreen() {
         link.click();
         document.body.removeChild(link);
     };
+
+    const labels = {
+        uk: { badge: '🏆 НАГОРОДА ЗА СТАРАННІСТЬ 🏆', title: 'Ти справжній знавець Біблії!', desc: 'Твої старання не залишилися непоміченими. В подарунок ти отримуєш колекцію красивих шпалер для твого пристрою.', learn: 'Продовжуй дізнаватися нове', close: 'Закрити', download: 'Скачати шпалери', subline: 'Чудова картинка для твого робочого столу' },
+        ru: { badge: '🏆 НАГРАДА ЗА СТАРАНИЕ 🏆', title: 'Ты настоящий знаток Библии!', desc: 'Твои старания не остались незамеченными. В подарок ты получаешь коллекцию красивых обоев для твоего устройства.', learn: 'Продолжай узнавать новое', close: 'Закрыть', download: 'Скачать обои', subline: 'Отличная картинка для твоего рабочего стола' },
+        en: { badge: '🏆 REWARD FOR DILIGENCE 🏆', title: 'You are a Bible expert!', desc: 'Your efforts did not go unnoticed. As a gift, you receive a collection of beautiful wallpapers for your device.', learn: 'Keep learning new things', close: 'Close', download: 'Download wallpaper', subline: 'A beautiful picture for your desktop' },
+    }[language];
 
     return (
         <motion.div
@@ -71,13 +90,13 @@ export function CompletionScreen() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-3xl bg-yellow-400/20 border-2 border-yellow-500/30 text-yellow-800 font-bold mb-2 shadow-sm"
                     >
-                        🏆 НАГОРОДА ЗА СТАРАННІСТЬ 🏆
+                        {labels.badge}
                     </motion.div>
                     <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                        Ти справжній знавець Біблії!
+                        {labels.title}
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-tight">
-                        Твої старання не залишилися непоміченими. В подарунок ти отримуєш колекцію красивих шпалер для твого пристрою.
+                        {labels.desc}
                     </p>
                 </div>
 
@@ -94,26 +113,19 @@ export function CompletionScreen() {
                         >
                             <Image
                                 src={img.src}
-                                alt={img.alt}
+                                alt={img.alt[language]}
                                 fill
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/20 backdrop-blur-md p-2 rounded-full border border-white/50">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
-                                    </svg>
-                                </span>
-                            </div>
                         </motion.button>
                     ))}
                 </div>
 
                 {/* Resources */}
                 <div className="space-y-4 md:space-y-6">
-                    <h2 className="text-xl md:text-2xl font-bold text-center">Продовжуй дізнаватися нове</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-center">{labels.learn}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto w-full">
-                        {EXTERNAL_LINKS.map((link, idx) => (
+                        {EXTERNAL_LINKS[language].map((link, idx) => (
                             <a
                                 key={idx}
                                 href={link.url}
@@ -121,7 +133,6 @@ export function CompletionScreen() {
                                 rel="noopener noreferrer"
                                 className={`flex items-center justify-center gap-2 p-3 md:p-4 rounded-xl text-white text-sm md:text-base font-bold shadow-md transition-all active:scale-95 ${link.color}`}
                             >
-                                {link.icon}
                                 <span>{link.title}</span>
                             </a>
                         ))}
@@ -161,7 +172,7 @@ export function CompletionScreen() {
                         >
                             <Image
                                 src={selectedImage.src}
-                                alt={selectedImage.alt}
+                                alt={selectedImage.alt[language]}
                                 fill
                                 className="object-cover"
                             />
@@ -169,13 +180,13 @@ export function CompletionScreen() {
                             {/* Overlay UI */}
                             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 bg-gradient-to-t from-black/80 to-transparent flex justify-between items-end">
                                 <div className="text-white space-y-1">
-                                    <p className="text-xl md:text-2xl font-bold">{selectedImage.title}</p>
-                                    <p className="text-white/60 text-sm md:text-base">Чудова картинка для твого робочого столу</p>
+                                    <p className="text-xl md:text-2xl font-bold">{selectedImage.title[language]}</p>
+                                    <p className="text-white/60 text-sm md:text-base">{labels.subline}</p>
                                 </div>
                                 <button
                                     onClick={() => handleDownload(selectedImage)}
                                     className="p-3 md:p-4 bg-white text-black rounded-full shadow-lg hover:bg-white/90 transition-all active:scale-90 flex items-center justify-center"
-                                    title="Скачать шпалери"
+                                    title={labels.download}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4" />
@@ -190,7 +201,7 @@ export function CompletionScreen() {
                             className="mt-6 text-white/50 hover:text-white transition-colors"
                             onClick={() => setSelectedImage(null)}
                         >
-                            Закрити
+                            {labels.close}
                         </button>
                     </motion.div>
                 )}

@@ -8,11 +8,14 @@ import { QuestionCard } from './question-card';
 import { StoryScreen } from './story-screen';
 import { CompletionScreen } from './completion-screen';
 
+export type Language = 'uk' | 'ru' | 'en';
+
 function QuizContent() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answeredCount, setAnsweredCount] = useState(0);
     const [isStarted, setIsStarted] = useState(false);
     const [isCompleted, setIsCompleted] = useState(false);
+    const [language, setLanguage] = useState<Language>('uk');
 
     const { playContinue, playComplete, isEnabled, toggleSound, startBackgroundMusic } = useSound();
 
@@ -56,7 +59,9 @@ function QuizContent() {
                     {isStarted && isQuestion && (
                         <div className="w-full space-y-1">
                             <div className="flex justify-between items-center text-[10px] md:text-xs font-medium text-muted-foreground px-1">
-                                <span>Питання {answeredCount + 1} з {totalQuestions}</span>
+                                <span>
+                                    {language === 'uk' ? 'Питання' : language === 'ru' ? 'Вопрос' : 'Question'} {answeredCount + 1} {language === 'uk' ? 'з' : language === 'ru' ? 'из' : 'of'} {totalQuestions}
+                                </span>
                             </div>
                             <div className="h-2 bg-muted/30 backdrop-blur-md rounded-full overflow-hidden border border-white/10 shadow-inner">
                                 <motion.div
@@ -89,9 +94,15 @@ function QuizContent() {
             <main className="w-full z-10 pt-16 md:pt-20">
                 <AnimatePresence mode="wait">
                     {!isStarted ? (
-                        <StoryScreen key="start" screen={quizData[0]} onContinue={handleStart} />
+                        <StoryScreen
+                            key="start"
+                            screen={quizData[0]}
+                            onContinue={handleStart}
+                            language={language}
+                            onLanguageChange={setLanguage}
+                        />
                     ) : isCompleted ? (
-                        <CompletionScreen />
+                        <CompletionScreen language={language} />
                     ) : (
                         isQuestion ? (
                             <QuestionCard
@@ -99,12 +110,14 @@ function QuizContent() {
                                 question={currentScreen}
                                 onAnswer={handleAnswer}
                                 onContinue={handleContinue}
+                                language={language}
                             />
                         ) : (
                             <StoryScreen
                                 key={`s-${currentIndex}`}
                                 screen={currentScreen}
                                 onContinue={handleContinue}
+                                language={language}
                             />
                         )
                     )}
@@ -113,7 +126,7 @@ function QuizContent() {
 
 
             <div className="fixed bottom-2 right-2 text-[10px] text-muted-foreground/30 pointer-events-none z-50">
-                v2.0 [The Reward]
+                v3.0 [Infinity]
             </div>
         </div>
     );

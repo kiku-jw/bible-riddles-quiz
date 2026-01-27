@@ -4,55 +4,97 @@ import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import type { QuizQuestion } from '@/lib/quiz-data';
+import type { Language } from './bible-quiz';
 import { useSound } from './sound-manager';
 import confetti from 'canvas-confetti';
 import Image from 'next/image';
 
-const CORRECT_PHRASES = [
-    'Чудово! Ти молодець!',
-    'Правильно! Так тримати!',
-    'Відмінно! Ти добре знаєш цю історію!',
-    'Браво! Ти справжній знавець!',
-    'Супер! Продовжуй у тому ж дусі!',
-    'Вау! Ти дуже уважний!',
-    'Точно! Ти добре запам\'ятав!',
-    'Прекрасно! Єгова радіє твоїй старанності!',
-];
+const CORRECT_PHRASES = {
+    uk: [
+        'Чудово! Ти молодець!',
+        'Правильно! Так тримати!',
+        'Відмінно! Ти добре знаєш цю історію!',
+        'Браво! Ти справжній знавець!',
+        'Супер! Продовжуй у тому ж дусі!',
+        'Вау! Ти дуже уважний!',
+        'Точно! Ти добре запам\'ятав!',
+        'Прекрасно! Єгова радіє твоїй старанності!',
+    ],
+    ru: [
+        'Отлично! Ты молодец!',
+        'Правильно! Так держать!',
+        'Прекрасно! Ты отлично знаешь эту историю!',
+        'Браво! Ты настоящий знаток!',
+        'Супер! Продолжай в том же духе!',
+        'Вау! Ты очень внимательный!',
+        'Точно! Ты хорошо запомнил!',
+        'Прекрасно! Иегова радуется твоему старанию!',
+    ],
+    en: [
+        'Great job! You are doing well!',
+        'Correct! Keep it up!',
+        'Excellent! You know this story well!',
+        'Bravo! You are a true expert!',
+        'Super! Continue in the same spirit!',
+        'Wow! You are very observant!',
+        'Exactly! You remembered well!',
+        'Wonderful! Jehovah rejoices in your diligence!',
+    ]
+};
 
-const TRY_AGAIN_PHRASES = [
-    'Майже вдалося! Спробуй ще раз',
-    'Гарна спроба! Подумай ще трішки',
-    'Ти на правильному шляху! Ще разок',
-    'Не здавайся! Ти зможеш!',
-    'Ось-ось знайдеш правильну відповідь!',
-    'Продовжуй шукати! Ти впораєшся!',
-];
+const TRY_AGAIN_PHRASES = {
+    uk: [
+        'Майже вдалося! Спробуй ще раз',
+        'Гарна спроба! Подумай ще трішки',
+        'Ти на правильному шляху! Ще разок',
+        'Не здавайся! Ти зможеш!',
+        'Ось-ось знайдеш правильну відповідь!',
+        'Продовжуй шукати! Ти впораєшся!',
+    ],
+    ru: [
+        'Почти получилось! Попробуй еще раз',
+        'Хорошая попытка! Подумай еще немного',
+        'Ты на правильном пути! Еще разок',
+        'Не сдавайся! Ты сможешь!',
+        'Вот-вот найдешь правильный ответ!',
+        'Продолжай искать! Ты справишься!',
+    ],
+    en: [
+        'Almost there! Try again',
+        'Good attempt! Think a bit more',
+        'You are on the right track! One more time',
+        'Don\'t give up! You can do it!',
+        'You\'re about to find the right answer!',
+        'Keep searching! You\'ll manage!',
+    ]
+};
 
 interface QuestionCardProps {
     question: QuizQuestion;
     onAnswer: (isCorrect: boolean) => void;
     onContinue: () => void;
+    language: Language;
 }
 
-export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardProps) {
+export function QuestionCard({ question, onAnswer, onContinue, language }: QuestionCardProps) {
     const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
     const [showResult, setShowResult] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [hasAttempted, setHasAttempted] = useState(false);
 
-    const { playClick, playSuccess, playError } = useSound();
+    const { playClick, playError } = useSound();
 
     const bgImage = question.part === 'josiah' ? '/bible-quiz-kids/images/josiah.jpg' : '/bible-quiz-kids/images/jeremiah.jpg';
 
-    const correctPhrase = useMemo(() =>
-        CORRECT_PHRASES[Math.floor(Math.random() * CORRECT_PHRASES.length)],
-        [question.id]
-    );
+    const correctPhrase = useMemo(() => {
+        const phrases = CORRECT_PHRASES[language];
+        return phrases[Math.floor(Math.random() * phrases.length)];
+    }, [question.id, language]);
 
-    const tryAgainPhrase = useMemo(() =>
-        TRY_AGAIN_PHRASES[Math.floor(Math.random() * TRY_AGAIN_PHRASES.length)],
-        [question.id, hasAttempted]
-    );
+    const tryAgainPhrase = useMemo(() => {
+        const phrases = TRY_AGAIN_PHRASES[language];
+        return phrases[Math.floor(Math.random() * phrases.length)];
+    }, [question.id, hasAttempted, language]);
 
     useEffect(() => {
         setSelectedOptions([]);
@@ -141,6 +183,12 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
         setIsCorrect(false);
     };
 
+    const labels = {
+        uk: { multi: 'Обери ВСІ правильні відповіді', single: 'Обери одну правильну відповідь', next: 'Далі', retry: 'Спробувати ще', check: 'Перевірити' },
+        ru: { multi: 'Выбери ВСЕ правильные ответы', single: 'Выбери один правильный ответ', next: 'Далее', retry: 'Попробовать еще', check: 'Проверить' },
+        en: { multi: 'Choose ALL correct answers', single: 'Choose one correct answer', next: 'Next', retry: 'Try again', check: 'Check' },
+    }[language];
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -163,19 +211,19 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                     {isMulti ? (
                         <div className="inline-flex flex-col items-center gap-1 px-3 py-1 bg-primary/10 border border-primary/20 rounded-xl">
                             <span className="text-[10px] md:text-xs font-medium text-primary">
-                                🔹 Обери ВСІ правильні відповіді
+                                🔹 {labels.multi}
                             </span>
                         </div>
                     ) : (
                         <span className="inline-block px-3 py-1 bg-secondary/60 rounded-full text-[10px] md:text-xs text-muted-foreground font-medium">
-                            🔹 Обери одну правильну відповідь
+                            🔹 {labels.single}
                         </span>
                     )}
                 </div>
 
                 <div className="relative bg-card/90 backdrop-blur-md border border-border rounded-xl p-3 md:p-5 shadow-lg mb-3 md:mb-5 overflow-hidden watercolor-texture">
                     <h2 className="text-lg md:text-xl text-foreground text-center leading-snug text-balance relative z-10 font-bold">
-                        {question.question}
+                        {question.question?.[language]}
                     </h2>
                 </div>
 
@@ -215,7 +263,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                                 )}>
                                     {String.fromCharCode(1040 + index)}
                                 </span>
-                                <span className="text-base font-medium leading-tight">{option.text}</span>
+                                <span className="text-base font-medium leading-tight">{option.text[language]}</span>
                             </motion.button>
                         );
                     })}
@@ -234,9 +282,9 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                                         <p className="text-lg md:text-xl text-foreground font-bold mb-1">
                                             {correctPhrase}
                                         </p>
-                                        {question.afterReveal && (
+                                        {question.afterReveal?.[language] && (
                                             <p className="text-sm text-muted-foreground leading-tight">
-                                                {question.afterReveal}
+                                                {question.afterReveal[language]}
                                             </p>
                                         )}
                                     </div>
@@ -244,7 +292,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                                         onClick={onContinue}
                                         className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                                     >
-                                        Далі
+                                        {labels.next}
                                     </button>
                                 </div>
                             ) : (
@@ -258,7 +306,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                                         onClick={tryAgain}
                                         className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full text-lg font-bold hover:bg-secondary/80 transition-all border border-border"
                                     >
-                                        Спробувати ще
+                                        {labels.retry}
                                     </button>
                                 </div>
                             )}
@@ -276,7 +324,7 @@ export function QuestionCard({ question, onAnswer, onContinue }: QuestionCardPro
                             onClick={() => validateAnswer(selectedOptions)}
                             className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:bg-primary/90 transition-all transform hover:scale-105"
                         >
-                            Перевірити
+                            {labels.check}
                         </button>
                     </motion.div>
                 )}
