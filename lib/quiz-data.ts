@@ -32,6 +32,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Сегодня ты отправляешься в путешествие в библейские времена. Ты познакомишься с двумя смелыми служителями Иеговы — царем Иосией и пророком Иеремией.',
             en: 'Today you set off on a journey into biblical times. You will meet two brave servants of Jehovah — King Josiah and the prophet Jeremiah.'
         },
+        image: '/bible-quiz-kids/illustrations/intro.png',
         part: 'josiah'
     },
 
@@ -241,6 +242,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что начал Иосия в 26 лет?',
             en: 'What did Josiah begin at age 26?'
         },
+        image: '/bible-quiz-kids/illustrations/q5.png',
         options: [
             {
                 text: { uk: 'Бізнес', ru: 'Бизнес', en: 'Business' },
@@ -289,6 +291,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Как народ Иуды относился к поклонению Иегове, когда Иосия стал царем?',
             en: 'How did the people of Judah view worship of Jehovah when Josiah became king?'
         },
+        image: '/bible-quiz-kids/illustrations/q6.png',
         options: [
             {
                 text: { uk: 'Виявляли зневагу', ru: 'Проявляли неуважение', en: 'Showed disrespect' },
@@ -337,6 +340,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что нашли в Храме?',
             en: 'What was found in the Temple?'
         },
+        image: '/bible-quiz-kids/illustrations/q7.png',
         options: [
             {
                 text: { uk: 'Біблію', ru: 'Библию', en: 'The Bible' },
@@ -385,6 +389,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что сделал царь Иосия, когда ему прочитали Закон?',
             en: 'What did King Josiah do when the Law was read to him?'
         },
+        image: '/bible-quiz-kids/illustrations/q8.png',
         options: [
             {
                 text: { uk: 'Розірвав на собі одяг', ru: 'Разорвал на себе одежду', en: 'Ripped his clothes' },
@@ -433,6 +438,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что пообещал народ Иуды Иегове?',
             en: 'What did the people of Judah promise Jehovah?'
         },
+        image: '/bible-quiz-kids/illustrations/q9.png',
         options: [
             {
                 text: { uk: 'Слухатися Його', ru: 'Слушаться Его', en: 'To obey Him' },
@@ -481,6 +487,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что помогло Иосии полюбить Закон Иеговы?',
             en: 'What helped Josiah love Jehovah\'s Law?'
         },
+        image: '/bible-quiz-kids/illustrations/q10.png',
         options: [
             {
                 text: { uk: 'Те, що Йосія читав Закон', ru: 'To, что Иосия читал Закон', en: 'Fact that Josiah read the Law' },
@@ -529,6 +536,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Как Иегова относился к Иосии?',
             en: 'How did Jehovah feel about Josiah?'
         },
+        image: '/bible-quiz-kids/illustrations/q11.png',
         options: [
             {
                 text: { uk: 'Був дуже сердитий', ru: 'Был очень сердит', en: 'He was very angry' },
@@ -577,6 +585,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Какой урок можно извлечь для себя из примера Иосии?',
             en: 'What lesson can we learn from Josiah\'s example?'
         },
+        image: '/bible-quiz-kids/illustrations/q12.png',
         afterReveal: {
             uk: 'Насправді всі ці думки правильні',
             ru: 'На самом деле все эти мысли верны',
@@ -632,6 +641,7 @@ export const quizData: QuizQuestion[] = [
             en: 'To remember it all better, you can watch a film about Josiah.'
         },
         part: 'josiah',
+        image: '/bible-quiz-kids/illustrations/t13.png',
         bgImage: '/bible-quiz-kids/images/josiah-king.jpg'
     },
     {
@@ -643,6 +653,7 @@ export const quizData: QuizQuestion[] = [
             en: 'Time passed... And now a new prophet enters the scene.'
         },
         part: 'jeremiah',
+        image: '/bible-quiz-kids/illustrations/t14.png',
         bgImage: '/bible-quiz-kids/images/transition.jpg'
     },
 
@@ -656,6 +667,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Кто такой Иеремия?',
             en: 'Who was Jeremiah?'
         },
+        image: '/bible-quiz-kids/illustrations/q15.png',
         options: [
             {
                 text: { uk: 'Цар Юди', ru: 'Царь Иуды', en: 'King of Judah' },
@@ -704,6 +716,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'К кому Иегова послал Иеремию?',
             en: 'To whom did Jehovah send Jeremiah?'
         },
+        image: '/bible-quiz-kids/illustrations/q16.png',
         options: [
             {
                 text: { uk: 'Єгиптян', ru: 'Египтянам', en: 'Egyptians' },
@@ -752,6 +765,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Почему Иеремия сначала переживал из-за проповеди?',
             en: 'Why was Jeremiah initially worried about preaching?'
         },
+        image: '/bible-quiz-kids/illustrations/q17.png',
         options: [
             {
                 text: { uk: 'Бо його хотіли вбити', ru: 'Потому что его хотели убить', en: 'Because they wanted to kill him' },
@@ -800,6 +814,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что Иегова пообещал Иеремии?',
             en: 'What did Jehovah promise Jeremiah?'
         },
+        image: '/bible-quiz-kids/illustrations/q18.png',
         options: [
             {
                 text: { uk: 'Що від нього вийде великий народ', ru: 'Что от него произойдет великий народ', en: 'That a great nation would come from him' },
@@ -848,6 +863,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что Иегова велел сделать Иеремии перед старейшинами?',
             en: 'What did Jehovah tell Jeremiah to do before the elders?'
         },
+        image: '/bible-quiz-kids/illustrations/q19.png',
         options: [
             {
                 text: { uk: 'Побудувати жертовник', ru: 'Построить жертвенник', en: 'Build an altar' },
@@ -896,6 +912,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что означал разбитый кувшин?',
             en: 'What did the broken jar mean?'
         },
+        image: '/bible-quiz-kids/illustrations/q20.png',
         options: [
             {
                 text: { uk: 'Що Єрусалим буде знищений', ru: 'Что Иерусалим будет уничтожен', en: 'That Jerusalem would be destroyed' },
@@ -944,6 +961,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Куда посадили Иеремию после этого?',
             en: 'Where was Jeremiah put after that?'
         },
+        image: '/bible-quiz-kids/illustrations/q21.png',
         options: [
             {
                 text: { uk: 'У дерев\'яні колодки', ru: 'В деревянные колодки', en: 'In wooden stocks' },
@@ -992,6 +1010,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Что помогло Иеремии не прекратить проповедовать?',
             en: 'What helped Jeremiah not to stop preaching?'
         },
+        image: '/bible-quiz-kids/illustrations/q22.png',
         options: [
             {
                 text: { uk: 'Похвала людей', ru: 'Похвала людей', en: 'Praise from people' },
@@ -1040,6 +1059,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Кто вытащил Иеремию из колодца?',
             en: 'Who pulled Jeremiah out of the cistern?'
         },
+        image: '/bible-quiz-kids/illustrations/q23.png',
         options: [
             {
                 text: { uk: 'Евед-Мелех', ru: 'Эвед-Мелех', en: 'Ebed-melech' },
@@ -1088,6 +1108,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Почему, несмотря на молодой возраст, Иеремия послушался Иегову?',
             en: 'Why did Jeremiah obey Jehovah despite his young age?'
         },
+        image: '/bible-quiz-kids/illustrations/q24.png',
         options: [
             {
                 text: { uk: 'Бо Єгова пообіцяв бути з ним', ru: 'Потому что Иегова пообещал быть с ним', en: 'Because Jehovah promised to be with him' },
@@ -1136,6 +1157,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Кто не хотел, чтобы Иеремия проповедовал?',
             en: 'Who did not want Jeremiah to preach?'
         },
+        image: '/bible-quiz-kids/illustrations/q25.png',
         options: [
             {
                 text: { uk: 'Священики', ru: 'Священники', en: 'Priests' },
@@ -1184,6 +1206,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Какой урок можно извлечь из этой истории?',
             en: 'What lesson can we take from this story?'
         },
+        image: '/bible-quiz-kids/illustrations/q26.png',
         afterReveal: {
             uk: 'Усі ці думки правильні',
             ru: 'Все эти мысли верны',
@@ -1238,6 +1261,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Иосия и Иеремия доверяли Иегове даже тогда, когда было трудно. А как ты можешь показать свое доверие сегодня?',
             en: 'Josiah and Jeremiah trusted Jehovah even when it was difficult. How can you show your trust today?'
         },
+        image: '/bible-quiz-kids/illustrations/finale.png',
         part: 'jeremiah'
     }
 ];
