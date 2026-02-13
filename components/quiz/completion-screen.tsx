@@ -14,16 +14,16 @@ interface ImageItem {
 
 const EXTERNAL_LINKS = {
     uk: [
-        { title: 'Фільм про Йосію', url: 'https://www.jw.org/finder?wtlocale=K&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
-        { title: 'Мультик про Єремію', url: 'https://www.jw.org/finder?wtlocale=K&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+        { title: 'Більше цікавого на JW.ORG', url: 'https://www.jw.org/uk/біблійні-вчення/діти/', color: 'bg-green-600 hover:bg-green-700' },
+        { title: 'Біблійні запитання', url: 'https://www.jw.org/uk/біблійні-вчення/запитання/', color: 'bg-blue-600 hover:bg-blue-700' }
     ],
     ru: [
-        { title: 'Фильм об Иосии', url: 'https://www.jw.org/finder?wtlocale=U&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
-        { title: 'Мультик об Иеремии', url: 'https://www.jw.org/finder?wtlocale=U&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+        { title: 'Больше интересного на JW.ORG', url: 'https://www.jw.org/ru/библейские-учения/дети/', color: 'bg-green-600 hover:bg-green-700' },
+        { title: 'Библейские вопросы', url: 'https://www.jw.org/ru/библейские-учения/вопросы/', color: 'bg-blue-600 hover:bg-blue-700' }
     ],
     en: [
-        { title: 'Josiah Movie', url: 'https://www.jw.org/finder?wtlocale=E&docid=1102019289&srcid=share', color: 'bg-orange-600 hover:bg-orange-700' },
-        { title: 'Jeremiah Video', url: 'https://www.jw.org/finder?wtlocale=E&docid=503000104&srcid=share', color: 'bg-blue-600 hover:bg-blue-700' }
+        { title: 'More on JW.ORG', url: 'https://www.jw.org/en/bible-teachings/children/', color: 'bg-green-600 hover:bg-green-700' },
+        { title: 'Bible Questions', url: 'https://www.jw.org/en/bible-teachings/questions/', color: 'bg-blue-600 hover:bg-blue-700' }
     ]
 };
 

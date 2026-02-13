@@ -130,12 +130,12 @@ function QuizContent() {
             </main>
 
             <a
-                href="https://github.com/kiku-jw/bible-quiz-kids"
+                href="https://github.com/kiku-jw/bible-riddles-quiz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-2 right-2 text-[8px] md:text-[10px] text-muted-foreground/20 hover:text-muted-foreground/40 transition-colors z-50 cursor-pointer"
             >
-                v4.3.31 [Interactive]
+                v5.0.0 [Bible Riddles]
             </a>
         </div>
     );

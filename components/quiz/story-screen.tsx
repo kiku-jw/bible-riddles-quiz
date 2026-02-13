@@ -20,21 +20,18 @@ const LANGUAGES = [
 ] as const;
 
 export function StoryScreen({ screen, onContinue, language, onLanguageChange }: StoryScreenProps) {
-    const bgImage = screen.bgImage || (screen.type === 'intro' ? '/bible-quiz-kids/images/intro.jpg' :
-        screen.type === 'transition' ? '/bible-quiz-kids/images/transition.jpg' : '/bible-quiz-kids/images/finale.jpg');
+    const bgImage = screen.bgImage || (screen.type === 'intro' ? '/bible-riddles-quiz/images/intro.jpg' :
+        screen.type === 'transition' ? '/bible-riddles-quiz/images/transition.jpg' : '/bible-riddles-quiz/images/finale.jpg');
 
     const illustration = screen.image;
     const isIntro = screen.type === 'intro';
 
     const getTitle = () => {
         if (screen.type === 'intro') {
-            return language === 'uk' ? 'Початок подорожі' : language === 'ru' ? 'Начало путешествия' : 'The Beginning';
+            return language === 'uk' ? 'Біблійні загадки' : language === 'ru' ? 'Библейские загадки' : 'Bible Riddles';
         }
         if (screen.type === 'transition') {
-            if (screen.part === 'jeremiah') {
-                return language === 'uk' ? 'Нова історія' : language === 'ru' ? 'Новая история' : 'New Story';
-            }
-            return language === 'uk' ? 'Час перепочити' : language === 'ru' ? 'Время отдохнуть' : 'Time to Rest';
+            return language === 'uk' ? 'Наступна загадка' : language === 'ru' ? 'Следующая загадка' : 'Next Riddle';
         }
         return language === 'uk' ? 'Ти молодець!' : language === 'ru' ? 'Ты молодец!' : 'Well Done!';
     };

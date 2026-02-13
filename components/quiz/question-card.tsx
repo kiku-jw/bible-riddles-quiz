@@ -82,6 +82,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
     const [isCorrect, setIsCorrect] = useState(false);
     const [hasAttempted, setHasAttempted] = useState(false);
     const [lastClickedIndex, setLastClickedIndex] = useState<number | null>(null);
+    const [showHint, setShowHint] = useState(false);
 
     const { playClick, playError } = useSound();
 
@@ -109,6 +110,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
         setIsCorrect(false);
         setHasAttempted(false);
         setLastClickedIndex(null);
+        setShowHint(false);
     }, [question.id]);
 
     const isSingle = question.type === 'single';
@@ -202,9 +204,9 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
     };
 
     const labels = {
-        uk: { multi: 'Обери ВСІ правильні відповіді', single: 'Обери одну правильну відповідь', next: 'Далі', retry: 'Спробувати ще', check: 'Перевірити' },
-        ru: { multi: 'Выбери ВСЕ правильные ответы', single: 'Выбери один правильный ответ', next: 'Далее', retry: 'Попробовать еще', check: 'Проверить' },
-        en: { multi: 'Choose ALL correct answers', single: 'Choose one correct answer', next: 'Next', retry: 'Try again', check: 'Check' },
+        uk: { multi: 'Обери ВСІ правильні відповіді', single: 'Обери одну правильну відповідь', next: 'Далі', retry: 'Спробувати ще', check: 'Перевірити', hint: 'Підказка' },
+        ru: { multi: 'Выбери ВСЕ правильные ответы', single: 'Выбери один правильный ответ', next: 'Далее', retry: 'Попробовать еще', check: 'Проверить', hint: 'Подсказка' },
+        en: { multi: 'Choose ALL correct answers', single: 'Choose one correct answer', next: 'Next', retry: 'Try again', check: 'Check', hint: 'Hint' },
     }[language];
 
     return (
@@ -263,6 +265,30 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                     <h2 className="text-lg md:text-xl text-foreground text-center leading-snug text-balance relative z-10 font-bold">
                         {question.question?.[language]}
                     </h2>
+
+                    {/* Hint Section */}
+                    {question.hint && (
+                        <div className="mt-3 text-center">
+                            <button
+                                onClick={() => { playClick(); setShowHint(!showHint); }}
+                                className="text-xs font-medium text-primary/60 hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
+                            >
+                                {labels.hint}
+                            </button>
+                            <AnimatePresence>
+                                {showHint && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="mt-2 text-sm text-muted-foreground italic bg-primary/5 rounded-lg p-2 border border-primary/10"
+                                    >
+                                        {question.hint[language]}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    )}
                 </div>
 
                 <div className="grid gap-2">
