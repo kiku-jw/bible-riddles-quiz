@@ -175,10 +175,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q7.png',
         options: [
-            { text: { uk: 'Іван Хреститель', ru: 'Иоанн Креститель', en: 'John the Baptist' }, isCorrect: false },
+            { text: { uk: 'Іван Хреститель', ru: 'Иоанн Креститель', en: 'John the Baptist' }, isCorrect: false, feedback: { uk: 'Він хрестив людей, а не катав їх.', ru: 'Он крестил людей, а не катал их.', en: 'He baptized people, he didn\'t give them rides.' } },
             { text: { uk: 'Молодий осел', ru: 'Молодой осел', en: 'A young donkey' }, isCorrect: true },
-            { text: { uk: 'Йосип', ru: 'Иосиф', en: 'Joseph' }, isCorrect: false },
-            { text: { uk: 'Ангел', ru: 'Ангел', en: 'An angel' }, isCorrect: false }
+            { text: { uk: 'Йосип', ru: 'Иосиф', en: 'Joseph' }, isCorrect: false, feedback: { uk: 'Він був батьком, а не транспортом.', ru: 'Он был отцом, а не транспортом.', en: 'He was a father, not a vehicle.' } },
+            { text: { uk: 'Ангел', ru: 'Ангел', en: 'An angel' }, isCorrect: false, feedback: { uk: 'Ангели літають, а Ісус в’їжджав верхи.', ru: 'Ангелы летают, а Иисус въезжал верхом.', en: 'Angels fly, but Jesus rode in.' } }
         ]
     },
     {
@@ -196,10 +196,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q8.png',
         options: [
-            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false },
+            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false, feedback: { uk: 'Він бачив світ кожен день, поки Адама не вигнали.', ru: 'Он видел свет каждый день, пока Адама не выгнали.', en: 'It saw the light every day until Adam was expelled.' } },
             { text: { uk: 'Дно Червоного моря', ru: 'Дно Красного моря', en: 'The bottom of the Red Sea' }, isCorrect: true },
-            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false },
-            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false }
+            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false, feedback: { uk: 'Вона завжди стоїть під сонцем.', ru: 'Она всегда стоит под солнцем.', en: 'It always stands under the sun.' } },
+            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false, feedback: { uk: 'Ной бачив її часто, поки вода не спала.', ru: 'Ной видел ее частенько, пока вода не спала.', en: 'Noah saw it quite often while the water was receding.' } }
         ]
     },
     {
@@ -217,10 +217,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q9.png',
         options: [
-            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false },
-            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false },
+            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false, feedback: { uk: 'Це лише "основний склад", як у футболі.', ru: 'Это только "основной состав", как в футболе.', en: 'That\'s just the "starting lineup," like in football.' } },
+            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false, feedback: { uk: 'Число нещасливе, але апостолів було більше.', ru: 'Число несчастливое, но апостолов было больше.', en: 'An unlucky number, but there were more apostles.' } },
             { text: { uk: '16', ru: '16', en: '16' }, isCorrect: true, feedback: { uk: 'Крім 12 обраних Ісусом, були також Маттій, Павло, Варнава та Ісус (як Посланець).', ru: 'Кроме 12 избранных Иисусом, были также Матфий, Павел, Варнава и Иисус (как Посланник).', en: 'Besides the 12 chosen by Jesus, there were also Matthias, Paul, Barnabas, and Jesus (as the Apostle).' } },
-            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false }
+            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: 'Це були учні, але не всі вони називалися апостолами.', ru: 'Это были ученики, но не все они назывались апостолами.', en: 'They were disciples, but not all were called apostles.' } }
         ]
     },
     {
@@ -238,10 +238,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q10.png',
         options: [
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false },
+            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Одяг ми купуємо набагато частіше.', ru: 'Одежду мы покупаем гораздо чаще.', en: 'We buy clothes much more often than that.' } },
             { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true },
-            { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false },
-            { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false }
+            { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false, feedback: { uk: 'Воно росте безкоштовно (якщо пощастить).', ru: 'Оно растет бесплатно (если повезет).', en: 'It grows for free (if you\'re lucky).' } },
+            { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false, feedback: { uk: 'Його не купиш, можна тільки купити окуляри.', ru: 'Его не купишь, можно только купить очки.', en: 'You can\'t buy it, you can only buy glasses.' } }
         ]
     },
     {
@@ -259,10 +259,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q11.png',
         options: [
-            { text: { uk: 'Саул', ru: 'Саул', en: 'Saul' }, isCorrect: false },
-            { text: { uk: 'Юда Іскаріот', ru: 'Иуда Искариот', en: 'Judas Iscariot' }, isCorrect: false },
+            { text: { uk: 'Саул', ru: 'Саул', en: 'Saul' }, isCorrect: false, feedback: { uk: 'Він помер від власного меча, але не як приклад віри.', ru: 'Он пал от собственного меча, но не как пример веры.', en: 'He fell by his own sword, but not as an example of faith.' } },
+            { text: { uk: 'Юда Іскаріот', ru: 'Иуда Искариот', en: 'Judas Iscariot' }, isCorrect: false, feedback: { uk: 'Його вчинок не був актом віри.', ru: 'Его поступок не был актом веры.', en: 'His act was not an act of faith.' } },
             { text: { uk: 'Самсон', ru: 'Самсон', en: 'Samson' }, isCorrect: true, feedback: { uk: 'Так! Він пожертвував собою заради перемоги над ворогами Бога і згаданий як приклад віри.', ru: 'Да! Он пожертвовал собой ради победы над врагами Бога и упомянут как пример веры.', en: 'Yes! He sacrificed himself to defeat God\'s enemies and is mentioned as an example of faith.' } },
-            { text: { uk: 'Ахітофел', ru: 'Ахитофел', en: 'Ahithophel' }, isCorrect: false }
+            { text: { uk: 'Ахітофел', ru: 'Ахитофел', en: 'Ahithophel' }, isCorrect: false, feedback: { uk: 'Вчинок відчаю, а не віри.', ru: 'Поступок отчаяния, а не веры.', en: 'An act of despair, not faith.' } }
         ]
     },
     {
@@ -281,9 +281,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q12.png',
         options: [
             { text: { uk: 'Йов', ru: 'Иов', en: 'Job' }, isCorrect: true },
-            { text: { uk: 'Давид', ru: 'Давид', en: 'David' }, isCorrect: false },
-            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false },
-            { text: { uk: 'Петро', ru: 'Петр', en: 'Peter' }, isCorrect: false }
+            { text: { uk: 'Давид', ru: 'Давид', en: 'David' }, isCorrect: false, feedback: { uk: 'Давид часто славив Бога у псалмах.', ru: 'Давид часто славил Бога в псалмах.', en: 'David often praised God in the psalms.' } },
+            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Він сказав, що все марнота, але день не проклинав.', ru: 'Он сказал, что всё суета, но день не проклинал.', en: 'He said everything is vanity, but he didn\'t curse the day.' } },
+            { text: { uk: 'Петро', ru: 'Петр', en: 'Peter' }, isCorrect: false, feedback: { uk: 'Він плакав, але не проклинав свій день народження.', ru: 'Он плакал, но не проклинал свой день рождения.', en: 'He cried, but he didn\'t curse his birthday.' } }
         ]
     },
     {
@@ -302,9 +302,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q13.png',
         options: [
             { text: { uk: 'Гідеон', ru: 'Гедеон', en: 'Gideon' }, isCorrect: true },
-            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false },
-            { text: { uk: 'Авраам', ru: 'Авраам', en: 'Abraham' }, isCorrect: false },
-            { text: { uk: 'Ісус Навин', ru: 'Иисус Навин', en: 'Joshua' }, isCorrect: false }
+            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Йому було наказано будувати, а не рубати чуже.', ru: 'Ему было приказано строить, а не рубить чужое.', en: 'He was commanded to build, not to cut down others\' property.' } },
+            { text: { uk: 'Авраам', ru: 'Авраам', en: 'Abraham' }, isCorrect: false, feedback: { uk: 'Він зрубав дерево, але тільки щоб принести жертву (якщо ви про Ісаака, то це не той випадок).', ru: 'Он срубил дерево, но только чтобы принести жертву (если вы про Исаака, то это не тот случай).', en: 'He cut wood for sacrifice, but that\'s a different story.' } },
+            { text: { uk: 'Ісус Навин', ru: 'Иисус Навин', en: 'Joshua' }, isCorrect: false, feedback: { uk: 'Він руйнував стіни, а не дерева.', ru: 'Он разрушал стены, а не деревья.', en: 'He demolished walls, not trees.' } }
         ]
     },
     {
@@ -322,10 +322,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q14.png',
         options: [
-            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false },
-            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false },
+            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Навіть на самій високій її не було.', ru: 'Даже на самой высокой её не было.', en: 'Even on the highest one, it wasn\'t there.' } },
+            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'На дні ковчега були тільки тварини.', ru: 'На дне ковчега были только животные.', en: 'Only animals were at the bottom of the ark.' } },
             { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало.', ru: 'Верно! Тогда Библии еще не существовало.', en: 'Correct! The Bible didn\'t exist then.' } },
-            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false }
+            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Библии — нет.', en: 'There were cabins, but no Bibles.' } }
         ]
     },
     {
@@ -343,10 +343,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q15.png',
         options: [
-            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false },
+            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Він побудував храм, а не пам’ятник собі.', ru: 'Он построил храм, а не памятник себе.', en: 'He built a temple, not a monument to himself.' } },
             { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true },
-            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false },
-            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false }
+            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Він хотів стати царем, а не пам’ятником.', ru: 'Он хотел стать царем, а не памятником.', en: 'He wanted to be king, not a monument.' } },
+            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Він не думав про пам’ятники.', ru: 'Он не думал о памятниках.', en: 'He wasn\'t thinking about monuments.' } }
         ]
     },
     {
@@ -364,10 +364,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q16.png',
         options: [
-            { text: { uk: 'Осел', ru: 'Осел', en: 'Donkey' }, isCorrect: false },
+            { text: { uk: 'Осел', ru: 'Осел', en: 'Donkey' }, isCorrect: false, feedback: { uk: 'Він говорить "Іа", якщо ви не помітили.', ru: 'Он говорит "Иа", если вы не заметили.', en: 'He says "Hee-haw," if you haven\'t noticed.' } },
             { text: { uk: 'Кінь', ru: 'Конь', en: 'Horse' }, isCorrect: true, feedback: { uk: 'Так, у книзі Йова 39:25 так описується голос бойового коня.', ru: 'Да, в книге Иова 39:25 так описывается голос боевого коня.', en: 'Yes, Job 39:25 describes the war horse\'s sound this way.' } },
-            { text: { uk: 'Бегемот', ru: 'Бегемот', en: 'Behemoth' }, isCorrect: false },
-            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false }
+            { text: { uk: 'Бегемот', ru: 'Бегемот', en: 'Behemoth' }, isCorrect: false, feedback: { uk: 'Бегемоти тільки пирхають.', ru: 'Бегемоты только фыркают.', en: 'Hippos just snort.' } },
+            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Він морське чудовисько, а не оратор.', ru: 'Он морское чудовище, а не оратор.', en: 'He\'s a sea monster, not an orator.' } }
         ]
     },
     {
@@ -385,10 +385,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q17.png',
         options: [
-            { text: { uk: 'Будинок', ru: 'Дом', en: 'House' }, isCorrect: false },
+            { text: { uk: 'Будинок', ru: 'Дом', en: 'House' }, isCorrect: false, feedback: { uk: 'Власник будинку зазвичай знає, що він у нього є.', ru: 'Владелец дома обычно знает, что он у него есть.', en: 'A house owner usually knows they have one.' } },
             { text: { uk: 'Труна (гроб)', ru: 'Гроб', en: 'Coffin' }, isCorrect: true },
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false },
-            { text: { uk: 'Ліки', ru: 'Лекарства', en: 'Medicine' }, isCorrect: false }
+            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Той, кому потрібен одяг, точно це усвідомлює.', ru: 'Тот, кому нужна одежда, точно это осознает.', en: 'Someone who needs clothes definitely knows it.' } },
+            { text: { uk: 'Ліки', ru: 'Лекарства', en: 'Medicine' }, isCorrect: false, feedback: { uk: 'Ви точно знаєте, коли вам потрібні ліки.', ru: 'Вы точно знаете, когда вам нужны лекарства.', en: 'You definitely know when you need medicine.' } }
         ]
     },
     {
@@ -408,8 +408,8 @@ export const quizData: QuizQuestion[] = [
         options: [
             { text: { uk: 'Небо', ru: 'Небо', en: 'Heaven' }, isCorrect: true },
             { text: { uk: 'Земля', ru: 'Земля', en: 'Earth' }, isCorrect: true },
-            { text: { uk: 'Сонце', ru: 'Солнце', en: 'Sun' }, isCorrect: false },
-            { text: { uk: 'Людина', ru: 'Человек', en: 'Man' }, isCorrect: false }
+            { text: { uk: 'Сонце', ru: 'Солнце', en: 'Sun' }, isCorrect: false, feedback: { uk: 'Сонце — це частина неба, але не все створене.', ru: 'Солнце — это часть неба, но не всё созданное.', en: 'The sun is part of the heavens, but not everything created.' } },
+            { text: { uk: 'Людина', ru: 'Человек', en: 'Man' }, isCorrect: false, feedback: { uk: 'Людина з’явилася пізніше, а спочатку були небо і земля.', ru: 'Человек появился позже, а вначале были небо и земля.', en: 'Man came later; in the beginning were the heavens and the earth.' } }
         ]
     },
     {
@@ -427,10 +427,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q19.png',
         options: [
-            { text: { uk: 'Ілля', ru: 'Илья', en: 'Elijah' }, isCorrect: false },
+            { text: { uk: 'Ілля', ru: 'Илья', en: 'Elijah' }, isCorrect: false, feedback: { uk: 'Він полетів на небо живим, а не помер у гілках.', ru: 'Он улетел на небо живым, а не умер в ветвях.', en: 'He went to heaven alive, he didn\'t die in the branches.' } },
             { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true },
-            { text: { uk: 'Ісая', ru: 'Исаия', en: 'Isaiah' }, isCorrect: false },
-            { text: { uk: 'Степан', ru: 'Стефан', en: 'Stephen' }, isCorrect: false }
+            { text: { uk: 'Ісая', ru: 'Исаия', en: 'Isaiah' }, isCorrect: false, feedback: { uk: 'Його шлях закінчився інакше.', ru: 'Его путь закончился иначе.', en: 'His journey ended differently.' } },
+            { text: { uk: 'Степан', ru: 'Стефан', en: 'Stephen' }, isCorrect: false, feedback: { uk: 'Він помер на землі, бачачи відкрите небо.', ru: 'Он умер на земле, видя открытое небо.', en: 'He died on earth, seeing the heavens open.' } }
         ]
     },
     {
@@ -449,9 +449,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q20.png',
         options: [
             { text: { uk: 'Лазар', ru: 'Лазарь', en: 'Lazarus' }, isCorrect: true, feedback: { uk: 'Так! Ісус воскресив його, але згодом Лазар знову помер від старості.', ru: 'Да! Иисус воскресил его, но позже Лазарь снова умер от старости.', en: 'Yes! Jesus resurrected him, but later Lazarus died again of old age.' } },
-            { text: { uk: 'Марія', ru: 'Мария', en: 'Mary' }, isCorrect: false },
-            { text: { uk: 'Іван', ru: 'Иоанн', en: 'John' }, isCorrect: false },
-            { text: { uk: 'Яків', ru: 'Иаков', en: 'James' }, isCorrect: false }
+            { text: { uk: 'Марія', ru: 'Мария', en: 'Mary' }, isCorrect: false, feedback: { uk: 'Їх було багато, але ніхто з них не вмирав двічі в такому контексті.', ru: 'Их было много, но никто из них не умирал дважды в таком контексте.', en: 'There were many, but none died twice in this context.' } },
+            { text: { uk: 'Іван', ru: 'Иоанн', en: 'John' }, isCorrect: false, feedback: { uk: 'Він дожив до глибокої старості і помер один раз.', ru: 'Он дожил до глубокой старости и умер один раз.', en: 'He lived to a ripe old age and died once.' } },
+            { text: { uk: 'Яків', ru: 'Иаков', en: 'James' }, isCorrect: false, feedback: { uk: 'Він загинув як мученик, але тільки один раз.', ru: 'Он погиб как мученик, но только один раз.', en: 'He died as a martyr, but only once.' } }
         ]
     },
     {
@@ -470,9 +470,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q21.png',
         options: [
             { text: { uk: 'Ослина щелепа', ru: 'Ослиная челюсть', en: 'Donkey\'s jawbone' }, isCorrect: true },
-            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false },
-            { text: { uk: 'Роги бика', ru: 'Рога быка', en: 'Bull\'s horns' }, isCorrect: false },
-            { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false }
+            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false, feedback: { uk: 'Самсон убив лева руками, а не його лапою тисячу чоловік.', ru: 'Самсон убил льва руками, а не его лапой тысячу человек.', en: 'Samson killed a lion with his hands, not a thousand people with its paw.' } },
+            { text: { uk: 'Роги бика', ru: 'Рога быка', en: 'Bull\'s horns' }, isCorrect: false, feedback: { uk: 'Бики тоді відпочивали.', ru: 'Быки тогда отдыхали.', en: 'The bulls were resting then.' } },
+            { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false, feedback: { uk: 'Крила допомагають літати, а не битися.', ru: 'Крылья помогают летать, а не сражаться.', en: 'Wings help you fly, not fight.' } }
         ]
     },
     {
@@ -490,10 +490,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q22.png',
         options: [
-            { text: { uk: 'Вавилон', ru: 'Вавилон', en: 'Babylon' }, isCorrect: false },
+            { text: { uk: 'Вавилон', ru: 'Вавилон', en: 'Babylon' }, isCorrect: false, feedback: { uk: 'Його будували на гордості, а не на синах.', ru: 'Его строили на гордости, а не на сыновьях.', en: 'It was built on pride, not on sons.' } },
             { text: { uk: 'Єрихон', ru: 'Иерихон', en: 'Jericho' }, isCorrect: true, feedback: { uk: 'Так, це було прокляття Ісуса Навина, яке здійснилося через сотні років.', ru: 'Да, это было проклятие Иисуса Навина, которое исполнилось спустя сотни лет.', en: 'Yes, it was Joshua\'s curse that was fulfilled hundreds of years later.' } },
-            { text: { uk: 'Ніневія', ru: 'Ниневия', en: 'Nineveh' }, isCorrect: false },
-            { text: { uk: 'Содом', ru: 'Содом', en: 'Sodom' }, isCorrect: false }
+            { text: { uk: 'Ніневія', ru: 'Ниневия', en: 'Nineveh' }, isCorrect: false, feedback: { uk: 'Там покаялися від проповіді Йони, а не будували на крові.', ru: 'Там покаялись от проповеди Ионы, а не строили на крови.', en: 'They repented at Jonah\'s preaching, they didn\'t build on blood.' } },
+            { text: { uk: 'Содом', ru: 'Содом', en: 'Sodom' }, isCorrect: false, feedback: { uk: 'Його не відбудовували, він зник у вогні.', ru: 'Его не отстраивали, он исчез в огне.', en: 'It wasn\'t rebuilt; it vanished in fire.' } }
         ]
     },
     {
@@ -511,10 +511,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q23.png',
         options: [
-            { text: { uk: 'Амінь', ru: 'Аминь', en: 'Amen' }, isCorrect: false },
+            { text: { uk: 'Амінь', ru: 'Аминь', en: 'Amen' }, isCorrect: false, feedback: { uk: 'Це слово звучить у Біблії постійно.', ru: 'Это слово звучит в Библии постоянно.', en: 'This word is heard in the Bible constantly.' } },
             { text: { uk: 'Армагеддон', ru: 'Армагеддон', en: 'Armageddon' }, isCorrect: true },
-            { text: { uk: 'Рай', ru: 'Рай', en: 'Paradise' }, isCorrect: false },
-            { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false }
+            { text: { uk: 'Рай', ru: 'Рай', en: 'Paradise' }, isCorrect: false, feedback: { uk: 'Рай згадується кілька разів (Едем, Луки 23:43 тощо).', ru: 'Рай упоминается несколько раз (Эдем, Луки 23:43 и т.д.).', en: 'Paradise is mentioned several times (Eden, Luke 23:43, etc.).' } },
+            { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false, feedback: { uk: 'Це слово зустрічається чотири рази тільки в одній главі Об’явлення.', ru: 'Это слово встречается четыре раза только в одной главе Откровения.', en: 'This word appears four times in just one chapter of Revelation.' } }
         ]
     },
     {
@@ -533,9 +533,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q24.png',
         options: [
             { text: { uk: 'Рахав', ru: 'Рахав', en: 'Rahab' }, isCorrect: true, feedback: { uk: 'Вірно! Вона стала частиною родоводу Ісуса.', ru: 'Верно! Она стала частью родословной Иисуса.', en: 'Correct! She became part of Jesus\'s lineage.' } },
-            { text: { uk: 'Єзавель', ru: 'Иезавель', en: 'Jezebel' }, isCorrect: false },
-            { text: { uk: 'Даліла', ru: 'Далида', en: 'Delilah' }, isCorrect: false },
-            { text: { uk: 'Сапфіра', ru: 'Сапфира', en: 'Sapphira' }, isCorrect: false }
+            { text: { uk: 'Єзавель', ru: 'Иезавель', en: 'Jezebel' }, isCorrect: false, feedback: { uk: 'Вона була прикладом зла, а не віри.', ru: 'Она была примером зла, а не веры.', en: 'She was an example of evil, not faith.' } },
+            { text: { uk: 'Даліла', ru: 'Далида', en: 'Delilah' }, isCorrect: false, feedback: { uk: 'Вона зрадила Самсона, а не врятувала соглядачів.', ru: 'Она предала Самсона, а не спасла соглядатаев.', en: 'She betrayed Samson, she didn\'t save the spies.' } },
+            { text: { uk: 'Сапфіра', ru: 'Сапфира', en: 'Sapphira' }, isCorrect: false, feedback: { uk: 'Її віра закінчилася на обмані.', ru: 'Её вера закончилась на обмане.', en: 'Her faith ended in deception.' } }
         ]
     },
     {
@@ -553,10 +553,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q25.png',
         options: [
-            { text: { uk: 'Каменем', ru: 'Камнем', en: 'A stone' }, isCorrect: false },
+            { text: { uk: 'Каменем', ru: 'Камнем', en: 'A stone' }, isCorrect: false, feedback: { uk: 'Навіть камінь знає, що Авель був жертвою.', ru: 'Даже камень знает, что Авель был жертвой.', en: 'Even a stone knows Abel was the victim.' } },
             { text: { uk: 'Нічим', ru: 'Ничем', en: 'Nothing' }, isCorrect: true, feedback: { uk: 'Уважно! Це Каїн убив Авеля, а не навпаки.', ru: 'Внимательно! Это Каин убил Авеля, а не наоборот.', en: 'Careful! Cain killed Abel, not the other way around.' } },
-            { text: { uk: 'Палицею', ru: 'Палкой', en: 'A stick' }, isCorrect: false },
-            { text: { uk: 'Ножем', ru: 'Ножом', en: 'A knife' }, isCorrect: false }
+            { text: { uk: 'Палицею', ru: 'Палкой', en: 'A stick' }, isCorrect: false, feedback: { uk: 'Палиці тут не допоможуть поміняти жертву з убивцею.', ru: 'Палки тут не помогут поменять жертву с убийцей.', en: 'Sticks won\'t help swap the victim with the killer here.' } },
+            { text: { uk: 'Ножем', ru: 'Ножом', en: 'A knife' }, isCorrect: false, feedback: { uk: 'Ні-і-і, читайте уважніше!', ru: 'Не-е-ет, читайте внимательнее!', en: 'No-o-o, read more carefully!' } }
         ]
     },
     {
@@ -575,9 +575,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q26.png',
         options: [
             { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: true, feedback: { uk: 'Так! Він був створений з пороху земного і доглядав за землею Едему.', ru: 'Да! Он был создан из праха земного и ухаживал за землей Эдема.', en: 'Yes! He was created from the dust of the ground and cared for the land of Eden.' } },
-            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false },
-            { text: { uk: 'Каїн', ru: 'Каин', en: 'Cain' }, isCorrect: false },
-            { text: { uk: 'Ісус', ru: 'Иисус', en: 'Jesus' }, isCorrect: false }
+            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Він рятував життя, а не землю в такому сенсі.', ru: 'Он спасал жизни, а не землю в таком смысле.', en: 'He saved lives, not the earth in that sense.' } },
+            { text: { uk: 'Каїн', ru: 'Каин', en: 'Cain' }, isCorrect: false, feedback: { uk: 'Він вбивав, а не доглядав.', ru: 'Он убивал, а не ухаживал.', en: 'He killed, he didn\'t care for.' } },
+            { text: { uk: 'Ісус', ru: 'Иисус', en: 'Jesus' }, isCorrect: false, feedback: { uk: 'Ісус — Творець землі, а не її доглядач у цьому сенсі.', ru: 'Иисус — Творец земли, а не её смотритель в этом смысле.', en: 'Jesus is the Creator of the earth, not its caretaker in this sense.' } }
         ]
     },
     {
@@ -596,9 +596,9 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q27.png',
         options: [
             { text: { uk: 'Півень', ru: 'Петух', en: 'Rooster' }, isCorrect: true, feedback: { uk: 'Так! Коли півень заспівав, Петро (Кіфа — камінь) гірко заплакав.', ru: 'Да! Когда петух пропел, Петр (Кифа — камень) горько заплакал.', en: 'Yes! When the rooster crowed, Peter (Cephas — stone) wept bitterly.' } },
-            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false },
-            { text: { uk: 'Ворон', ru: 'Ворон', en: 'Raven' }, isCorrect: false },
-            { text: { uk: 'Орел', ru: 'Орел', en: 'Eagle' }, isCorrect: false }
+            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс гілку Ною, а не сльози Петру.', ru: 'Голубь принес ветку Ною, а не слезы Петру.', en: 'The dove brought a branch to Noah, not tears to Peter.' } },
+            { text: { uk: 'Ворон', ru: 'Ворон', en: 'Raven' }, isCorrect: false, feedback: { uk: 'Ворон годував Іллю, а Петру він не допоміг.', ru: 'Ворон кормил Илью, а Петру он не помог.', en: 'The raven fed Elijah, but he didn\'t help Peter.' } },
+            { text: { uk: 'Орел', ru: 'Орел', en: 'Eagle' }, isCorrect: false, feedback: { uk: 'Орел літає високо, він не займається сльозами апостолів.', ru: 'Орел летает высоко, он не занимается слезами апостолов.', en: 'The eagle flies high; he doesn\'t deal with apostles\' tears.' } }
         ]
     },
     {
