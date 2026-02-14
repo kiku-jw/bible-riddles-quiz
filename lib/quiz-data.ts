@@ -175,10 +175,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q7.png',
         options: [
-            { text: { uk: 'Іван Хреститель', ru: 'Иоанн Креститель', en: 'John the Baptist' }, isCorrect: false, feedback: { uk: 'Він хрестив людей, а не катав їх.', ru: 'Он крестил людей, а не катал их.', en: 'He baptized people, he didn\'t give them rides.' } },
-            { text: { uk: 'Молодий осел', ru: 'Молодой осел', en: 'A young donkey' }, isCorrect: true },
-            { text: { uk: 'Йосип', ru: 'Иосиф', en: 'Joseph' }, isCorrect: false, feedback: { uk: 'Він був батьком, а не транспортом.', ru: 'Он был отцом, а не транспортом.', en: 'He was a father, not a vehicle.' } },
-            { text: { uk: 'Ангел', ru: 'Ангел', en: 'An angel' }, isCorrect: false, feedback: { uk: 'Ангели літають, а Ісус в’їжджав верхи.', ru: 'Ангелы летают, а Иисус въезжал верхом.', en: 'Angels fly, but Jesus rode in.' } }
+            { text: { uk: 'Іван Хреститель', ru: 'Иоанн Креститель', en: 'John the Baptist' }, isCorrect: false, feedback: { uk: 'Іван був у пустелі, а не на парковці в Єрусалимі. Та й верблюжа шерсть — це не сідло!', ru: 'Иоанн был в пустыне, а не на парковке в Иерусалиме. Да и верблюжья шерсть — это не седло!', en: 'John was in the wilderness, not at a parking lot in Jerusalem. And camel hair is not a saddle!' } },
+            { text: { uk: 'Молодий осел', ru: 'Молодой осел', en: 'A young donkey' }, isCorrect: true, feedback: { uk: 'Правильно! Він ніколи не возив людей, поки на нього не сів Ісус. Це був особливий "рейс"!', ru: 'Верно! Он никогда не возил людей, пока на него не сел Иисус. Это был особенный "рейс"!', en: 'Correct! He had never carried people until Jesus sat on him. It was a very special "flight"!' } },
+            { text: { uk: 'Йосип', ru: 'Иосиф', en: 'Joseph' }, isCorrect: false, feedback: { uk: 'Йосип був теслею, а не кріслом-гойдалкою для Ісуса! Уяви, як би це виглядало...', ru: 'Иосиф был плотником, а не креслом-качалкой для Иисуса! Представь, как бы это выглядело...', en: 'Joseph was a carpenter, not a rocking chair for Jesus! Imagine how that would look...' } },
+            { text: { uk: 'Ангел', ru: 'Ангел', en: 'An angel' }, isCorrect: false, feedback: { uk: 'Ангели мають крила, а Ісусу потрібен був хтось із копитами для виконання пророцтва!', ru: 'У ангелов есть крылья, а Иисусу нужен был кто-то с копытами для исполнения пророчества!', en: 'Angels have wings, but Jesus needed someone with hooves to fulfill the prophecy!' } }
         ]
     },
     {
@@ -196,10 +196,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q8.png',
         options: [
-            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false, feedback: { uk: 'Він бачив світ кожен день, поки Адама не вигнали.', ru: 'Он видел свет каждый день, пока Адама не выгнали.', en: 'It saw the light every day until Adam was expelled.' } },
-            { text: { uk: 'Дно Червоного моря', ru: 'Дно Красного моря', en: 'The bottom of the Red Sea' }, isCorrect: true },
-            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false, feedback: { uk: 'Вона завжди стоїть під сонцем.', ru: 'Она всегда стоит под солнцем.', en: 'It always stands under the sun.' } },
-            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false, feedback: { uk: 'Ной бачив її часто, поки вода не спала.', ru: 'Ной видел ее частенько, пока вода не спала.', en: 'Noah saw it quite often while the water was receding.' } }
+            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false, feedback: { uk: 'Він купався в сонячних променях щодня, поки Адама не попросили "з’їхати".', ru: 'Он купался в солнечных лучах каждый день, пока Адама не попросили "съехать".', en: 'It enjoyed sunshine every day until Adam was asked to "move out".' } },
+            { text: { uk: 'Дно Червоного моря', ru: 'Дно Красного моря', en: 'The bottom of the Red Sea' }, isCorrect: true, feedback: { uk: 'Саме так! Коли води розійшлися, сонце вперше і востаннє заглянуло в гості до морських коників.', ru: 'Именно так! Когда воды разошлись, солнце впервые и в последний раз заглянуло в гости к морским конькам.', en: 'Exactly! When the waters parted, the sun visited the seahorses for the first and last time.' } },
+            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false, feedback: { uk: 'Вона стоїть на видноті тисячі років. Сонце там — постійний гість, а не випадковий перехожий.', ru: 'Она стоит на виду тысячи лет. Солнце там — постоянный гость, а не случайный прохожий.', en: 'It has been in plain sight for thousands of years. The sun is a permanent guest there, not a passerby.' } },
+            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false, feedback: { uk: 'Верхівка гори першою висунулася з води, щоб Ной міг погрітися на сонечку. Вона бачить світ щодня!', ru: 'Верхушка горы первой высунулась из воды, чтобы Ной мог погреться на солнышке. Она видит свет каждый день!', en: 'The mountain top was the first to pop out of the water so Noah could catch some rays. It sees light every day!' } }
         ]
     },
     {
@@ -238,10 +238,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q10.png',
         options: [
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Одяг ми купуємо набагато частіше.', ru: 'Одежду мы покупаем гораздо чаще.', en: 'We buy clothes much more often than that.' } },
-            { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true },
-            { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false, feedback: { uk: 'Воно росте безкоштовно (якщо пощастить).', ru: 'Оно растет бесплатно (если повезет).', en: 'It grows for free (if you\'re lucky).' } },
-            { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false, feedback: { uk: 'Його не купиш, можна тільки купити окуляри.', ru: 'Его не купишь, можно только купить очки.', en: 'You can\'t buy it, you can only buy glasses.' } }
+            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Одяг — штука мінлива. Бог дав шкіряний одяг Адаму, а далі ми вже самі штурмуємо магазини!', ru: 'Одежда — штука переменчивая. Бог дал кожаную одежду Адаму, а дальше мы уже сами штурмуем магазины!', en: 'Clothing is changeable. God gave Adam leather clothes, and from then on we\'ve been hitting the shops!' } },
+            { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true, feedback: { uk: 'Уважно! Молочні та корінні — подарунок природи, а далі — тільки до стоматолога за новими!', ru: 'Внимательно! Молочные и коренные — подарок природы, а дальше — только к стоматологу за новыми!', en: 'Careful! Baby and permanent ones are a gift from nature, but after that, it\'s off to the dentist for new ones!' } },
+            { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false, feedback: { uk: 'Якби ми купували кожну волосину втретє, перукарі були б мільярдерами!', ru: 'Если бы мы покупали каждый волос в третий раз, парикмахеры были бы миллиардерами!', en: 'If we had to buy every single hair the third time, hairdressers would be billionaires!' } },
+            { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false, feedback: { uk: 'Зір — це талант від Творця. Купити можна окуляри, але не саму здатність бачити світ!', ru: 'Зрение — это талант от Творца. Купить можно очки, но не саму способность видеть мир!', en: 'Sight is a talent from the Creator. You can buy glasses, but not the ability to see the world itself!' } }
         ]
     },
     {
@@ -301,10 +301,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q13.png',
         options: [
-            { text: { uk: 'Гідеон', ru: 'Гедеон', en: 'Gideon' }, isCorrect: true },
-            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Йому було наказано будувати, а не рубати чуже.', ru: 'Ему было приказано строить, а не рубить чужое.', en: 'He was commanded to build, not to cut down others\' property.' } },
-            { text: { uk: 'Авраам', ru: 'Авраам', en: 'Abraham' }, isCorrect: false, feedback: { uk: 'Він зрубав дерево, але тільки щоб принести жертву (якщо ви про Ісаака, то це не той випадок).', ru: 'Он срубил дерево, но только чтобы принести жертву (если вы про Исаака, то это не тот случай).', en: 'He cut wood for sacrifice, but that\'s a different story.' } },
-            { text: { uk: 'Ісус Навин', ru: 'Иисус Навин', en: 'Joshua' }, isCorrect: false, feedback: { uk: 'Він руйнував стіни, а не дерева.', ru: 'Он разрушал стены, а не деревья.', en: 'He demolished walls, not trees.' } }
+            { text: { uk: 'Гідеон', ru: 'Гедеон', en: 'Gideon' }, isCorrect: true, feedback: { uk: 'Так! Він зрубав Ашеру (священне дерево) свого батька, бо це було правильно в очах Єгови. Справжній біблійний дроворуб!', ru: 'Да! Он срубил Ашеру (священное дерево) своего отца, потому что это было правильно в глазах Иеговы. Настоящий библейский дровосек!', en: 'Yes! He cut down his father\'s Asherah (sacred pole) because it was right in Jehovah\'s eyes. A true biblical lumberjack!' } },
+            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Ной побудував цілий ковчег, але ми сподіваємося, що він брав ліс у власному лісгоспі!', ru: 'Ной построил целый ковчег, но мы надеемся, что он брал лес в собственном лесхозе!', en: 'Noah built a whole ark, but we hope he got the timber from his own lumberyard!' } },
+            { text: { uk: 'Авраам', ru: 'Авраам', en: 'Abraham' }, isCorrect: false, feedback: { uk: 'Авраам саджав дерева, а не рубав чужі. Він був більше по садівництву та гостинності.', ru: 'Авраам сажал деревья, а не рубил чужие. Он был больше по садоводству и гостеприимству.', en: 'Abraham planted trees, he didn\'t chop down others. He was more into gardening and hospitality.' } },
+            { text: { uk: 'Ісус Навин', ru: 'Иисус Навин', en: 'Joshua' }, isCorrect: false, feedback: { uk: 'Ісус Навин боровся з велетнями та стінами, а не воював із садовими рослинами.', ru: 'Иисус Навин сражался с великанами и стенами, а не воевал с садовыми растениями.', en: 'Joshua fought giants and walls, not garden plants.' } }
         ]
     },
     {
@@ -343,10 +343,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q15.png',
         options: [
-            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Він побудував храм, а не пам’ятник собі.', ru: 'Он построил храм, а не памятник себе.', en: 'He built a temple, not a monument to himself.' } },
-            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true },
-            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Він хотів стати царем, а не пам’ятником.', ru: 'Он хотел стать царем, а не памятником.', en: 'He wanted to be king, not a monument.' } },
-            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Він не думав про пам’ятники.', ru: 'Он не думал о памятниках.', en: 'He wasn\'t thinking about monuments.' } }
+            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Соломон будував храни та палаци, але він був занадто мудрий, щоб перетворювати себе на статую!', ru: 'Соломон строил храмы и дворцы, но он был слишком мудрым, чтобы превращать себя в статую!', en: 'Solomon built temples and palaces, but he was too wise to turn himself into a statue!' } },
+            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так! Він поставив собі пам’ятник, бо не мав синів. Тепер ми знаємо про нього завдяки цій загадці!', ru: 'Да! Он поставил себе памятник, так как у него не было сыновей. Теперь мы знаем о нем благодаря этой загадке!', en: 'Yes! He set up a pillar for himself because he had no son. Now we know about him thanks to this riddle!' } },
+            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Адонія хотів приміряти корону, а не позувати для скульптора!', ru: 'Адония хотел примерить корону, а не позировать для скульптора!', en: 'Adonijah wanted to try on the crown, not pose for a sculptor!' } },
+            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Амнон думав про зовсім інші речі, пам’ятники його не цікавили.', ru: 'Амнон думал о совсем других вещах, памятники его не интересовали.', en: 'Amnon had other things on his mind; he wasn\'t interested in monuments.' } }
         ]
     },
     {
@@ -385,10 +385,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q17.png',
         options: [
-            { text: { uk: 'Будинок', ru: 'Дом', en: 'House' }, isCorrect: false, feedback: { uk: 'Власник будинку зазвичай знає, що він у нього є.', ru: 'Владелец дома обычно знает, что он у него есть.', en: 'A house owner usually knows they have one.' } },
-            { text: { uk: 'Труна (гроб)', ru: 'Гроб', en: 'Coffin' }, isCorrect: true },
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Той, кому потрібен одяг, точно це усвідомлює.', ru: 'Тот, кому нужна одежда, точно это осознает.', en: 'Someone who needs clothes definitely knows it.' } },
-            { text: { uk: 'Ліки', ru: 'Лекарства', en: 'Medicine' }, isCorrect: false, feedback: { uk: 'Ви точно знаєте, коли вам потрібні ліки.', ru: 'Вы точно знаете, когда вам нужны лекарства.', en: 'You definitely know when you need medicine.' } }
+            { text: { uk: 'Будинок', ru: 'Дом', en: 'House' }, isCorrect: false, feedback: { uk: 'Якщо ти купив будинок і не знаєш про це — можливо, пора перевірити пошту? Чи це такий великий особняк?', ru: 'Если ты купил дом и не знаешь об этом — возможно, пора проверить почту? Или это такой большой особняк?', en: 'If you bought a house and don\'t know it, maybe you should check your mail? Or is it just a very big mansion?' } },
+            { text: { uk: 'Труна (гроб)', ru: 'Гроб', en: 'Coffin' }, isCorrect: true, feedback: { uk: 'Бінго! Майстер робить на продаж, покупець бере не для себе, а користувач вже нічого не скаже...', ru: 'Бинго! Мастер делает на продажу, покупатель берет не для себя, а пользователь уже ничего не скажет...', en: 'Bingo! The maker makes to sell, the buyer buys for someone else, and the user has nothing to say...' } },
+            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Якщо тобі потрібен одяг, ти зазвичай це помічаєш... особливо взимку!', ru: 'Если тебе нужна одежда, ты обычно это замечаешь... особенно зимой!', en: 'If you need clothes, you usually notice... especially in winter!' } },
+            { text: { uk: 'Ліки', ru: 'Лекарства', en: 'Medicine' }, isCorrect: false, feedback: { uk: 'Той, кому потрібні ліки, зазвичай мріє про них більше за все на світі. Тут без секретів!', ru: 'Тот, кому нужны лекарства, обычно мечтает о них больше всего на свете. Тут без секретов!', en: 'Someone who needs medicine usually dreams of it more than anything. No secrets here!' } }
         ]
     },
     {
@@ -469,10 +469,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q21.png',
         options: [
-            { text: { uk: 'Ослина щелепа', ru: 'Ослиная челюсть', en: 'Donkey\'s jawbone' }, isCorrect: true },
-            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false, feedback: { uk: 'Самсон убив лева руками, а не його лапою тисячу чоловік.', ru: 'Самсон убил льва руками, а не его лапой тысячу человек.', en: 'Samson killed a lion with his hands, not a thousand people with its paw.' } },
-            { text: { uk: 'Роги бика', ru: 'Рога быка', en: 'Bull\'s horns' }, isCorrect: false, feedback: { uk: 'Бики тоді відпочивали.', ru: 'Быки тогда отдыхали.', en: 'The bulls were resting then.' } },
-            { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false, feedback: { uk: 'Крила допомагають літати, а не битися.', ru: 'Крылья помогают летать, а не сражаться.', en: 'Wings help you fly, not fight.' } }
+            { text: { uk: 'Ослина щелепа', ru: 'Ослиная челюсть', en: 'Donkey\'s jawbone' }, isCorrect: true, feedback: { uk: 'Саме так! Самсон переміг тисячу ворогів цією незвичайною зброєю. Ослику це б не сподобалося!', ru: 'Именно так! Самсон победил тысячу врагов этим необычным оружием. Ослику бы это не понравилось!', en: 'Exactly! Samson defeated a thousand enemies with this unusual weapon. The donkey wouldn\'t have liked that!' } },
+            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false, feedback: { uk: 'Лапа лева — грізна річ, але Самсон волів використовувати "підручні" засоби від осликів.', ru: 'Лапа льва — грозная штука, но Самсон предпочитал использовать "подручные" средства от осликов.', en: 'A lion\'s paw is fearsome, but Samson preferred to use "handy" items from donkeys.' } },
+            { text: { uk: 'Роги бика', ru: 'Рога быка', en: 'Bull\'s horns' }, isCorrect: false, feedback: { uk: 'Роги — це для биків, а Самсон був майстром імпровізації!', ru: 'Рога — это для быков, а Самсон был мастером импровизации!', en: 'Horns are for bulls, but Samson was a master of improvisation!' } },
+            { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false, feedback: { uk: 'Уяви Самсона, що розмахує орлиними крилами в бою... Це було б гарно, але неефективно!', ru: 'Представь Самсона, размахивающего орлиными крыльями в бою... Это было бы красиво, но неэффективно!', en: 'Imagine Samson waving eagle wings in battle... It would be beautiful, but not very effective!' } }
         ]
     },
     {
@@ -511,10 +511,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q23.png',
         options: [
-            { text: { uk: 'Амінь', ru: 'Аминь', en: 'Amen' }, isCorrect: false, feedback: { uk: 'Це слово звучить у Біблії постійно.', ru: 'Это слово звучит в Библии постоянно.', en: 'This word is heard in the Bible constantly.' } },
-            { text: { uk: 'Армагеддон', ru: 'Армагеддон', en: 'Armageddon' }, isCorrect: true, feedback: { uk: 'Правильно! Це єдине місце в Біблії, де вживається це слово.', ru: 'Правильно! Это единственное место в Библии, где употребляется это слово.', en: 'Correct! This is the only place in the Bible where this word is used.' } },
-            { text: { uk: 'Рай', ru: 'Рай', en: 'Paradise' }, isCorrect: false, feedback: { uk: 'Рай згадується кілька разів (Едем, Луки 23:43 тощо).', ru: 'Рай упоминается несколько раз (Эдем, Луки 23:43 и т.д.).', en: 'Paradise is mentioned several times (Eden, Luke 23:43, etc.).' } },
-            { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false, feedback: { uk: 'Це слово зустрічається чотири рази тільки в одній главі Об’явлення.', ru: 'Это слово встречается четыре раза только в одной главе Откровения.', en: 'This word appears four times in just one chapter of Revelation.' } }
+            { text: { uk: 'Амінь', ru: 'Аминь', en: 'Amen' }, isCorrect: false, feedback: { uk: 'Це слово звучить у Біблії на кожній другій сторінці. Ми його вчимо першим!', ru: 'Это слово звучит в Библии на каждой второй странице. Мы его учим первым!', en: 'This word is on every other page of the Bible. It\'s the first one we learn!' } },
+            { text: { uk: 'Армагеддон', ru: 'Армагеддон', en: 'Armageddon' }, isCorrect: true, feedback: { uk: 'Вірно! Багато хто боїться цього слова, але в Біблії воно — як рідкісний діамант, лише один раз!', ru: 'Верно! Многие боятся этого слова, но в Библии оно — как редкий бриллиант, всего один раз!', en: 'Correct! Many people are afraid of this word, but in the Bible, it\'s like a rare diamond—it appears only once!' } },
+            { text: { uk: 'Рай', ru: 'Рай', en: 'Paradise' }, isCorrect: false, feedback: { uk: 'Рай — це круто, і Біблія любить про нього нагадувати. Одним разом не обійшлося!', ru: 'Рай — это круто, и Библия любит о нем напоминать. Одним разом не обошлось!', en: 'Paradise is great, and the Bible loves to remind us about it. Once wasn\'t enough!' } },
+            { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false, feedback: { uk: 'Це слово звучить як головна пісня всього всесвіту. Одного разу було б замало для такого славослів’я!', ru: 'Это слово звучит как главная песня всей вселенной. Одного раза было бы мало для такого славословия!', en: 'This word sounds like the main song of the whole universe. Once would definitely be too little for such praise!' } }
         ]
     },
     {

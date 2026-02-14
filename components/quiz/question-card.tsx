@@ -9,66 +9,6 @@ import { useSound } from './sound-manager';
 import confetti from 'canvas-confetti';
 import Image from 'next/image';
 
-const CORRECT_PHRASES = {
-    uk: [
-        'Чудово! Ти молодець!',
-        'Правильно! Так тримати!',
-        'Відмінно! Ти добре знаєш цю історію!',
-        'Браво! Ти справжній знавець!',
-        'Супер! Продовжуй у тому ж дусі!',
-        'Вау! Ти дуже уважний!',
-        'Точно! Ти добре запам\'ятав!',
-        'Прекрасно! Єгова радіє твоїй старанності!',
-    ],
-    ru: [
-        'Отлично! Ты молодец!',
-        'Правильно! Так держать!',
-        'Прекрасно! Ты отлично знаешь эту историю!',
-        'Браво! Ты настоящий знаток!',
-        'Супер! Продолжай в том же духе!',
-        'Вау! Ты очень внимательный!',
-        'Точно! Ты хорошо запомнил!',
-        'Прекрасно! Иегова радуется твоему старанию!',
-    ],
-    en: [
-        'Great job! You are doing well!',
-        'Correct! Keep it up!',
-        'Excellent! You know this story well!',
-        'Bravo! You are a true expert!',
-        'Super! Continue in the same spirit!',
-        'Wow! You are very observant!',
-        'Exactly! You remembered well!',
-        'Wonderful! Jehovah rejoices in your diligence!',
-    ]
-};
-
-const TRY_AGAIN_PHRASES = {
-    uk: [
-        'Майже вдалося! Але ні 😜',
-        'Гарна спроба, але Біблія каже інакше! Подумай ще трішки 🤔',
-        'Ти на правильному шляху, але звернув не туди! Ще разок 🔄',
-        'Не здавайся! Самсон би не здався! (Хоча він теж помилявся) 💪',
-        'Ось-ось знайдеш! Твій "акварельний" розум впорається! 🎨',
-        'Продовжуй шукати! Навіть загублену драхму знайшли! 🪙',
-    ],
-    ru: [
-        'Почти получилось! Но нет 😜',
-        'Хорошая попытка, но Библия говорит иначе! Подумай еще немного 🤔',
-        'Ты на правильном пути, но свернул не туда! Еще разок 🔄',
-        'Не сдавайся! Самсон бы не сдался! (Хотя он тоже ошибался) 💪',
-        'Вот-вот найдешь! Твой "акварельный" мозг справится! 🎨',
-        'Продолжай искать! Даже потерянную драхму нашли! 🪙',
-    ],
-    en: [
-        'Almost there! But not quite 😜',
-        'Good attempt, but the Bible says otherwise! Think a bit more 🤔',
-        'You\'re on the right track, but took a wrong turn! One more time 🔄',
-        'Don\'t give up! Samson wouldn\'t! (Though he made mistakes too) 💪',
-        'You\'re about to find it! Your "watercolor" mind can do it! 🎨',
-        'Keep searching! Even the lost coin was found! 🪙',
-    ]
-};
-
 interface QuestionCardProps {
     question: QuizQuestion;
     onAnswer: (isCorrect: boolean) => void;
@@ -93,16 +33,8 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
             const optionFeedback = question.options?.[lastClickedIndex]?.feedback?.[language];
             if (optionFeedback) return optionFeedback;
         }
-
-        // Fallback to random phrases if no specific feedback
-        if (isCorrect) {
-            const phrases = CORRECT_PHRASES[language];
-            return phrases[Math.floor(Math.random() * phrases.length)];
-        } else {
-            const phrases = TRY_AGAIN_PHRASES[language];
-            return phrases[Math.floor(Math.random() * phrases.length)];
-        }
-    }, [question.id, language, showResult, isCorrect, lastClickedIndex]);
+        return '';
+    }, [question.id, language, showResult, lastClickedIndex]);
 
     useEffect(() => {
         setSelectedOptions([]);
