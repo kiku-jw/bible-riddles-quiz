@@ -50,7 +50,7 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q1.png',
         options: [
             { text: { uk: 'По одній парі', ru: 'По одной паре', en: 'One pair each' }, isCorrect: false, feedback: { uk: 'Мойсей був зайнятий заповідями на Синаї, а не будівництвом плавучих зоопарків!', ru: 'Моисей был занят заповедями на Синае, а не строительством плавучих зоопарков!', en: 'Moses was busy with the commandments on Sinai, not building floating zoos!' } },
-            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false, feedback: { uk: 'Навіть якби тварин було сім пар, капітаном там був Ной, а не Мойсей. Переплутати їх — це як назвати сонце місяцем!', ru: 'Даже если бы животных было семь пар, капитаном там был Ной, а не Моисей. Перепутать их — это как назвать солнце луной!', en: 'Even if there were seven pairs, the captain was Noah, not Moses. Confusing them is like calling the sun the moon!' } },
+            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false, feedback: { uk: 'Навіть якби тварин було сім пар, цей капітан був майстром заповідей на горі, а не мореплавцем у шторм!', ru: 'Даже если бы животных было семь пар, этот капитан был мастером заповедей на горе, а не мореплавателем в шторм!', en: 'Even if there were seven pairs, this captain was a master of commandments on a mountain, not a sailor in a storm!' } },
             { text: { uk: 'Жодної', ru: 'Ни одной', en: 'None' }, isCorrect: true, feedback: { uk: 'Бінго! Ковчег будував Ной, а Мойсей у цей час ще навіть не народився. Уважність — твоя суперсила!', ru: 'Бинго! Ковчег строил Ной, а Моисей в это время еще даже не родился. Внимательность — твоя суперсила!', en: 'Bingo! Noah built the ark, and Moses wasn\'t even born yet. Attentiveness is your superpower!' } },
             { text: { uk: 'Всіх тварин світу', ru: 'Всех животных мира', en: 'All animals of the world' }, isCorrect: false, feedback: { uk: 'Мойсей розділяв море, а не збирав пасажирів на круїз. Це був би дуже довгий квитковий контроль!', ru: 'Моисей разделял море, а не собирал пассажиров на круиз. Это был бы очень длинный билетный контроль!', en: 'Moses parted the sea, he didn\'t collect passengers for a cruise. That would be one long ticket check!' } }
         ]
@@ -70,10 +70,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q2.png',
         options: [
-            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука, а не сіль!', ru: 'Ева любила яблоки, а не соль!', en: 'Eve liked apples, not salt!' } },
+            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука та фігове листя, а не відділ бакалії!', ru: 'Ева любила яблоки и фиговые листья, а не отдел бакалеи!', en: 'Eve liked apples and fig leaves, not the grocery aisle!' } },
             { text: { uk: 'Дружина Лота', ru: 'Жена Лота', en: 'Lot\'s wife' }, isCorrect: true, feedback: { uk: 'Так! Вона стала соляним стовпом.', ru: 'Да! Она стала соляным столпом.', en: 'Yes! She became a pillar of salt.' } },
-            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false, feedback: { uk: 'Сарра була принцесою, вона віддавала перевагу прикрасам, а не сільничкам.', ru: 'Сарра была принцессой, она предпочитала украшения, а не солонки.', en: 'Sarah was a princess, she preferred jewels over salt shakers.' } },
-            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false, feedback: { uk: 'Ревека напувала верблюдів, а не перетворювалася на мінерал!', ru: 'Ревекка поила верблюдов, а не превращалась в минерал!', en: 'Rebekah watered camels, she didn\'t turn into a mineral!' } }
+            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false, feedback: { uk: 'Сарра була принцесою, вона віддавала перевагу прикрасам, а не кулінарним спеціям!', ru: 'Сарра была принцессой, она предпочитала украшения, а не кулинарные специи!', en: 'Sarah was a princess, she preferred jewelry over culinary spices!' } },
+            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false, feedback: { uk: 'Ревека напувала верблюдів, а не перетворювалася на товар для кухні!', ru: 'Ревекка поила верблюдов, а не превращалась в товар для кухни!', en: 'Rebekah watered camels, she didn\'t turn into a kitchen commodity!' } }
         ]
     },
     {
@@ -91,10 +91,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q3.png',
         options: [
-            { text: { uk: 'Дерев’яним', ru: 'Деревянным', en: 'Wooden' }, isCorrect: false, feedback: { uk: 'Технічно правильно, але це не та «каверзна» відповідь, яку ми шукаємо! Подумай про вологість.', ru: 'Технически правильно, но это не тот «каверзный» ответ, который мы ищем! Подумай о влажности.', en: 'Technically correct, but not the tricky answer we\'re looking for! Think about moisture.' } },
-            { text: { uk: 'Великим', ru: 'Большим', en: 'Big' }, isCorrect: false, feedback: { uk: 'Він був величезний, але все одно тримався на поверхні води... переважно.', ru: 'Он был огромным, но все равно держался на поверхности воды... в основном.', en: 'It was huge, but it still stayed on top of the water... mostly.' } },
-            { text: { uk: 'Мокрим', ru: 'Мокрым', en: 'Wet' }, isCorrect: true, feedback: { uk: 'Вірно! Під час такого дощу сухо в ковчегу не було нікому.', ru: 'Верно! Во время такого дождя сухо в ковчеге не было никому.', en: 'Correct! During such rain, no one in the ark stayed dry.' } },
-            { text: { uk: 'Надійним', ru: 'Надежным', en: 'Reliable' }, isCorrect: false, feedback: { uk: 'Він пережив найбільший шторм в історії, але «мокрий» — ще точніше!', ru: 'Он пережил величайший шторм в истории, но «мокрый» — еще точнее!', en: 'It survived the biggest storm in history, but "wet" is even more accurate!' } }
+            { text: { uk: 'Підводним', ru: 'Подводным', en: 'Submarine' }, isCorrect: false, feedback: { uk: 'Ной не мав перископа, а жирафам би дуже не сподобалося дихати через трубку!', ru: 'У Ноя не было перископа, а жирафам бы очень не понравилось дышать через трубку!', en: 'Noah didn\'t have a periscope, and the giraffes wouldn\'t have liked breathing through a snorkel!' } },
+            { text: { uk: 'Космічним', ru: 'Космическим', en: 'Spacecraft' }, isCorrect: false, feedback: { uk: 'Ной був моряком, а не астронавтом. Ковчег був великим, але не мав двигунів для польоту до зірок!', ru: 'Ной был моряком, а не астронавтом. Ковчег был большим, но у него не было двигателей для полета к звездам!', en: 'Noah was a sailor, not an astronaut. The ark was big, but it didn\'t have engines to fly to the stars!' } },
+            { text: { uk: 'Мокрим', ru: 'Мокрым', en: 'Wet' }, isCorrect: true, feedback: { uk: 'Бінго! Коли дощ іде 40 днів, навіть найнадійніший дах не врятує від вологості.', ru: 'Бинго! Когда дождь идет 40 дней, даже самая надежная крыша не спасет от влажности.', en: 'Bingo! When it rains for 40 days, even the sturdiest roof won\'t keep the dampness out.' } },
+            { text: { uk: 'Надувним', ru: 'Надувным', en: 'Inflatable' }, isCorrect: false, feedback: { uk: 'Уяви слонів та левів на надувному човні... Він би лопнув швидше, ніж упала перша крапля дощу!', ru: 'Представь слонов и львов на надувной лодке... Она бы лопнула быстрее, чем упала первая капля дождя!', en: 'Imagine elephants and lions on an inflatable boat... It would have popped faster than the first raindrop fell!' } }
         ]
     },
     {
@@ -217,10 +217,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q9.png',
         options: [
-            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false, feedback: { uk: 'Це лише "основний склад", як у футболі.', ru: 'Это только "основной состав", как в футболе.', en: 'That\'s just the "starting lineup," like in football.' } },
-            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false, feedback: { uk: 'Число нещасливе, але апостолів було більше.', ru: 'Число несчастливое, но апостолов было больше.', en: 'An unlucky number, but there were more apostles.' } },
+            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false, feedback: { uk: 'Це лише початок списку! Біблія знає набагато більше тих, хто носив це почесне звання.', ru: 'Это только начало списка! Библия знает гораздо больше тех, кто носил это почетное звание.', en: 'That\'s just the start of the list! The Bible knows many more who bore this honorable title.' } },
+            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false, feedback: { uk: 'Трішки більше... Число 13 було б занадто простим для такої глибокої книги!', ru: 'Чуть-чуть больше... Число 13 было бы слишком простым для такой глубокой книги!', en: 'A little more... The number 13 would be too simple for such a profound book!' } },
             { text: { uk: '16', ru: '16', en: '16' }, isCorrect: true, feedback: { uk: 'Крім 12 обраних Ісусом, були також Маттій, Павло, Варнава та Ісус (як Посланець).', ru: 'Кроме 12 избранных Иисусом, были также Матфий, Павел, Варнава и Иисус (как Посланник).', en: 'Besides the 12 chosen by Jesus, there were also Matthias, Paul, Barnabas, and Jesus (as the Apostle).' } },
-            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: 'Це були учні, але не всі вони називалися апостолами.', ru: 'Это были ученики, но не все они назывались апостолами.', en: 'They were disciples, but not all were called apostles.' } }
+            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: 'Це були учні, але не всі вони називалися апостолами.', ru: 'Это были учні, але не всі вони називалися апостолами.', en: 'They were disciples, but not all were called apostles.' } }
         ]
     },
     {
@@ -322,10 +322,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q14.png',
         options: [
-            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Навіть на самій високій її не було.', ru: 'Даже на самой высокой её не было.', en: 'Even on the highest one, it wasn\'t there.' } },
-            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'На дні ковчега були тільки тварини.', ru: 'На дне ковчега были только животные.', en: 'Only animals were at the bottom of the ark.' } },
-            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало.', ru: 'Верно! Тогда Библии еще не существовало.', en: 'Correct! The Bible didn\'t exist then.' } },
-            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Библии — нет.', en: 'There were cabins, but no Bibles.' } }
+            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Там були пташки, але точно не книги!', ru: 'Там были птицы, но точно не книги!', en: 'There were birds there, but definitely no books!' } },
+            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'Там панував слонячий тупіт, а не тиша бібліотеки.', ru: 'Там царил слоновий топот, а не тишина библиотеки.', en: 'There was the thumping of elephants there, not the silence of a library.' } },
+            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало.', ru: 'Верно! Тогда Біблії ще не існувало.', en: 'Correct! The Bible didn\'t exist then.' } },
+            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Біблії — ні.', en: 'There were cabins, but no Bibles.' } }
         ]
     },
     {
@@ -470,7 +470,7 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q21.png',
         options: [
             { text: { uk: 'Ослина щелепа', ru: 'Ослиная челюсть', en: 'Donkey\'s jawbone' }, isCorrect: true, feedback: { uk: 'Саме так! Самсон переміг тисячу ворогів цією незвичайною зброєю. Ослику це б не сподобалося!', ru: 'Именно так! Самсон победил тысячу врагов этим необычным оружием. Ослику бы это не понравилось!', en: 'Exactly! Samson defeated a thousand enemies with this unusual weapon. The donkey wouldn\'t have liked that!' } },
-            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false, feedback: { uk: 'Лапа лева — грізна річ, але Самсон волів використовувати "підручні" засоби від осликів.', ru: 'Лапа льва — грозная штука, но Самсон предпочитал использовать "подручные" средства от осликов.', en: 'A lion\'s paw is fearsome, but Samson preferred to use "handy" items from donkeys.' } },
+            { text: { uk: 'Левова лапа', ru: 'Львиная лапа', en: 'Lion\'s paw' }, isCorrect: false, feedback: { uk: 'Лапа лева — грізна річ, але Самсон волів використовувати те, що буквально валялося під ногами на дорозі!', ru: 'Лапа льва — грозная штука, но Самсон предпочитал использовать то, что буквально валялось под ногами на дороге!', en: 'A lion\'s paw is fearsome, but Samson preferred to use what was literally lying under his feet on the road!' } },
             { text: { uk: 'Роги бика', ru: 'Рога быка', en: 'Bull\'s horns' }, isCorrect: false, feedback: { uk: 'Роги — це для биків, а Самсон був майстром імпровізації!', ru: 'Рога — это для быков, а Самсон был мастером импровизации!', en: 'Horns are for bulls, but Samson was a master of improvisation!' } },
             { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false, feedback: { uk: 'Уяви Самсона, що розмахує орлиними крилами в бою... Це було б гарно, але неефективно!', ru: 'Представь Самсона, размахивающего орлиными крыльями в бою... Это было бы красиво, но неэффективно!', en: 'Imagine Samson waving eagle wings in battle... It would be beautiful, but not very effective!' } }
         ]
