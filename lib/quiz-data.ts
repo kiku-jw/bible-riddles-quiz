@@ -49,10 +49,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q1.png',
         options: [
-            { text: { uk: 'По одній парі', ru: 'По одной паре', en: 'One pair each' }, isCorrect: false },
-            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false },
+            { text: { uk: 'По одній парі', ru: 'По одной паре', en: 'One pair each' }, isCorrect: false, feedback: { uk: 'Мойсей був зайнятий заповідями, йому було не до зоопарку!', ru: 'Моисей был занят заповедями, ему было не до зоопарка!', en: 'Moses was busy with the commandments, he didn\'t have time for a zoo!' } },
+            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false, feedback: { uk: 'Навіть якби їх було сім, вони були б у Ноя, а не у Мойсея!', ru: 'Даже если бы их было семь, они были бы у Ноя, а не у Моисея!', en: 'Even if there were seven, they would be on Noah\'s boat, not Moses\'s!' } },
             { text: { uk: 'Жодної', ru: 'Ни одной', en: 'None' }, isCorrect: true, feedback: { uk: 'Правильно! Ковчег будував Ной, а не Мойсей.', ru: 'Верно! Ковчег строил Ной, а не Моисей.', en: 'Correct! Noah built the ark, not Moses.' } },
-            { text: { uk: 'Всіх тварин світу', ru: 'Всех животных мира', en: 'All animals of the world' }, isCorrect: false }
+            { text: { uk: 'Всіх тварин світу', ru: 'Всех животных мира', en: 'All animals of the world' }, isCorrect: false, feedback: { uk: 'Це занадто багато квитків для перевірки! Та й капітан не той.', ru: 'Это слишком много билетов для проверки! Да и капитан не тот.', en: 'That\'s too many tickets to check! And wrong captain.' } }
         ]
     },
     {
@@ -70,10 +70,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q2.png',
         options: [
-            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false },
+            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука, а не сіль!', ru: 'Ева любила яблоки, а не соль!', en: 'Eve liked apples, not salt!' } },
             { text: { uk: 'Дружина Лота', ru: 'Жена Лота', en: 'Lot\'s wife' }, isCorrect: true, feedback: { uk: 'Так! Вона стала соляним стовпом.', ru: 'Да! Она стала соляным столпом.', en: 'Yes! She became a pillar of salt.' } },
-            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false },
-            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false }
+            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false, feedback: { uk: 'Сарра була принцесою, вона віддавала перевагу прикрасам, а не сільничкам.', ru: 'Сарра была принцессой, она предпочитала украшения, а не солонки.', en: 'Sarah was a princess, she preferred jewels over salt shakers.' } },
+            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false, feedback: { uk: 'Ревека напувала верблюдів, а не перетворювалася на мінерал!', ru: 'Ревекка поила верблюдов, а не превращалась в минерал!', en: 'Rebekah watered camels, she didn\'t turn into a mineral!' } }
         ]
     },
     {
@@ -91,10 +91,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q3.png',
         options: [
-            { text: { uk: 'Дерев’яним', ru: 'Деревянным', en: 'Wooden' }, isCorrect: false },
-            { text: { uk: 'Великим', ru: 'Большим', en: 'Big' }, isCorrect: false },
-            { text: { uk: 'Мокрим', ru: 'Мокрым', en: 'Wet' }, isCorrect: true },
-            { text: { uk: 'Надійним', ru: 'Надежным', en: 'Reliable' }, isCorrect: false }
+            { text: { uk: 'Дерев’яним', ru: 'Деревянным', en: 'Wooden' }, isCorrect: false, feedback: { uk: 'Технічно правильно, але це не та «каверзна» відповідь, яку ми шукаємо! Подумай про вологість.', ru: 'Технически правильно, но это не тот «каверзный» ответ, который мы ищем! Подумай о влажности.', en: 'Technically correct, but not the tricky answer we\'re looking for! Think about moisture.' } },
+            { text: { uk: 'Великим', ru: 'Большим', en: 'Big' }, isCorrect: false, feedback: { uk: 'Він був величезний, але все одно тримався на поверхні води... переважно.', ru: 'Он был огромным, но все равно держался на поверхности воды... в основном.', en: 'It was huge, but it still stayed on top of the water... mostly.' } },
+            { text: { uk: 'Мокрим', ru: 'Мокрым', en: 'Wet' }, isCorrect: true, feedback: { uk: 'Вірно! Під час такого дощу сухо в ковчегу не було нікому.', ru: 'Верно! Во время такого дождя сухо в ковчеге не было никому.', en: 'Correct! During such rain, no one in the ark stayed dry.' } },
+            { text: { uk: 'Надійним', ru: 'Надежным', en: 'Reliable' }, isCorrect: false, feedback: { uk: 'Він пережив найбільший шторм в історії, але «мокрий» — ще точніше!', ru: 'Он пережил величайший шторм в истории, но «мокрый» — еще точнее!', en: 'It survived the biggest storm in history, but "wet" is even more accurate!' } }
         ]
     },
     {
@@ -112,10 +112,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q4.png',
         options: [
-            { text: { uk: 'На першому', ru: 'На первом', en: 'On the first' }, isCorrect: false },
-            { text: { uk: 'На третьому', ru: 'На третьем', en: 'On the third' }, isCorrect: false },
+            { text: { uk: 'На першому', ru: 'На первом', en: 'On the first' }, isCorrect: false, feedback: { uk: 'Їм би було там затісно! Вони віддавали перевагу відкритому морю.', ru: 'Им бы было там тесновато! Они предпочитали открытое море.', en: 'They would have been quite cramped there! They preferred the open sea.' } },
+            { text: { uk: 'На третьому', ru: 'На третьем', en: 'On the third' }, isCorrect: false, feedback: { uk: 'Пентхаус для золотих рибок? Весело, але не по-біблійному.', ru: 'Пентхаус для золотых рыбок? Весело, но не по-библейски.', en: 'A penthouse for goldfish? Fun, but not biblical.' } },
             { text: { uk: 'Їх там не було', ru: 'Их там не было', en: 'They weren\'t there' }, isCorrect: true, feedback: { uk: 'Риби плавали у воді навколо ковчега!', ru: 'Рыбы плавали в воде вокруг ковчега!', en: 'The fish were swimming in the water around the ark!' } },
-            { text: { uk: 'В акваріумах', ru: 'В аквариумах', en: 'In aquariums' }, isCorrect: false }
+            { text: { uk: 'В акваріумах', ru: 'В аквариумах', en: 'In aquariums' }, isCorrect: false, feedback: { uk: 'У Ноя не було часу мити скло в акваріумах з усіма цими тваринами!', ru: 'У Ноя не было времени мыть стекла в аквариумах со всеми этими животными!', en: 'Noah didn\'t have time to clean aquariums with all those animals around!' } }
         ]
     },
     {
@@ -133,10 +133,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q5.png',
         options: [
-            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false },
+            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але Бог першим зробив «операцію» в Едемі!', ru: 'Он был врачом, но Бог первым сделал «операцию» в Эдеме!', en: 'He was a doctor, but God was the first to perform "surgery" in Eden!' } },
             { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву.', ru: 'Да, Он взял ребро Адама, чтобы создать Еву.', en: 'Yes, He took Adam\'s rib to create Eve.' } },
-            { text: { uk: 'Мойсей', ru: 'Моисей', en: 'Moses' }, isCorrect: false },
-            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: false }
+            { text: { uk: 'Мойсей', ru: 'Моисей', en: 'Moses' }, isCorrect: false, feedback: { uk: 'Він робив багато чудес, але не першу операцію.', ru: 'Он совершал много чудес, но не первую операцию.', en: 'He performed many signs, but not the first surgery.' } },
+            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: false, feedback: { uk: 'Адам був пацієнтом, а не лікарем!', ru: 'Адам был пациентом, а не врачом!', en: 'Adam was the patient, not the doctor!' } }
         ]
     },
     {
@@ -154,10 +154,10 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q6.png',
         options: [
-            { text: { uk: 'Змій', ru: 'Змей', en: 'Serpent' }, isCorrect: true },
-            { text: { uk: 'Лев', ru: 'Лев', en: 'Lion' }, isCorrect: false },
-            { text: { uk: 'Ослиця', ru: 'Ослица', en: 'Donkey' }, isCorrect: true },
-            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false }
+            { text: { uk: 'Змій', ru: 'Змей', en: 'Serpent' }, isCorrect: true, feedback: { uk: 'Так, в Едемі змій заговорив першим.', ru: 'Да, в Эдеме змей заговорил первым.', en: 'Yes, the serpent spoke first in Eden.' } },
+            { text: { uk: 'Лев', ru: 'Лев', en: 'Lion' }, isCorrect: false, feedback: { uk: 'Лев, що розмовляє? Це тобі не Нарнія!', ru: 'Говорящий лев? Это тебе не Нарния!', en: 'A talking lion? This isn\'t Narnia!' } },
+            { text: { uk: 'Ослиця', ru: 'Ослица', en: 'Donkey' }, isCorrect: true, feedback: { uk: 'Вірно! Ослиця Валаама заговорила на дорозі.', ru: 'Верно! Ослица Валаама заговорила на дороге.', en: 'Correct! Balaam\'s donkey spoke on the road.' } },
+            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс оливкову гілку, а не виголошував промову.', ru: 'Голубь принес оливковую ветвь, а не произносил речь.', en: 'The dove brought an olive branch, it didn\'t give a speech.' } }
         ]
     },
     {
@@ -512,7 +512,7 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q23.png',
         options: [
             { text: { uk: 'Амінь', ru: 'Аминь', en: 'Amen' }, isCorrect: false, feedback: { uk: 'Це слово звучить у Біблії постійно.', ru: 'Это слово звучит в Библии постоянно.', en: 'This word is heard in the Bible constantly.' } },
-            { text: { uk: 'Армагеддон', ru: 'Армагеддон', en: 'Armageddon' }, isCorrect: true },
+            { text: { uk: 'Армагеддон', ru: 'Армагеддон', en: 'Armageddon' }, isCorrect: true, feedback: { uk: 'Правильно! Це єдине місце в Біблії, де вживається це слово.', ru: 'Правильно! Это единственное место в Библии, где употребляется это слово.', en: 'Correct! This is the only place in the Bible where this word is used.' } },
             { text: { uk: 'Рай', ru: 'Рай', en: 'Paradise' }, isCorrect: false, feedback: { uk: 'Рай згадується кілька разів (Едем, Луки 23:43 тощо).', ru: 'Рай упоминается несколько раз (Эдем, Луки 23:43 и т.д.).', en: 'Paradise is mentioned several times (Eden, Luke 23:43, etc.).' } },
             { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false, feedback: { uk: 'Це слово зустрічається чотири рази тільки в одній главі Об’явлення.', ru: 'Это слово встречается четыре раза только в одной главе Откровения.', en: 'This word appears four times in just one chapter of Revelation.' } }
         ]

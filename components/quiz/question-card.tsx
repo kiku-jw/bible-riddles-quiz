@@ -44,28 +44,28 @@ const CORRECT_PHRASES = {
 
 const TRY_AGAIN_PHRASES = {
     uk: [
-        'Майже вдалося! Спробуй ще раз',
-        'Гарна спроба! Подумай ще трішки',
-        'Ти на правильному шляху! Ще разок',
-        'Не здавайся! Ти зможеш!',
-        'Ось-ось знайдеш правильну відповідь!',
-        'Продовжуй шукати! Ти впораєшся!',
+        'Майже вдалося! Але ні 😜',
+        'Гарна спроба, але Біблія каже інакше! Подумай ще трішки 🤔',
+        'Ти на правильному шляху, але звернув не туди! Ще разок 🔄',
+        'Не здавайся! Самсон би не здався! (Хоча він теж помилявся) 💪',
+        'Ось-ось знайдеш! Твій "акварельний" розум впорається! 🎨',
+        'Продовжуй шукати! Навіть загублену драхму знайшли! 🪙',
     ],
     ru: [
-        'Почти получилось! Попробуй еще раз',
-        'Хорошая попытка! Подумай еще немного',
-        'Ты на правильном пути! Еще разок',
-        'Не сдавайся! Ты сможешь!',
-        'Вот-вот найдешь правильный ответ!',
-        'Продолжай искать! Ты справишься!',
+        'Почти получилось! Но нет 😜',
+        'Хорошая попытка, но Библия говорит иначе! Подумай еще немного 🤔',
+        'Ты на правильном пути, но свернул не туда! Еще разок 🔄',
+        'Не сдавайся! Самсон бы не сдался! (Хотя он тоже ошибался) 💪',
+        'Вот-вот найдешь! Твой "акварельный" мозг справится! 🎨',
+        'Продолжай искать! Даже потерянную драхму нашли! 🪙',
     ],
     en: [
-        'Almost there! Try again',
-        'Good attempt! Think a bit more',
-        'You are on the right track! One more time',
-        'Don\'t give up! You can do it!',
-        'You\'re about to find the right answer!',
-        'Keep searching! You\'ll manage!',
+        'Almost there! But not quite 😜',
+        'Good attempt, but the Bible says otherwise! Think a bit more 🤔',
+        'You\'re on the right track, but took a wrong turn! One more time 🔄',
+        'Don\'t give up! Samson wouldn\'t! (Though he made mistakes too) 💪',
+        'You\'re about to find it! Your "watercolor" mind can do it! 🎨',
+        'Keep searching! Even the lost coin was found! 🪙',
     ]
 };
 
@@ -86,7 +86,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
 
     const { playClick, playError } = useSound();
 
-    const bgImage = question.part === 'josiah' ? '/bible-quiz-kids/images/josiah.jpg' : '/bible-quiz-kids/images/jeremiah.jpg';
+    const bgImage = question.part === 'josiah' ? '/bible-riddles-quiz/images/josiah.jpg' : '/bible-riddles-quiz/images/jeremiah.jpg';
 
     const feedbackText = useMemo(() => {
         if (showResult && lastClickedIndex !== null) {
