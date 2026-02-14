@@ -22,7 +22,9 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
 
     const tracks = [
         '/bible-riddles-quiz/audio/background-music.mp3',
-        '/bible-riddles-quiz/audio/background-music-2.mp3'
+        '/bible-riddles-quiz/audio/background-music-2.mp3',
+        '/bible-riddles-quiz/audio/background-music-3.mp3',
+        '/bible-riddles-quiz/audio/background-music-4.mp3'
     ];
 
     useEffect(() => {
