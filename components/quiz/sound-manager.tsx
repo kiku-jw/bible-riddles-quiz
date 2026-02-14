@@ -20,9 +20,9 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
     const bgMusicRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
-        bgMusicRef.current = new Audio('/bible-quiz-kids/music.mp3');
+        bgMusicRef.current = new Audio('/bible-riddles-quiz/audio/background-music.mp3');
         bgMusicRef.current.loop = true;
-        bgMusicRef.current.volume = 0.3;
+        bgMusicRef.current.volume = 0.5;
 
         return () => {
             if (bgMusicRef.current) {
