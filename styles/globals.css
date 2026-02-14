@@ -108,12 +108,16 @@
         mix-blend-mode: multiply;
     }
 
-    .glass-effect {
-        @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl;
+    .premium-glass {
+        @apply bg-card/60 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)];
     }
 
     .premium-shadow {
-        box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    .radiant-accent {
+        background: linear-gradient(135deg, oklch(0.65 0.12 45) 0%, oklch(0.55 0.15 55) 100%);
     }
 }
 

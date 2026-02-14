@@ -133,8 +133,8 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/q5.png',
         options: [
-            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але Бог першим зробив «операцію» в Едемі!', ru: 'Он был врачом, но Бог первым сделал «операцию» в Эдеме!', en: 'He was a doctor, but God was the first to perform "surgery" in Eden!' } },
-            { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву.', ru: 'Да, Он взял ребро Адама, чтобы создать Еву.', en: 'Yes, He took Adam\'s rib to create Eve.' } },
+            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але не першим, хто проводив складні процедури в Едемі!', ru: 'Он был врачом, но не первым, кто проводил сложные процедуры в Эдеме!', en: 'He was a doctor, but not the first to perform complex procedures in Eden!' } },
+            { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву. Справжня творча мудрість!', ru: 'Да, Он взял ребро Адама, чтобы создать Еву. Настоящая творческая мудрость!', en: 'Yes, He took Adam\'s rib to create Eve. True creative wisdom!' } },
             { text: { uk: 'Мойсей', ru: 'Моисей', en: 'Moses' }, isCorrect: false, feedback: { uk: 'Він робив багато чудес, але не першу операцію.', ru: 'Он совершал много чудес, но не первую операцию.', en: 'He performed many signs, but not the first surgery.' } },
             { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: false, feedback: { uk: 'Адам був пацієнтом, а не лікарем!', ru: 'Адам был пациентом, а не врачом!', en: 'Adam was the patient, not the doctor!' } }
         ]
@@ -239,34 +239,13 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q10.png',
         options: [
             { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Одяг — штука мінлива. Бог дав шкіряний одяг Адаму, а далі ми вже самі штурмуємо магазини!', ru: 'Одежда — штука переменчивая. Бог дал кожаную одежду Адаму, а дальше мы уже сами штурмуем магазины!', en: 'Clothing is changeable. God gave Adam leather clothes, and from then on we\'ve been hitting the shops!' } },
-            { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true, feedback: { uk: 'Уважно! Молочні та корінні — подарунок природи, а далі — тільки до стоматолога за новими!', ru: 'Внимательно! Молочные и коренные — подарок природы, а дальше — только к стоматологу за новыми!', en: 'Careful! Baby and permanent ones are a gift from nature, but after that, it\'s off to the dentist for new ones!' } },
+            { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true, feedback: { uk: 'Уважно! Молочні та корінні — дар Творця, а далі — тільки до стоматолога за новими!', ru: 'Внимательно! Молочные и коренные — дар Творца, а дальше — только к стоматологу за новыми!', en: 'Careful! Baby and permanent ones are a gift from the Creator, but after that, it\'s off to the dentist for new ones!' } },
             { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false, feedback: { uk: 'Якби ми купували кожну волосину втретє, перукарі були б мільярдерами!', ru: 'Если бы мы покупали каждый волос в третий раз, парикмахеры были бы миллиардерами!', en: 'If we had to buy every single hair the third time, hairdressers would be billionaires!' } },
             { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false, feedback: { uk: 'Зір — це талант від Творця. Купити можна окуляри, але не саму здатність бачити світ!', ru: 'Зрение — это талант от Творца. Купить можно очки, но не саму способность видеть мир!', en: 'Sight is a talent from the Creator. You can buy glasses, but not the ability to see the world itself!' } }
         ]
     },
     {
         id: 11,
-        type: 'single',
-        question: {
-            uk: 'Який самогубця з Біблії буде воскрешений?',
-            ru: 'Какой самоубийца из Библии будет воскрешен?',
-            en: 'Which suicide from the Bible will be resurrected?'
-        },
-        hint: {
-            uk: 'Він був суддею Ізраїля і мав надзвичайну силу.',
-            ru: 'Он был судьей Израиля и обладал необычайной силой.',
-            en: 'He was a judge of Israel and had extraordinary strength.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q11.png',
-        options: [
-            { text: { uk: 'Саул', ru: 'Саул', en: 'Saul' }, isCorrect: false, feedback: { uk: 'Саул обрав темний шлях і впав від свого меча. На жаль, він не в списку героїв віри.', ru: 'Саул выбрал темный путь и пал от своего меча. К сожалению, он не в списке героев веры.', en: 'Saul chose a dark path and fell by his own sword. Unfortunately, he is not on the list of faith heroes.' } },
-            { text: { uk: 'Юда Іскаріот', ru: 'Иуда Искариот', en: 'Judas Iscariot' }, isCorrect: false, feedback: { uk: 'Його вчинок — символ зради, а не віри. Воскресіння для нього не обіцяно.', ru: 'Его поступок — символ предательства, а не веры. Воскресение для него не обещано.', en: 'His act is a symbol of betrayal, not faith. Resurrection is not promised for him.' } },
-            { text: { uk: 'Самсон', ru: 'Самсон', en: 'Samson' }, isCorrect: true, feedback: { uk: 'Так! Він пожертвував собою, щоб зупинити ворогів, і Бог згадав його серед героїв віри. Справжній біблійний супергерой!', ru: 'Да! Он пожертвовал собой, чтобы остановить врагов, и Бог упомянул его среди героев веры. Настоящий библейский супергерой!', en: 'Yes! He sacrificed himself to stop the enemies, and God mentioned him among the heroes of faith. A true biblical superhero!' } },
-            { text: { uk: 'Ахітофел', ru: 'Ахитофел', en: 'Ahithophel' }, isCorrect: false, feedback: { uk: 'Ахітофел був мудрим порадником, але його кінець був актом відчаю, а не віри. Мудрість без Бога — небезпечна річ!', ru: 'Ахитофел был мудрым советником, но его конец был актом отчаяния, а не веры. Мудрость без Бога — опасная штука!', en: 'Ahithophel was a wise counselor, but his end was an act of despair, not faith. Wisdom without God is a dangerous thing!' } }
-        ]
-    },
-    {
-        id: 12,
         type: 'single',
         question: {
             uk: 'Хто з біблійних персонажів прокляв день свого народження?',
@@ -287,7 +266,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 13,
+        id: 12,
         type: 'single',
         question: {
             uk: 'Хто зрубав чуже дерево і не запитав господаря, але вчинив правильно?',
@@ -308,7 +287,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 14,
+        id: 13,
         type: 'single',
         question: {
             uk: 'На якій полиці в ковчезі Ной тримав Біблію?',
@@ -329,7 +308,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 15,
+        id: 14,
         type: 'single',
         question: {
             uk: 'Хто ще за життя поставив собі пам’ятник і назвав його своїм ім’ям?',
@@ -344,13 +323,13 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q15.png',
         options: [
             { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Соломон будував храни та палаци, але він був занадто мудрий, щоб перетворювати себе на статую!', ru: 'Соломон строил храмы и дворцы, но он был слишком мудрым, чтобы превращать себя в статую!', en: 'Solomon built temples and palaces, but he was too wise to turn himself into a statue!' } },
-            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так! Він поставив собі пам’ятник, бо не мав синів. Тепер ми знаємо про нього завдяки цій загадці!', ru: 'Да! Он поставил себе памятник, так как у него не было сыновей. Теперь мы знаем о нем благодаря этой загадке!', en: 'Yes! He set up a pillar for himself because he had no son. Now we know about him thanks to this riddle!' } },
+            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так! Він поставив собі пам’ятник, бо не мав синів. Пиха та марнославство до добра не доводять.', ru: 'Да! Он поставил себе памятник, так как у него не было сыновей. Гордость и тщеславие до добра не доводят.', en: 'Yes! He set up a pillar for himself because he had no son. Pride and vanity don\'t lead to anything good.' } },
             { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Адонія хотів приміряти корону, а не позувати для скульптора!', ru: 'Адония хотел примерить корону, а не позировать для скульптора!', en: 'Adonijah wanted to try on the crown, not pose for a sculptor!' } },
             { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Амнон думав про зовсім інші речі, пам’ятники його не цікавили.', ru: 'Амнон думал о совсем других вещах, памятники его не интересовали.', en: 'Amnon had other things on his mind; he wasn\'t interested in monuments.' } }
         ]
     },
     {
-        id: 16,
+        id: 15,
         type: 'single',
         question: {
             uk: 'Хто в Біблії говорив "Го-го"?',
@@ -371,7 +350,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 17,
+        id: 16,
         type: 'single',
         question: {
             ru: 'Человек сделал вещь, продал ее. Купил тот, кому она не нужна. Тот, кому она нужна, не осознает этого. Что это?',
@@ -392,7 +371,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 18,
+        id: 17,
         type: 'multi',
         question: {
             uk: 'Якими двома іменами можна назвати все створене у всесвіті?',
@@ -413,7 +392,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 19,
+        id: 18,
         type: 'single',
         question: {
             uk: 'Хто помер між небом та землею?',
@@ -428,13 +407,13 @@ export const quizData: QuizQuestion[] = [
         image: '/bible-riddles-quiz/illustrations/q19.png',
         options: [
             { text: { uk: 'Ілля', ru: 'Илья', en: 'Elijah' }, isCorrect: false, feedback: { uk: 'Він полетів на небо живим, а не помер у гілках.', ru: 'Он улетел на небо живым, а не умер в ветвях.', en: 'He went to heaven alive, he didn\'t die in the branches.' } },
-            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true },
+            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так, він заплутався волоссям у гілках терпентинового дерева. Сумний кінець для того, хто повстав проти свого батька!', ru: 'Да, он запутался волосами в ветвях терпентинового дерева. Печальный конец для того, кто восстал против своего отца!', en: 'Yes, he got caught by his hair in the branches of a terebinth tree. A sad end for one who rebelled against his father!' } },
             { text: { uk: 'Ісая', ru: 'Исаия', en: 'Isaiah' }, isCorrect: false, feedback: { uk: 'Його шлях закінчився інакше.', ru: 'Его путь закончился иначе.', en: 'His journey ended differently.' } },
             { text: { uk: 'Степан', ru: 'Стефан', en: 'Stephen' }, isCorrect: false, feedback: { uk: 'Він помер на землі, бачачи відкрите небо.', ru: 'Он умер на земле, видя открытое небо.', en: 'He died on earth, seeing the heavens open.' } }
         ]
     },
     {
-        id: 20,
+        id: 19,
         type: 'single',
         question: {
             uk: 'Хто один раз народився і два рази помер?',
@@ -455,7 +434,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 21,
+        id: 20,
         type: 'single',
         question: {
             uk: 'Через яку частину тіла тварини загинула тисяча чоловік?',
@@ -476,7 +455,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 22,
+        id: 21,
         type: 'single',
         question: {
             uk: 'Яке місто було відбудоване на життях первістка та наймолодшого сина?',
@@ -497,7 +476,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 23,
+        id: 22,
         type: 'single',
         question: {
             uk: 'Яке слово зустрічається в Біблії лише один раз і позначає подію, що станеться один раз в історії?',
@@ -518,7 +497,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 24,
+        id: 23,
         type: 'single',
         question: {
             uk: 'Хто за великий гріх у минулому отримав велике благословення через свою віру?',
@@ -539,7 +518,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 25,
+        id: 24,
         type: 'single',
         question: {
             uk: 'Чим Авель убив Каїна?',
@@ -560,7 +539,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 26,
+        id: 25,
         type: 'single',
         question: {
             uk: 'Хто після появи на світ став доглядати за своєю "матір’ю"?',
@@ -581,7 +560,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 27,
+        id: 26,
         type: 'single',
         question: {
             uk: 'Яка пташка змусила плакати "камінь"?',
@@ -602,7 +581,7 @@ export const quizData: QuizQuestion[] = [
         ]
     },
     {
-        id: 28,
+        id: 27,
         type: 'finale',
         text: {
             uk: 'Ти пройшов усі загадки! Твій розум гострий, а знання Біблії вражають. Продовжуй досліджувати Слово Бога!',

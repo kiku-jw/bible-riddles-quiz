@@ -47,7 +47,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
 
     const isSingle = question.type === 'single';
     const isMulti = question.type === 'multi';
-    const isSpecialSummary = question.id === 12 || question.id === 26;
+    const isSpecialSummary = false; // Previously hardcoded to 12 and 26, causing bugs
 
     const requiredCount = isMulti
         ? question.options?.filter(o => o.isCorrect).length || 0
@@ -173,7 +173,7 @@ export function QuestionCard({ question, onAnswer, onContinue, language }: Quest
                     )}
                 </div>
 
-                <div className="relative bg-card/90 backdrop-blur-md border border-border rounded-xl p-3 md:p-5 shadow-lg mb-3 md:mb-5 overflow-hidden watercolor-texture">
+                <div className="relative premium-glass border border-white/10 rounded-2xl p-4 md:p-6 shadow-2xl mb-4 md:mb-6 overflow-hidden">
                     {/* Question Image revealed after correct answer */}
                     <AnimatePresence>
                         {showResult && isCorrect && question.image && (
