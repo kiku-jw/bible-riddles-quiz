@@ -17,20 +17,36 @@ const SoundContext = createContext<SoundContextType | undefined>(undefined);
 
 export function SoundProvider({ children }: { children: React.ReactNode }) {
     const [isEnabled, setIsEnabled] = useState(true);
+    const [trackIndex, setTrackIndex] = useState(0);
     const bgMusicRef = useRef<HTMLAudioElement | null>(null);
 
+    const tracks = [
+        '/bible-riddles-quiz/audio/background-music.mp3',
+        '/bible-riddles-quiz/audio/background-music-2.mp3'
+    ];
+
     useEffect(() => {
-        bgMusicRef.current = new Audio('/bible-riddles-quiz/audio/background-music.mp3');
-        bgMusicRef.current.loop = true;
+        bgMusicRef.current = new Audio(tracks[trackIndex]);
         bgMusicRef.current.volume = 0.5;
+
+        const handleEnded = () => {
+            setTrackIndex(prev => (prev + 1) % tracks.length);
+        };
+
+        bgMusicRef.current.addEventListener('ended', handleEnded);
+
+        if (isEnabled && bgMusicRef.current.paused && trackIndex > 0) {
+            bgMusicRef.current.play().catch(() => { });
+        }
 
         return () => {
             if (bgMusicRef.current) {
+                bgMusicRef.current.removeEventListener('ended', handleEnded);
                 bgMusicRef.current.pause();
                 bgMusicRef.current = null;
             }
         };
-    }, []);
+    }, [trackIndex]);
 
     const playTone = useCallback((freq: number, type: OscillatorType, duration: number) => {
         if (!isEnabled) return;
