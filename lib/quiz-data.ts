@@ -232,9 +232,9 @@ export const quizData: QuizQuestion[] = [
             en: 'Which sea "animal" was present at the execution of Jesus Christ?'
         },
         hint: {
-            uk: 'Її намочили в оцет і піднесли до уст Ісуса.',
-            ru: 'Её намочили в уксус и поднесли к устам Иисуса.',
-            en: 'It was soaked in vinegar and held up to Jesus\'s mouth.'
+            uk: 'Її намочили в оцет і піднесли до уст Ісуса (Мт 27:48; Мр 15:36; Ів 19:29).',
+            ru: 'Её намочили в уксус и поднесли к устам Иисуса (Мф 27:48; Мк 15:36; Ин 19:29).',
+            en: 'It was soaked in vinegar and held up to Jesus\'s mouth (Matt 27:48; Mark 15:36; John 19:29).'
         },
         image: '/bible-riddles-quiz/illustrations/q10.png',
         options: [
