@@ -206,9 +206,9 @@ export const quizData: QuizQuestion[] = [
         id: 9,
         type: 'single',
         question: {
-            uk: 'Скільки людей у Біблії називаються "апостолами"? (Включаючи тих, хто не входив до початкових 12-ти)',
-            ru: 'Сколько человек в Библии называются "апостолами"? (Включая тех, кто не входил в число первых 12-ти)',
-            en: 'How many people in the Bible are called "apostles"? (Including those beyond the original 12)'
+            uk: 'Скільки людей у Біблії називаються "апостолами"?',
+            ru: 'Сколько человек в Библии называются "апостолами"?',
+            en: 'How many people in the Bible are called "apostles"?'
         },
         hint: {
             uk: 'Не забувай про Павла, Варнаву та найголовнішого Посланця.',
@@ -269,9 +269,9 @@ export const quizData: QuizQuestion[] = [
         id: 12,
         type: 'single',
         question: {
-            uk: 'Хто зрубав чужий священний стовп і не запитав господаря, але вчинив правильно?',
-            ru: 'Кто срубил чужой священный столб и не спросил хозяина, но поступил правильно?',
-            en: 'Who cut down someone else\'s sacred pole without asking but did the right thing?'
+            uk: 'Хто зрубав чужий стовп і не запитав господаря, але вчинив правильно?',
+            ru: 'Кто срубил чужой столб и не спросил хозяина, но поступил правильно?',
+            en: 'Who cut down someone else\'s pole without asking but did the right thing?'
         },
         hint: {
             uk: 'Це був стовп, присвячений фальшивому богу Ваалу.',
