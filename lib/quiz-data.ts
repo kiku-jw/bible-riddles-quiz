@@ -206,42 +206,42 @@ export const quizData: QuizQuestion[] = [
         id: 9,
         type: 'single',
         question: {
-            uk: 'Скільки апостолів згадується в Біблії?',
-            ru: 'Сколько апостолов упоминается в Библии?',
-            en: 'How many apostles are mentioned in the Bible?'
+            uk: 'Скільки людей у Біблії називаються "апостолами"? (Включаючи тих, хто не входив до початкових 12-ти)',
+            ru: 'Сколько человек в Библии называются "апостолами"? (Включая тех, кто не входил в число первых 12-ти)',
+            en: 'How many people in the Bible are called "apostles"? (Including those beyond the original 12)'
         },
         hint: {
-            uk: 'Не забувай про Павла та інших.',
-            ru: 'Не забывай про Павла и других.',
-            en: 'Don\'t forget Paul and others.'
+            uk: 'Не забувай про Павла, Варнаву та найголовнішого Посланця.',
+            ru: 'Не забывай про Павла, Варнаву и самого главного Посланника.',
+            en: 'Don\'t forget Paul, Barnabas, and the most important Messenger.'
         },
         image: '/bible-riddles-quiz/illustrations/q9.png',
         options: [
-            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false, feedback: { uk: 'Це лише початок списку! Біблія знає набагато більше тих, хто носив це почесне звання.', ru: 'Это только начало списка! Библия знает гораздо больше тех, кто носил это почетное звание.', en: 'That\'s just the start of the list! The Bible knows many more who bore this honorable title.' } },
-            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false, feedback: { uk: 'Трішки більше... Число 13 було б занадто простим для такої глибокої книги!', ru: 'Чуть-чуть больше... Число 13 было бы слишком простым для такой глубокой книги!', en: 'A little more... The number 13 would be too simple for such a profound book!' } },
-            { text: { uk: '16', ru: '16', en: '16' }, isCorrect: true, feedback: { uk: 'Крім 12 обраних Ісусом, були також Маттій, Павло, Варнава та Ісус (як Посланець).', ru: 'Кроме 12 избранных Иисусом, были также Матфий, Павел, Варнава и Иисус (как Посланник).', en: 'Besides the 12 chosen by Jesus, there were also Matthias, Paul, Barnabas, and Jesus (as the Apostle).' } },
-            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: 'Це були учні, але не всі вони називалися апостолами.', ru: 'Это были учні, але не всі вони називалися апостолами.', en: 'They were disciples, but not all were called apostles.' } }
+            { text: { uk: '12', ru: '12', en: '12' }, isCorrect: false, feedback: { uk: 'Це лише початкова група учнів Ісуса. У Біблії цей список ширший!', ru: 'Это только начальная группа учеников Иисуса. В Библии этот список шире!', en: 'That\'s just the initial group of Jesus\'s disciples. The biblical list is broader!' } },
+            { text: { uk: '13', ru: '13', en: '13' }, isCorrect: false, feedback: { uk: 'Близько, але все ще мало. Число апостолів у тексті Біблії вас здивує!', ru: 'Близко, но всё ещё мало. Число апостолов в тексте Библии вас удивит!', en: 'Close, but still too few. The number of apostles in the Bible will surprise you!' } },
+            { text: { uk: '16', ru: '16', en: '16' }, isCorrect: true, feedback: { uk: 'Вірно! Крім 12-ти, це ще Матфій, Павло, Варнава та сам Ісус (Євр. 3:1 називає його "Апостолом нашого визнання").', ru: 'Верно! Кроме 12-ти, это ещё Матфий, Павел, Варнава и сам Иисус (Евр. 3:1 называет его "Апостолом нашего исповедания").', en: 'Correct! Besides the 12, there are Matthias, Paul, Barnabas, and Jesus himself (Heb. 3:1 calls him the "Apostle of our confession").' } },
+            { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: '70 учнів були послані проповідувати, але Біблія не називає їх усіх апостолами.', ru: '70 учеников были посланы проповедовать, но Библия не называет их всех апостолами.', en: '70 disciples were sent to preach, but the Bible doesn\'t call them all apostles.' } }
         ]
     },
     {
         id: 10,
         type: 'single',
         question: {
-            uk: 'Що Бог дарує людині двічі, а втретє вона мусить купувати це сама?',
-            ru: 'Что Бог дарит дважды, а третий раз человек это покупает сам?',
-            en: 'What does God give a person twice, but the third time they must buy it themselves?'
+            uk: 'Яка морська "тварина" була присутня при страті Ісуса Христа?',
+            ru: 'Какое морское "животное" присутствовало при казни Иисуса Христа?',
+            en: 'Which sea "animal" was present at the execution of Jesus Christ?'
         },
         hint: {
-            uk: 'Це є в кожного в роті.',
-            ru: 'Это есть у каждого во рту.',
-            en: 'Everyone has this in their mouth.'
+            uk: 'Її намочили в оцет і піднесли до уст Ісуса.',
+            ru: 'Её намочили в уксус и поднесли к устам Иисуса.',
+            en: 'It was soaked in vinegar and held up to Jesus\'s mouth.'
         },
         image: '/bible-riddles-quiz/illustrations/q10.png',
         options: [
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Одяг — штука мінлива. Бог дав шкіряний одяг Адаму, а далі ми вже самі штурмуємо магазини!', ru: 'Одежда — штука переменчивая. Бог дал кожаную одежду Адаму, а дальше мы уже сами штурмуем магазины!', en: 'Clothing is changeable. God gave Adam leather clothes, and from then on we\'ve been hitting the shops!' } },
-            { text: { uk: 'Зуби', ru: 'Зубы', en: 'Teeth' }, isCorrect: true, feedback: { uk: 'Уважно! Молочні та корінні — дар Творця, а далі — тільки до стоматолога за новими!', ru: 'Внимательно! Молочные и коренные — дар Творца, а дальше — только к стоматологу за новыми!', en: 'Careful! Baby and permanent ones are a gift from the Creator, but after that, it\'s off to the dentist for new ones!' } },
-            { text: { uk: 'Волосся', ru: 'Волосы', en: 'Hair' }, isCorrect: false, feedback: { uk: 'Якби ми купували кожну волосину втретє, перукарі були б мільярдерами!', ru: 'Если бы мы покупали каждый волос в третий раз, парикмахеры были бы миллиардерами!', en: 'If we had to buy every single hair the third time, hairdressers would be billionaires!' } },
-            { text: { uk: 'Зір', ru: 'Зрение', en: 'Eyesight' }, isCorrect: false, feedback: { uk: 'Зір — це талант від Творця. Купити можна окуляри, але не саму здатність бачити світ!', ru: 'Зрение — это талант от Творца. Купить можно очки, но не саму способность видеть мир!', en: 'Sight is a talent from the Creator. You can buy glasses, but not the ability to see the world itself!' } }
+            { text: { uk: 'Кит', ru: 'Кит', en: 'Whale' }, isCorrect: false, feedback: { uk: 'Кит був зайнятий Йоною, на Голгофі йому було б затісно!', ru: 'Кит был занят Ионой, на Голгофе ему было бы тесновато!', en: 'The whale was busy with Jonah; it would have been too cramped on Golgotha!' } },
+            { text: { uk: 'Губка', ru: 'Губка', en: 'Sponge' }, isCorrect: true, feedback: { uk: 'Так! З точки зору біології губка — це багатоклітинна морська тварина. Саме її наповнили оцтом і дали Ісусу. Несподівано, правда?', ru: 'Да! С точки зрения биологии губка — это многоклеточное морское животное. Именно её наполнили уксусом и дали Иисусу. Неожиданно, правда?', en: 'Yes! Biologically, a sponge is a multicellular sea animal. It was filled with vinegar and given to Jesus. Unexpected, right?' } },
+            { text: { uk: 'Дельфін', ru: 'Дельфин', en: 'Dolphin' }, isCorrect: false, feedback: { uk: 'Дельфіни — розумні, але вони плавали в морі, а не знаходилися на місці страти.', ru: 'Дельфины — умные, но они плавали в море, а не находились на месте казни.', en: 'Dolphins are smart, but they were swimming in the sea, not hanging around the execution site.' } },
+            { text: { uk: 'Акула', ru: 'Акула', en: 'Shark' }, isCorrect: false, feedback: { uk: 'Акули — грізні хижаки, але в біблійній історії про страту вони не згадуються.', ru: 'Акулы — грозные хищники, но в библейской истории о казни они не упоминаются.', en: 'Sharks are fearsome, but they aren\'t mentioned in the biblical account of the execution.' } }
         ]
     },
     {
@@ -269,14 +269,14 @@ export const quizData: QuizQuestion[] = [
         id: 12,
         type: 'single',
         question: {
-            uk: 'Хто зрубав чуже дерево і не запитав господаря, але вчинив правильно?',
-            ru: 'Кто срубил чужое дерево и не спросил хозяина, но поступил правильно?',
-            en: 'Who cut down someone else\'s tree without asking but did the right thing?'
+            uk: 'Хто зрубав чужий священний стовп і не запитав господаря, але вчинив правильно?',
+            ru: 'Кто срубил чужой священный столб и не спросил хозяина, но поступил правильно?',
+            en: 'Who cut down someone else\'s sacred pole without asking but did the right thing?'
         },
         hint: {
-            uk: 'Це було дерево, присвячене фальшивому богу Ваалу.',
-            ru: 'Это было дерево, посвященное ложному богу Ваалу.',
-            en: 'It was a tree dedicated to the false god Baal.'
+            uk: 'Це був стовп, присвячений фальшивому богу Ваалу.',
+            ru: 'Это был столб, посвященный ложному богу Ваалу.',
+            en: 'It was a pole dedicated to the false god Baal.'
         },
         image: '/bible-riddles-quiz/illustrations/q13.png',
         options: [
@@ -332,14 +332,14 @@ export const quizData: QuizQuestion[] = [
         id: 15,
         type: 'single',
         question: {
-            uk: 'Хто в Біблії говорив "Го-го"?',
-            ru: 'Кто в Библии говорил "Го-го"?',
-            en: 'Who in the Bible said "Go-go" (neighing sound)?'
+            uk: 'Хто в Біблії вигукував "І-го-го!" (або "Ага!")?',
+            ru: 'Кто в Библии восклицал "Ага!" (или "Го! Го!")?',
+            en: 'Who in the Bible shouted "Aha!" or "Go! Go!" (neighing sound)?'
         },
         hint: {
-            uk: 'Подивись книгу Йова.',
-            ru: 'Посмотри книгу Иова.',
-            en: 'Look at the book of Job.'
+            uk: 'Подивись опис бойової тварини у книзі Йова.',
+            ru: 'Посмотри описание боевого животного в книге Иова.',
+            en: 'Look at the description of a war animal in the book of Job.'
         },
         image: '/bible-riddles-quiz/illustrations/q16.png',
         options: [
