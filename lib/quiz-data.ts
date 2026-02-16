@@ -500,9 +500,9 @@ export const quizData: QuizQuestion[] = [
         id: 23,
         type: 'single',
         question: {
-            uk: 'Хто за великий гріх у минулому отримав велике благословення через свою віру?',
-            ru: 'Кто за большой грех в прошлом получил большое благословение благодаря своей вере?',
-            en: 'Who, despite a great sin in the past, received a great blessing because of their faith?'
+            uk: 'Хто отримав велике благословення від Бога за те, що проявив міцну віру?',
+            ru: 'Кто получил великое благословение от Бога за то, что проявил крепкую веру?',
+            en: 'Who received a great blessing from God for displaying strong faith?'
         },
         hint: {
             uk: 'Вона жила в Єрихоні і сховала соглядатаїв.',
