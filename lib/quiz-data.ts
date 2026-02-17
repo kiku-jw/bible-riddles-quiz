@@ -236,7 +236,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Её намочили в уксус и поднесли к устам Иисуса (Мф 27:48; Мк 15:36; Ин 19:29).',
             en: 'It was soaked in vinegar and held up to Jesus\'s mouth (Matt 27:48; Mark 15:36; John 19:29).'
         },
-        image: '/bible-riddles-quiz/illustrations/q10.png',
+        image: '/bible-riddles-quiz/illustrations/q10_sponge.png',
         options: [
             { text: { uk: 'Кит', ru: 'Кит', en: 'Whale' }, isCorrect: false, feedback: { uk: 'Кит був зайнятий Йоною, на Голгофі йому було б затісно!', ru: 'Кит был занят Ионой, на Голгофе ему было бы тесновато!', en: 'The whale was busy with Jonah; it would have been too cramped on Golgotha!' } },
             { text: { uk: 'Губка', ru: 'Губка', en: 'Sponge' }, isCorrect: true, feedback: { uk: 'Так! З точки зору біології губка — це багатоклітинна морська тварина. Саме її наповнили оцтом і дали Ісусу. Несподівано, правда?', ru: 'Да! С точки зрения биологии губка — это многоклеточное морское животное. Именно её наполнили уксусом и дали Иисусу. Неожиданно, правда?', en: 'Yes! Biologically, a sponge is a multicellular sea animal. It was filled with vinegar and given to Jesus. Unexpected, right?' } },
