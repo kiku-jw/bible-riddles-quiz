@@ -89,7 +89,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Вспомни создание первой женщины.',
             en: 'Remember the creation of the first woman.'
         },
-        image: '/bible-riddles-quiz/illustrations/q5.png',
+        image: '/bible-riddles-quiz/illustrations/q3_first_surgeon.png',
         options: [
             { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але не першим, хто проводив складні процедури в Едемі!', ru: 'Он был врачом, но не первым, кто проводил сложные процедуры в Эдеме!', en: 'He was a doctor, but not the first to perform complex procedures in Eden!' } },
             { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву. Справжня творча мудрість!', ru: 'Да, Он взял ребро Адама, чтобы создать Еву. Настоящая творческая мудрость!', en: 'Yes, He took Adam\'s rib to create Eve. True creative wisdom!' } },
@@ -110,7 +110,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Один в Эдеме, другой — на дороге.',
             en: 'One in Eden, the other — on the road.'
         },
-        image: '/bible-riddles-quiz/illustrations/q6.png',
+        image: '/bible-riddles-quiz/illustrations/q4_talking_animals.png',
         options: [
             { text: { uk: 'Змій', ru: 'Змей', en: 'Serpent' }, isCorrect: true, feedback: { uk: 'Так, в Едемі змій заговорив першим.', ru: 'Да, в Эдеме змей заговорил первым.', en: 'Yes, the serpent spoke first in Eden.' } },
             { text: { uk: 'Лев', ru: 'Лев', en: 'Lion' }, isCorrect: false, feedback: { uk: 'Лев, що розмовляє? Це тобі не Нарнія!', ru: 'Говорящий лев? Это тебе не Нарния!', en: 'A talking lion? This isn\'t Narnia!' } },
@@ -164,21 +164,21 @@ export const quizData: QuizQuestion[] = [
         id: 7,
         type: 'single',
         question: {
-            uk: 'Яким був ковчег Ноя під час потопу?',
-            ru: 'Каким был ковчег Ноя во время потопа?',
-            en: 'How was Noah\'s ark during the flood?'
+            uk: 'Не народжувався, не вмирав, але їв подібних собі',
+            ru: 'Не рождался, не умирал, но ел себе подобных',
+            en: 'Was not born, did not die, but ate its own kind'
         },
         hint: {
-            uk: 'Це питання з гумором.',
-            ru: 'Это вопрос с юмором.',
-            en: 'This is a humorous question.'
+            uk: 'Дивись у книгу Вихід',
+            ru: 'В книге Исход',
+            en: 'In the book of Exodus'
         },
-        image: '/bible-riddles-quiz/illustrations/q3.png',
+        image: '/bible-riddles-quiz/illustrations/q7_moses_staff.png',
         options: [
-            { text: { uk: 'Підводним', ru: 'Подводным', en: 'Submarine' }, isCorrect: false, feedback: { uk: 'Ной не мав перископа, а жирафам би дуже не сподобалося дихати через трубку!', ru: 'У Ноя не было перископа, а жирафам бы очень не понравилось дышать через трубку!', en: 'Noah didn\'t have a periscope, and the giraffes wouldn\'t have liked breathing through a snorkel!' } },
-            { text: { uk: 'Космічним', ru: 'Космическим', en: 'Spacecraft' }, isCorrect: false, feedback: { uk: 'Ной був моряком, а не астронавтом. Ковчег був великим, але не мав двигунів для польоту до зірок!', ru: 'Ной был моряком, а не астронавтом. Ковчег был большим, но у него не было двигателей для полета к звездам!', en: 'Noah was a sailor, not an astronaut. The ark was big, but it didn\'t have engines to fly to the stars!' } },
-            { text: { uk: 'Мокрим', ru: 'Мокрым', en: 'Wet' }, isCorrect: true, feedback: { uk: 'Бінго! Коли дощ іде 40 днів, навіть найнадійніший дах не врятує від вологості.', ru: 'Бинго! Когда дождь идет 40 дней, даже самая надежная крыша не спасет от влажности.', en: 'Bingo! When it rains for 40 days, even the sturdiest roof won\'t keep the dampness out.' } },
-            { text: { uk: 'Надувним', ru: 'Надувным', en: 'Inflatable' }, isCorrect: false, feedback: { uk: 'Уяви слонів та левів на надувному човні... Він би лопнув швидше, ніж упала перша крапля дощу!', ru: 'Представь слонов и львов на надувной лодке... Она бы лопнула быстрее, чем упала первая капля дождя!', en: 'Imagine elephants and lions on an inflatable boat... It would have popped faster than the first raindrop fell!' } }
+            { text: { uk: 'Посох Мойсея', ru: 'Посох Моисея', en: 'Moses\'s staff' }, isCorrect: true, feedback: { uk: 'Вірно! Посох Мойсея перетворився на змію і поглинув змій єгипетських чарівників.', ru: 'Верно! Посох Моисея превратился в змею и поглотил змей египетских волхвов.', en: 'Correct! Moses\'s staff turned into a snake and swallowed the snakes of the Egyptian magicians.' } },
+            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Левіафан — грізна істота, але він народжувався і навряд чи займався такими фокусами!', ru: 'Левиафан — грозное существо, но он рождался и вряд ли занимался такими фокусами!', en: 'Leviathan is a fearsome creature, but it was born and unlikely to perform such tricks!' } },
+            { text: { uk: 'Динозавр', ru: 'Динозавр', en: 'Dinosaur' }, isCorrect: false, feedback: { uk: 'Динозаври залишили нам лише кістки, а не загадки про безсмертя!', ru: 'Динозавры оставили нам только кости, а не загадки о бессмертии!', en: 'Dinosaurs only left us bones, not riddles about immortality!' } },
+            { text: { uk: 'Жаба', ru: 'Лягушка', en: 'Frog' }, isCorrect: false, feedback: { uk: 'Жаби вміють квакати, але щоб їсти собі подібних у такому сенсі... це вже фільм жахів!', ru: 'Лягушки умеют квакать, но чтобы есть себе подобных в таком смысле... это уже фильм ужасов!', en: 'Frogs can croak, but eating their own kind in this sense... that\'s a horror movie!' } }
         ]
     },
     {
@@ -201,7 +201,7 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Їх там не було', ru: 'Их там не было', en: 'They weren\'t there' }, isCorrect: true, feedback: { uk: 'Риби плавали у воді навколо ковчега!', ru: 'Рыбы плавали в воде вокруг ковчега!', en: 'The fish were swimming in the water around the ark!' } },
             { text: { uk: 'В акваріумах', ru: 'В аквариумах', en: 'In aquariums' }, isCorrect: false, feedback: { uk: 'У Ноя не було часу мити скло в акваріумах з усіма цими тваринами!', ru: 'У Ноя не было времени мыть стекла в аквариумах со всеми этими животными!', en: 'Noah didn\'t have time to clean aquariums with all those animals around!' } }
         ]
-    }
+    },
     {
         id: 9,
         type: 'single',
@@ -236,7 +236,7 @@ export const quizData: QuizQuestion[] = [
             ru: 'Она оглянулась на Содом.',
             en: 'She looked back at Sodom.'
         },
-        image: '/bible-riddles-quiz/illustrations/q2.png',
+        image: '/bible-riddles-quiz/illustrations/q10_salt_pillar.png',
         options: [
             { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука та фігове листя, а не відділ бакалії!', ru: 'Ева любила яблоки и фиговые листья, а не отдел бакалеи!', en: 'Eve liked apples and fig leaves, not the grocery aisle!' } },
             { text: { uk: 'Дружина Лота', ru: 'Жена Лота', en: 'Lot\'s wife' }, isCorrect: true, feedback: { uk: 'Так! Вона стала соляним стовпом.', ru: 'Да! Она стала соляным столпом.', en: 'Yes! She became a pillar of salt.' } },
