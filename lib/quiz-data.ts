@@ -332,9 +332,9 @@ export const quizData: QuizQuestion[] = [
         id: 15,
         type: 'single',
         question: {
-            uk: 'Хто в Біблії вигукував "І-го-го!" (або "Ага!")?',
-            ru: 'Кто в Библии восклицал "Ага!" (или "Го! Го!")?',
-            en: 'Who in the Bible shouted "Aha!" or "Go! Go!" (neighing sound)?'
+            uk: 'Хто в Біблії вигукував "Ага!"?',
+            ru: 'Кто в Библии восклицал "Ага!"?',
+            en: 'Who in the Bible shouted "Aha!"?'
         },
         hint: {
             uk: 'Подивись опис бойової тварини у книзі Йова.',
