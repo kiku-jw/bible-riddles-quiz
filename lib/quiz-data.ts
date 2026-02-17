@@ -542,21 +542,21 @@ export const quizData: QuizQuestion[] = [
         id: 25,
         type: 'single',
         question: {
-            ru: 'Человек сделал вещь, продал ее. Купил тот, кому она не нужна. Тот, кому она нужна, не осознает этого. Что это?',
-            uk: 'Людина зробила річ, продала її. Купив той, кому вона не потрібна. Той, кому вона потрібна, не усвідомлює цього. Що це?',
-            en: 'A man made a thing, sold it. The buyer doesn\'t need it. The one who needs it doesn\'t know it. What is it?'
+            uk: 'Смерть змушувала ізраїльтян увійти туди, смерть також змушувала вийти. Але якщо вони виходили з власної волі, то помирали. Що це?',
+            ru: 'Смерть заставляла израильтян войти туда, смерть также заставляла выйти. Но если они выходили по своей воле, то умирали. Что это?',
+            en: 'Death forced the Israelites to enter there, death also forced them to leave. But if they left by their own will, they would die. What is it?'
         },
         hint: {
-            uk: 'Це пов’язано з кінцем земного шляху.',
-            ru: 'Это связано с концом земного пути.',
-            en: 'It relates to the end of life\'s journey.'
+            uk: 'Це були спеціальні міста для тих, хто випадково вбив людину.',
+            ru: 'Это были специальные города для тех, кто случайно убил человека.',
+            en: 'These were special cities for those who accidentally killed someone.'
         },
-        image: '/bible-riddles-quiz/illustrations/q17.png',
+        image: '/bible-riddles-quiz/illustrations/q25_cities_of_refuge.png',
         options: [
-            { text: { uk: 'Будинок', ru: 'Дом', en: 'House' }, isCorrect: false, feedback: { uk: 'Якщо ти купив будинок і не знаєш про це — можливо, пора перевірити пошту? Чи це такий великий особняк?', ru: 'Если ты купил дом и не знаешь об этом — возможно, пора проверить почту? Или это такой большой особняк?', en: 'If you bought a house and don\'t know it, maybe you should check your mail? Or is it just a very big mansion?' } },
-            { text: { uk: 'Труна (гроб)', ru: 'Гроб', en: 'Coffin' }, isCorrect: true, feedback: { uk: 'Бінго! Майстер робить на продаж, покупець бере не для себе, а користувач вже нічого не скаже...', ru: 'Бинго! Мастер делает на продажу, покупатель берет не для себя, а пользователь уже ничего не скажет...', en: 'Bingo! The maker makes to sell, the buyer buys for someone else, and the user has nothing to say...' } },
-            { text: { uk: 'Одяг', ru: 'Одежда', en: 'Clothing' }, isCorrect: false, feedback: { uk: 'Якщо тобі потрібен одяг, ти зазвичай це помічаєш... особливо взимку!', ru: 'Если тебе нужна одежда, ты обычно это замечаешь... особенно зимой!', en: 'If you need clothes, you usually notice... especially in winter!' } },
-            { text: { uk: 'Ліки', ru: 'Лекарства', en: 'Medicine' }, isCorrect: false, feedback: { uk: 'Той, кому потрібні ліки, зазвичай мріє про них більше за все на світі. Тут без секретів!', ru: 'Тот, кому нужны лекарства, обычно мечтает о них больше всего на свете. Тут без секретов!', en: 'Someone who needs medicine usually dreams of it more than anything. No secrets here!' } }
+            { text: { uk: 'Міста-сховища', ru: 'Города-убежища', en: 'Cities of Refuge' }, isCorrect: true, feedback: { uk: 'Вірно! Людина тікала туди від месника (смерті), виходила після смерті первосвященника, а вийти раніше означало підставити себе під удар.', ru: 'Верно! Человек бежал туда от мстителя (смерти), выходил после смерти первосвященника, а выйти раньше означало подставить себя под удар.', en: 'Correct! A person fled there from the avenger (death), left after the high priest\'s death, and leaving early meant risking their life.' } },
+            { text: { uk: 'Труна (гроб)', ru: 'Гроб', en: 'Grave' }, isCorrect: false, feedback: { uk: 'Труна — це кінець шляху, але з неї не виходять живими за розкладом!', ru: 'Гроб — это конец пути, но из него не выходят живыми по расписанию!', en: 'A grave is the end of the road, but you don\'t walk out of it alive on a schedule!' } },
+            { text: { uk: 'Гріх', ru: 'Грех', en: 'Sin' }, isCorrect: false, feedback: { uk: 'Гріх веде до смерті, але це не географічне місце, де можна сховатися.', ru: 'Грех ведет к смерти, но это не географическое место, где можно спрятаться.', en: 'Sin leads to death, but it\'s not a geographic place where you can hide.' } },
+            { text: { uk: 'Битва', ru: 'Битва', en: 'Battle' }, isCorrect: false, feedback: { uk: 'У битві смерть всюди, але правила входу та виходу там зовсім інші!', ru: 'В битве смерть повсюду, но правила входа и выхода там совсем другие!', en: 'In battle, death is everywhere, but the rules of entry and exit are quite different!' } }
         ]
     },
     {
