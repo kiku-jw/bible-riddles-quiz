@@ -303,7 +303,7 @@ export const quizData: QuizQuestion[] = [
         options: [
             { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Там були пташки, але точно не книги!', ru: 'Там были птицы, но точно не книги!', en: 'There were birds there, but definitely no books!' } },
             { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'Там панував слонячий тупіт, а не тиша бібліотеки.', ru: 'Там царил слоновий топот, а не тишина библиотеки.', en: 'There was the thumping of elephants there, not the silence of a library.' } },
-            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало.', ru: 'Верно! Тогда Біблії ще не існувало.', en: 'Correct! The Bible didn\'t exist then.' } },
+            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало. Але творіння Єгови були для Ноя наче відкрита книга.', ru: 'Верно! Тогда Библии еще не существовало. Но творения Иеговы были для Ноя словно открытая книга.', en: 'Correct! The Bible didn\'t exist then. But Jehovah\'s creations were like an open book for Noah.' } },
             { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Біблії — ні.', en: 'There were cabins, but no Bibles.' } }
         ]
     },
