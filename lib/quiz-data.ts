@@ -24,7 +24,7 @@ export interface QuizQuestion {
 }
 
 export const quizData: QuizQuestion[] = [
-    {
+{
         id: 0,
         type: 'intro',
         text: {
@@ -34,7 +34,7 @@ export const quizData: QuizQuestion[] = [
         },
         image: '/bible-riddles-quiz/illustrations/intro.png'
     },
-    {
+{
         id: 1,
         type: 'multi',
         question: {
@@ -55,218 +55,8 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Людина', ru: 'Человек', en: 'Man' }, isCorrect: false, feedback: { uk: 'Людина — це корона творіння, але короні потрібне місце, де стояти! Небо і земля були першими в черзі на створення.', ru: 'Человек — это корона творения, но короне нужно место, где стоять! Небо и земля были первыми в очереди на создание.', en: 'Man is the crown of creation, but a crown needs a place to stand! The heavens and the earth were first in line for creation.' } }
         ]
     },
-    {
+{
         id: 2,
-        type: 'single',
-        question: {
-            uk: 'Хто після появи на світ став доглядати за своєю "матір’ю"?',
-            ru: 'Кто после появления на свет стал ухаживать за своей "матерью"?',
-            en: 'Who, after coming into existence, began to care for their "mother"?'
-        },
-        hint: {
-            uk: 'Його "маторі" була земля.',
-            ru: 'Его "матерью" была земля.',
-            en: 'His "mother" was the earth.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q26.png',
-        options: [
-            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: true, feedback: { uk: 'Так! Він був створений з пороху земного і доглядав за землею Едему.', ru: 'Да! Он был создан из праха земного и ухаживал за землей Эдема.', en: 'Yes! He was created from the dust of the ground and cared for the land of Eden.' } },
-            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Він рятував життя, а не землю в такому сенсі.', ru: 'Он спасал жизни, а не землю в таком смысле.', en: 'He saved lives, not the earth in that sense.' } },
-            { text: { uk: 'Каїн', ru: 'Каин', en: 'Cain' }, isCorrect: false, feedback: { uk: 'Він вбивав, а не доглядав.', ru: 'Он убивал, а не ухаживал.', en: 'He killed, he didn\'t care for.' } },
-            { text: { uk: 'Ісус', ru: 'Иисус', en: 'Jesus' }, isCorrect: false, feedback: { uk: 'Ісус — Творець землі, а не її доглядач у цьому сенсі.', ru: 'Иисус — Творец земли, а не её смотритель в этом смысле.', en: 'Jesus is the Creator of the earth, not its caretaker in this sense.' } }
-        ]
-    },
-    {
-        id: 3,
-        type: 'single',
-        question: {
-            uk: 'Хто в Біблії був першим хірургом?',
-            ru: 'Кто в Библии был первым хирургом?',
-            en: 'Who in the Bible was the first surgeon?'
-        },
-        hint: {
-            uk: 'Згадай створення першої жінки.',
-            ru: 'Вспомни создание первой женщины.',
-            en: 'Remember the creation of the first woman.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q3_first_surgeon.png',
-        options: [
-            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але не першим, хто проводив складні процедури в Едемі!', ru: 'Он был врачом, но не первым, кто проводил сложные процедуры в Эдеме!', en: 'He was a doctor, but not the first to perform complex procedures in Eden!' } },
-            { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву. Справжня творча мудрість!', ru: 'Да, Он взял ребро Адама, чтобы создать Еву. Настоящая творческая мудрость!', en: 'Yes, He took Adam\'s rib to create Eve. True creative wisdom!' } },
-            { text: { uk: 'Мойсей', ru: 'Моисей', en: 'Moses' }, isCorrect: false, feedback: { uk: 'Він робив багато чудес, але не першу операцію.', ru: 'Он совершал много чудес, но не первую операцию.', en: 'He performed many signs, but not the first surgery.' } },
-            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: false, feedback: { uk: 'Адам був пацієнтом, а не лікарем!', ru: 'Адам был пациентом, а не врачом!', en: 'Adam was the patient, not the doctor!' } }
-        ]
-    },
-    {
-        id: 4,
-        type: 'multi',
-        question: {
-            uk: 'Які тварини в Біблії розмовляли людською мовою?',
-            ru: 'Какие животные в Библии разговаривали человеческим языком?',
-            en: 'Which animals in the Bible spoke in human language?'
-        },
-        hint: {
-            uk: 'Один в Едемі, інший — на дорозі.',
-            ru: 'Один в Эдеме, другой — на дороге.',
-            en: 'One in Eden, the other — on the road.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q4_talking_animals.png',
-        options: [
-            { text: { uk: 'Змій', ru: 'Змей', en: 'Serpent' }, isCorrect: true, feedback: { uk: 'Так, в Едемі змій заговорив першим.', ru: 'Да, в Эдеме змей заговорил первым.', en: 'Yes, the serpent spoke first in Eden.' } },
-            { text: { uk: 'Лев', ru: 'Лев', en: 'Lion' }, isCorrect: false, feedback: { uk: 'Лев, що розмовляє? Це тобі не Нарнія!', ru: 'Говорящий лев? Это тебе не Нарния!', en: 'A talking lion? This isn\'t Narnia!' } },
-            { text: { uk: 'Ослиця', ru: 'Ослица', en: 'Donkey' }, isCorrect: true, feedback: { uk: 'Вірно! Ослиця Валаама заговорила на дорозі.', ru: 'Верно! Ослица Валаама заговорила на дороге.', en: 'Correct! Balaam\'s donkey spoke on the road.' } },
-            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс оливкову гілку, а не виголошував промову.', ru: 'Голубь принес оливковую ветвь, а не произносил речь.', en: 'The dove brought an olive branch, it didn\'t give a speech.' } }
-        ]
-    },
-    {
-        id: 5,
-        type: 'single',
-        question: {
-            uk: 'Чим Авель убив Каїна?',
-            ru: 'Чем Авель убил Каина?',
-            en: 'What did Abel use to kill Cain?'
-        },
-        hint: {
-            uk: 'Це питання на уважність.',
-            ru: 'Это вопрос на внимательность.',
-            en: 'This is a test of your attentiveness.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q25.png',
-        options: [
-            { text: { uk: 'Каменем', ru: 'Камнем', en: 'A stone' }, isCorrect: false, feedback: { uk: 'Навіть камінь знає, що Авель був жертвою.', ru: 'Даже камень знает, что Авель был жертвой.', en: 'Even a stone knows Abel was the victim.' } },
-            { text: { uk: 'Нічим', ru: 'Ничем', en: 'Nothing' }, isCorrect: true, feedback: { uk: 'Уважно! Це Каїн убив Авеля, а не навпаки.', ru: 'Внимательно! Это Каин убил Авеля, а не наоборот.', en: 'Careful! Cain killed Abel, not the other way around.' } },
-            { text: { uk: 'Палицею', ru: 'Палкой', en: 'A stick' }, isCorrect: false, feedback: { uk: 'Палиці тут не допоможуть поміняти жертву з убивцею.', ru: 'Палки тут не помогут поменять жертву с убийцей.', en: 'Sticks won\'t help swap the victim with the killer here.' } },
-            { text: { uk: 'Ножем', ru: 'Ножом', en: 'A knife' }, isCorrect: false, feedback: { uk: 'Ні-і-і, читайте уважніше!', ru: 'Не-е-ет, читайте внимательнее!', en: 'No-o-o, read more carefully!' } }
-        ]
-    },
-    {
-        id: 6,
-        type: 'single',
-        question: {
-            uk: 'Скільки пар тварин Мойсей ввів у ковчег?',
-            ru: 'Сколько пар животных Моисей ввел в ковчег?',
-            en: 'How many pairs of animals did Moses lead into the ark?'
-        },
-        hint: {
-            uk: 'Згадай, хто саме будував ковчег.',
-            ru: 'Вспомни, кто именно строил ковчег.',
-            en: 'Remember who exactly built the ark.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q1.png',
-        options: [
-            { text: { uk: 'По одній парі', ru: 'По одной паре', en: 'One pair each' }, isCorrect: false, feedback: { uk: 'Мойсей був зайнятий заповідями на Синаї, а не будівництвом плавучих зоопарків!', ru: 'Моисей был занят заповедями на Синае, а не строительством плавучих зоопарков!', en: 'Moses was busy with the commandments on Sinai, not building floating zoos!' } },
-            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false, feedback: { uk: 'Навіть якби тварин було сім пар, цей капітан був майстром заповідей на горі, а не мореплавцем у шторм!', ru: 'Даже если бы животных было семь пар, этот капитан был мастером заповедей на горе, а не мореплавателем в шторм!', en: 'Even if there were seven pairs, this captain was a master of commandments on a mountain, not a sailor in a storm!' } },
-            { text: { uk: 'Жодної', ru: 'Ни одной', en: 'None' }, isCorrect: true, feedback: { uk: 'Бінго! Ковчег будував Ной, а Мойсей у цей час ще навіть не народився. Уважність — твоя суперсила!', ru: 'Бинго! Ковчег строил Ной, а Моисей в это время еще даже не родился. Внимательность — твоя суперсила!', en: 'Bingo! Noah built the ark, and Moses wasn\'t even born yet. Attentiveness is your superpower!' } },
-            { text: { uk: 'Всіх тварин світу', ru: 'Всех животных мира', en: 'All animals of the world' }, isCorrect: false, feedback: { uk: 'Мойсей розділяв море, а не збирав пасажирів на круїз. Це був би дуже довгий квитковий контроль!', ru: 'Моисей разделял море, а не собирал пассажиров на круиз. Это был бы очень длинный билетный контроль!', en: 'Moses parted the sea, he didn\'t collect passengers for a cruise. That would be one long ticket check!' } }
-        ]
-    },
-    {
-        id: 7,
-        type: 'single',
-        question: {
-            uk: 'Не народжувався, не вмирав, але їв подібних собі',
-            ru: 'Не рождался, не умирал, но ел себе подобных',
-            en: 'Was not born, did not die, but ate its own kind'
-        },
-        hint: {
-            uk: 'Дивись у книгу Вихід',
-            ru: 'В книге Исход',
-            en: 'In the book of Exodus'
-        },
-        image: '/bible-riddles-quiz/illustrations/q7_moses_staff.png',
-        options: [
-            { text: { uk: 'Посох Мойсея', ru: 'Посох Моисея', en: 'Moses\'s staff' }, isCorrect: true, feedback: { uk: 'Вірно! Посох Мойсея перетворився на змію і поглинув змій єгипетських чарівників.', ru: 'Верно! Посох Моисея превратился в змею и поглотил змей египетских волхвов.', en: 'Correct! Moses\'s staff turned into a snake and swallowed the snakes of the Egyptian magicians.' } },
-            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Левіафан — грізна істота, але він народжувався і навряд чи займався такими фокусами!', ru: 'Левиафан — грозное существо, но он рождался и вряд ли занимался такими фокусами!', en: 'Leviathan is a fearsome creature, but it was born and unlikely to perform such tricks!' } },
-            { text: { uk: 'Динозавр', ru: 'Динозавр', en: 'Dinosaur' }, isCorrect: false, feedback: { uk: 'Динозаври залишили нам лише кістки, а не загадки про безсмертя!', ru: 'Динозавры оставили нам только кости, а не загадки о бессмертии!', en: 'Dinosaurs only left us bones, not riddles about immortality!' } },
-            { text: { uk: 'Жаба', ru: 'Лягушка', en: 'Frog' }, isCorrect: false, feedback: { uk: 'Жаби вміють квакати, але щоб їсти собі подібних у такому сенсі... це вже фільм жахів!', ru: 'Лягушки умеют квакать, но чтобы есть себе подобных в таком смысле... это уже фильм ужасов!', en: 'Frogs can croak, but eating their own kind in this sense... that\'s a horror movie!' } }
-        ]
-    },
-    {
-        id: 8,
-        type: 'single',
-        question: {
-            uk: 'На якому поверсі в ковчезі були риби?',
-            ru: 'На каком этаже в ковчеге были рыбы?',
-            en: 'On which floor of the ark were the fish?'
-        },
-        hint: {
-            uk: 'Чи потрібен рибам ковчег?',
-            ru: 'Нужен ли рыбам ковчег?',
-            en: 'Do fish need an ark?'
-        },
-        image: '/bible-riddles-quiz/illustrations/q4.png',
-        options: [
-            { text: { uk: 'На першому', ru: 'На первом', en: 'On the first' }, isCorrect: false, feedback: { uk: 'Їм би було там затісно! Вони віддавали перевагу відкритому морю.', ru: 'Им бы было там тесновато! Они предпочитали открытое море.', en: 'They would have been quite cramped there! They preferred the open sea.' } },
-            { text: { uk: 'На третьому', ru: 'На третьем', en: 'On the third' }, isCorrect: false, feedback: { uk: 'Пентхаус для золотих рибок? Весело, але не по-біблійному.', ru: 'Пентхаус для золотых рыбок? Весело, но не по-библейски.', en: 'A penthouse for goldfish? Fun, but not biblical.' } },
-            { text: { uk: 'Їх там не було', ru: 'Их там не было', en: 'They weren\'t there' }, isCorrect: true, feedback: { uk: 'Риби плавали у воді навколо ковчега!', ru: 'Рыбы плавали в воде вокруг ковчега!', en: 'The fish were swimming in the water around the ark!' } },
-            { text: { uk: 'В акваріумах', ru: 'В аквариумах', en: 'In aquariums' }, isCorrect: false, feedback: { uk: 'У Ноя не було часу мити скло в акваріумах з усіма цими тваринами!', ru: 'У Ноя не было времени мыть стекла в аквариумах со всеми этими животными!', en: 'Noah didn\'t have time to clean aquariums with all those animals around!' } }
-        ]
-    },
-    {
-        id: 9,
-        type: 'single',
-        question: {
-            uk: 'На якій полиці в ковчезі Ной тримав Біблію?',
-            ru: 'На какой полке в ковкеге Ной держал Библию?',
-            en: 'On which shelf in the ark did Noah keep the Bible?'
-        },
-        hint: {
-            uk: 'Коли була написана Біблія?',
-            ru: 'Когда была написана Библия?',
-            en: 'When was the Bible written?'
-        },
-        image: '/bible-riddles-quiz/illustrations/q14.png',
-        options: [
-            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Там були пташки, але точно не книги!', ru: 'Там были птицы, но точно не книги!', en: 'There were birds there, but definitely no books!' } },
-            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'Там панував слонячий тупіт, а не тиша бібліотеки.', ru: 'Там царил слоновий топот, а не тишина библиотеки.', en: 'There was the thumping of elephants there, not the silence of a library.' } },
-            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало. Але творіння Єгови були для Ноя наче відкрита книга.', ru: 'Верно! Тогда Библии еще не существовало. Но творения Иеговы были для Ноя словно открытая книга.', en: 'Correct! The Bible didn\'t exist then. But Jehovah\'s creations were like an open book for Noah.' } },
-            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Біблії — ні.', en: 'There were cabins, but no Bibles.' } }
-        ]
-    },
-    {
-        id: 10,
-        type: 'single',
-        question: {
-            uk: 'У якого персонажа "одяг" можна купити в продуктовому магазині?',
-            ru: 'У какого персонажа "одежду" можно купить в продуктовом магазине?',
-            en: 'Which character\'s "clothing" can be bought in a grocery store?'
-        },
-        hint: {
-            uk: 'Вона озирнулася на Содом.',
-            ru: 'Она оглянулась на Содом.',
-            en: 'She looked back at Sodom.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q10_salt_pillar.png',
-        options: [
-            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука та фігове листя, а не відділ бакалії!', ru: 'Ева любила яблоки и фиговые листья, а не отдел бакалеи!', en: 'Eve liked apples and fig leaves, not the grocery aisle!' } },
-            { text: { uk: 'Дружина Лота', ru: 'Жена Лота', en: 'Lot\'s wife' }, isCorrect: true, feedback: { uk: 'Так! Вона стала соляним стовпом.', ru: 'Да! Она стала соляным столпом.', en: 'Yes! She became a pillar of salt.' } },
-            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false, feedback: { uk: 'Сарра була принцесою, вона віддавала перевагу прикрасам, а не кулінарним спеціям!', ru: 'Сарра была принцессой, она предпочитала украшения, а не кулинарные специи!', en: 'Sarah was a princess, she preferred jewelry over culinary spices!' } },
-            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false, feedback: { uk: 'Ревека напувала верблюдів, а не перетворювалася на товар для кухні!', ru: 'Ревекка поила верблюдов, а не превращалась в товар для кухни!', en: 'Rebekah watered camels, she didn\'t turn into a kitchen commodity!' } }
-        ]
-    },
-    {
-        id: 11,
-        type: 'single',
-        question: {
-            uk: 'Яка земля побачила світ лише один раз?',
-            ru: 'Какая земля увидела свет один раз?',
-            en: 'Which land saw the light only once?'
-        },
-        hint: {
-            uk: 'Це сталося під час виходу з Єгипту.',
-            ru: 'Это произошло во время исхода из Египта.',
-            en: 'This happened during the exodus from Egypt.'
-        },
-        image: '/bible-riddles-quiz/illustrations/q8.png',
-        options: [
-            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false, feedback: { uk: 'Він купався в сонячних променях щодня, поки Адама не попросили "з’їхати".', ru: 'Он купался в солнечных лучах каждый день, пока Адама не попросили "съехать".', en: 'It enjoyed sunshine every day until Adam was asked to "move out".' } },
-            { text: { uk: 'Дно Червоного моря', ru: 'Дно Красного моря', en: 'The bottom of the Red Sea' }, isCorrect: true, feedback: { uk: 'Саме так! Коли води розійшлися, це місце вперше і востаннє побачило світло цього світу.', ru: 'Именно так! Когда воды разошлись, это место впервые и в последний раз увидело свет этого мира.', en: 'Exactly! When the waters parted, this place saw the light of this world for the first and last time.' } },
-            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false, feedback: { uk: 'Вона стоїть на видноті тисячі років. Сонце там — постійний гість, а не випадковий перехожий.', ru: 'Она стоит на виду тысячи лет. Солнце там — постоянный гость, а не случайный прохожий.', en: 'It has been in plain sight for thousands of years. The sun is a permanent guest there, not a passerby.' } },
-            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false, feedback: { uk: 'Верхівка гори першою висунулася з води, щоб Ной міг погрітися на сонечку. Вона бачить світ щодня!', ru: 'Верхушка горы первой высунулась из воды, чтобы Ной мог погреться на солнышке. Она видит свет каждый день!', en: 'The mountain top was the first to pop out of the water so Noah could catch some rays. It sees light every day!' } }
-        ]
-    },
-    {
-        id: 12,
         type: 'single',
         question: {
             uk: 'Хто отримав велике благословення від Бога за те, що проявив міцну віру?',
@@ -286,29 +76,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Сапфіра', ru: 'Сапфира', en: 'Sapphira' }, isCorrect: false, feedback: { uk: 'Сапфіра хотіла і Богу послужити, і гаманець притримати. У підсумку — ні грошей, ні благословення, ні життя. Не найкраща стратегія!', ru: 'Сапфира хотела и Богу послужить, и кошелек придержать. В итоге — ни денег, ни благословения, ни жизни. Не лучшая стратегия!', en: 'Sapphira wanted to serve God while holding onto her wallet. In the end—no money, no blessing, and no life. Not the best strategy!' } }
         ]
     },
-    {
-        id: 13,
+{
+        id: 3,
         type: 'single',
         question: {
-            uk: 'Яке місто було відбудоване на життях первістка та наймолодшого сина?',
-            ru: 'Какой город был отстроен на жизнях первенца и младшего сына?',
-            en: 'Which city was rebuilt at the cost of the lives of the firstborn and the youngest son?'
+            uk: 'Хто після появи на світ став доглядати за своєю "матір’ю"?',
+            ru: 'Кто после появления на свет стал ухаживать за своей "матерью"?',
+            en: 'Who, after coming into existence, began to care for their "mother"?'
         },
         hint: {
-            uk: 'Це було місто, стіни якого колись впали.',
-            ru: 'Это был город, стены которого когда-то пали.',
-            en: 'This was the city whose walls once fell.'
+            uk: 'Його "маторі" була земля.',
+            ru: 'Его "матерью" была земля.',
+            en: 'His "mother" was the earth.'
         },
-        image: '/bible-riddles-quiz/illustrations/q22.png',
+        image: '/bible-riddles-quiz/illustrations/q26.png',
         options: [
-            { text: { uk: 'Вавилон', ru: 'Вавилон', en: 'Babylon' }, isCorrect: false, feedback: { uk: 'Вавилонську вежу будували на гордості, кирпичах та бітумі, а не на житті дітей. Але закінчилося все одно великою плутаниною!', ru: 'Вавилонскую башню строили на гордости, кирпичах и битуме, а не на жизни детей. Но закончилось всё равно великой путаницей!', en: 'The Tower of Babel was built on pride, bricks, and bitumen, not on the lives of children. But it still ended in a massive identity crisis!' } },
-            { text: { uk: 'Єрихон', ru: 'Иерихон', en: 'Jericho' }, isCorrect: true, feedback: { uk: 'Так! Хіїл з Бет-Еля відбудував його, втративши старшого сина Авірама та молодшого Сегуба, як і пророкував Ісус Навин. Пророцтва не жартують!', ru: 'Да! Хиил из Вефиля отстроил его, потеряв старшего сына Авирама и младшего Сегуба, как и пророчествовал Иисус Навин. Пророчества не шутят!', en: 'Yes! Hiel of Bethel rebuilt it at the cost of his firstborn Abiram and his youngest son Segub, just as Joshua had prophesied. Prophecies don\'t play around!' } },
-            { text: { uk: 'Ніневія', ru: 'Ниневия', en: 'Nineveh' }, isCorrect: false, feedback: { uk: 'У Ніневії всі покаялися — навіть тварини вдягли волосяницю! Але будували це місто без таких страшних сімейних проклять.', ru: 'В Ниневии все покаялись — даже животные надели власяницу! Но строили этот город без таких страшных семейных проклятий.', en: 'In Nineveh, everyone repented—even the animals wore sackcloth! But they built the city without such terrible family curses.' } },
-            { text: { uk: 'Содом', ru: 'Содом', en: 'Sodom' }, isCorrect: false, feedback: { uk: 'Содом зник так швидко, що його навіть не встигли забронювати для відбудови. Тільки попіл і солоні спогади...', ru: 'Содом исчез так быстро, что его даже не успели забронировать для восстановления. Только пепел и соленые воспоминания...', en: 'Sodom vanished so fast no one even had time to book a renovation. Just ashes and salty memories...' } }
+            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: true, feedback: { uk: 'Так! Він був створений з пороху земного і доглядав за землею Едему.', ru: 'Да! Он был создан из праха земного и ухаживал за землей Эдема.', en: 'Yes! He was created from the dust of the ground and cared for the land of Eden.' } },
+            { text: { uk: 'Ной', ru: 'Ной', en: 'Noah' }, isCorrect: false, feedback: { uk: 'Він рятував життя, а не землю в такому сенсі.', ru: 'Он спасал жизни, а не землю в таком смысле.', en: 'He saved lives, not the earth in that sense.' } },
+            { text: { uk: 'Каїн', ru: 'Каин', en: 'Cain' }, isCorrect: false, feedback: { uk: 'Він вбивав, а не доглядав.', ru: 'Он убивал, а не ухаживал.', en: 'He killed, he didn\'t care for.' } },
+            { text: { uk: 'Ісус', ru: 'Иисус', en: 'Jesus' }, isCorrect: false, feedback: { uk: 'Ісус — Творець землі, а не її доглядач у цьому сенсі.', ru: 'Иисус — Творец земли, а не её смотритель в этом смысле.', en: 'Jesus is the Creator of the earth, not its caretaker in this sense.' } }
         ]
     },
-    {
-        id: 14,
+{
+        id: 4,
         type: 'single',
         question: {
             uk: 'Через яку частину тіла тварини загинула тисяча чоловік?',
@@ -328,8 +118,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Крила орла', ru: 'Крылья орла', en: 'Eagle\'s wings' }, isCorrect: false, feedback: { uk: 'Уяви Самсона, що розмахує орлиними крилами в бою... Це було б гарно, але неефективно!', ru: 'Представь Самсона, размахивающего орлиными крыльями в бою... Это было бы красиво, но неэффективно!', en: 'Imagine Samson waving eagle wings in battle... It would be beautiful, but not very effective!' } }
         ]
     },
-    {
-        id: 15,
+{
+        id: 5,
+        type: 'single',
+        question: {
+            uk: 'Хто в Біблії був першим хірургом?',
+            ru: 'Кто в Библии был первым хирургом?',
+            en: 'Who in the Bible was the first surgeon?'
+        },
+        hint: {
+            uk: 'Згадай створення першої жінки.',
+            ru: 'Вспомни создание первой женщины.',
+            en: 'Remember the creation of the first woman.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q3_first_surgeon.png',
+        options: [
+            { text: { uk: 'Лука', ru: 'Лука', en: 'Luke' }, isCorrect: false, feedback: { uk: 'Він був лікарем, але не першим, хто проводив складні процедури в Едемі!', ru: 'Он был врачом, но не первым, кто проводил сложные процедуры в Эдеме!', en: 'He was a doctor, but not the first to perform complex procedures in Eden!' } },
+            { text: { uk: 'Бог Єгова', ru: 'Бог Иегова', en: 'Jehovah God' }, isCorrect: true, feedback: { uk: 'Так, Він взяв ребро Адама, щоб створити Єву. Справжня творча мудрість!', ru: 'Да, Он взял ребро Адама, чтобы создать Еву. Настоящая творческая мудрость!', en: 'Yes, He took Adam\'s rib to create Eve. True creative wisdom!' } },
+            { text: { uk: 'Мойсей', ru: 'Моисей', en: 'Moses' }, isCorrect: false, feedback: { uk: 'Він робив багато чудес, але не першу операцію.', ru: 'Он совершал много чудес, но не первую операцию.', en: 'He performed many signs, but not the first surgery.' } },
+            { text: { uk: 'Адам', ru: 'Адам', en: 'Adam' }, isCorrect: false, feedback: { uk: 'Адам був пацієнтом, а не лікарем!', ru: 'Адам был пациентом, а не врачом!', en: 'Adam was the patient, not the doctor!' } }
+        ]
+    },
+{
+        id: 6,
         type: 'single',
         question: {
             uk: 'Хто зрубав чужий стовп і не запитав господаря, але вчинив правильно?',
@@ -349,8 +160,71 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Ісус Навин', ru: 'Иисус Навин', en: 'Joshua' }, isCorrect: false, feedback: { uk: 'Ісус Навин боровся з велетнями та стінами, а не воював із садовими рослинами.', ru: 'Иисус Навин сражался с великанами и стенами, а не воевал с садовыми растениями.', en: 'Joshua fought giants and walls, not garden plants.' } }
         ]
     },
-    {
-        id: 16,
+{
+        id: 7,
+        type: 'single',
+        question: {
+            uk: 'Чим Авель убив Каїна?',
+            ru: 'Чем Авель убил Каина?',
+            en: 'What did Abel use to kill Cain?'
+        },
+        hint: {
+            uk: 'Це питання на уважність.',
+            ru: 'Это вопрос на внимательность.',
+            en: 'This is a test of your attentiveness.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q25.png',
+        options: [
+            { text: { uk: 'Каменем', ru: 'Камнем', en: 'A stone' }, isCorrect: false, feedback: { uk: 'Навіть камінь знає, що Авель був жертвою.', ru: 'Даже камень знает, что Авель был жертвой.', en: 'Even a stone knows Abel was the victim.' } },
+            { text: { uk: 'Нічим', ru: 'Ничем', en: 'Nothing' }, isCorrect: true, feedback: { uk: 'Уважно! Це Каїн убив Авеля, а не навпаки.', ru: 'Внимательно! Это Каин убил Авеля, а не наоборот.', en: 'Careful! Cain killed Abel, not the other way around.' } },
+            { text: { uk: 'Палицею', ru: 'Палкой', en: 'A stick' }, isCorrect: false, feedback: { uk: 'Палиці тут не допоможуть поміняти жертву з убивцею.', ru: 'Палки тут не помогут поменять жертву с убийцей.', en: 'Sticks won\'t help swap the victim with the killer here.' } },
+            { text: { uk: 'Ножем', ru: 'Ножом', en: 'A knife' }, isCorrect: false, feedback: { uk: 'Ні-і-і, читайте уважніше!', ru: 'Не-е-ет, читайте внимательнее!', en: 'No-o-o, read more carefully!' } }
+        ]
+    },
+{
+        id: 8,
+        type: 'single',
+        question: {
+            uk: 'Яке місто було відбудоване на життях первістка та наймолодшого сина?',
+            ru: 'Какой город был отстроен на жизнях первенца и младшего сына?',
+            en: 'Which city was rebuilt at the cost of the lives of the firstborn and the youngest son?'
+        },
+        hint: {
+            uk: 'Це було місто, стіни якого колись впали.',
+            ru: 'Это был город, стены которого когда-то пали.',
+            en: 'This was the city whose walls once fell.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q22.png',
+        options: [
+            { text: { uk: 'Вавилон', ru: 'Вавилон', en: 'Babylon' }, isCorrect: false, feedback: { uk: 'Вавилонську вежу будували на гордості, кирпичах та бітумі, а не на житті дітей. Але закінчилося все одно великою плутаниною!', ru: 'Вавилонскую башню строили на гордости, кирпичах и битуме, а не на жизни детей. Но закончилось всё равно великой путаницей!', en: 'The Tower of Babel was built on pride, bricks, and bitumen, not on the lives of children. But it still ended in a massive identity crisis!' } },
+            { text: { uk: 'Єрихон', ru: 'Иерихон', en: 'Jericho' }, isCorrect: true, feedback: { uk: 'Так! Хіїл з Бет-Еля відбудував його, втративши старшого сина Авірама та молодшого Сегуба, як і пророкував Ісус Навин. Пророцтва не жартують!', ru: 'Да! Хиил из Вефиля отстроил его, потеряв старшего сына Авирама и младшего Сегуба, как и пророчествовал Иисус Навин. Пророчества не шутят!', en: 'Yes! Hiel of Bethel rebuilt it at the cost of his firstborn Abiram and his youngest son Segub, just as Joshua had prophesied. Prophecies don\'t play around!' } },
+            { text: { uk: 'Ніневія', ru: 'Ниневия', en: 'Nineveh' }, isCorrect: false, feedback: { uk: 'У Ніневії всі покаялися — навіть тварини вдягли волосяницю! Але будували це місто без таких страшних сімейних проклять.', ru: 'В Ниневии все покаялись — даже животные надели власяницу! Но строили этот город без таких страшных семейных проклятий.', en: 'In Nineveh, everyone repented—even the animals wore sackcloth! But they built the city without such terrible family curses.' } },
+            { text: { uk: 'Содом', ru: 'Содом', en: 'Sodom' }, isCorrect: false, feedback: { uk: 'Содом зник так швидко, що його навіть не встигли забронювати для відбудови. Тільки попіл і солоні спогади...', ru: 'Содом исчез так быстро, что его даже не успели забронировать для восстановления. Только пепел и соленые воспоминания...', en: 'Sodom vanished so fast no one even had time to book a renovation. Just ashes and salty memories...' } }
+        ]
+    },
+{
+        id: 9,
+        type: 'single',
+        question: {
+            uk: 'Скільки пар тварин Мойсей ввів у ковчег?',
+            ru: 'Сколько пар животных Моисей ввел в ковчег?',
+            en: 'How many pairs of animals did Moses lead into the ark?'
+        },
+        hint: {
+            uk: 'Згадай, хто саме будував ковчег.',
+            ru: 'Вспомни, кто именно строил ковчег.',
+            en: 'Remember who exactly built the ark.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q1.png',
+        options: [
+            { text: { uk: 'По одній парі', ru: 'По одной паре', en: 'One pair each' }, isCorrect: false, feedback: { uk: 'Мойсей був зайнятий заповідями на Синаї, а не будівництвом плавучих зоопарків!', ru: 'Моисей был занят заповедями на Синае, а не строительством плавучих зоопарков!', en: 'Moses was busy with the commandments on Sinai, not building floating zoos!' } },
+            { text: { uk: 'По сім пар', ru: 'По семь пар', en: 'Seven pairs each' }, isCorrect: false, feedback: { uk: 'Навіть якби тварин було сім пар, цей капітан був майстром заповідей на горі, а не мореплавцем у шторм!', ru: 'Даже если бы животных было семь пар, этот капитан был мастером заповедей на горе, а не мореплавателем в шторм!', en: 'Even if there were seven pairs, this captain was a master of commandments on a mountain, not a sailor in a storm!' } },
+            { text: { uk: 'Жодної', ru: 'Ни одной', en: 'None' }, isCorrect: true, feedback: { uk: 'Бінго! Ковчег будував Ной, а Мойсей у цей час ще навіть не народився. Уважність — твоя суперсила!', ru: 'Бинго! Ковчег строил Ной, а Моисей в это время еще даже не родился. Внимательность — твоя суперсила!', en: 'Bingo! Noah built the ark, and Moses wasn\'t even born yet. Attentiveness is your superpower!' } },
+            { text: { uk: 'Всіх тварин світу', ru: 'Всех животных мира', en: 'All animals of the world' }, isCorrect: false, feedback: { uk: 'Мойсей розділяв море, а не збирав пасажирів на круїз. Це був би дуже довгий квитковий контроль!', ru: 'Моисей разделял море, а не собирал пассажиров на круиз. Это был бы очень длинный билетный контроль!', en: 'Moses parted the sea, he didn\'t collect passengers for a cruise. That would be one long ticket check!' } }
+        ]
+    },
+{
+        id: 10,
         type: 'single',
         question: {
             uk: 'Хто помер між небом та землею?',
@@ -370,29 +244,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Степан', ru: 'Стефан', en: 'Stephen' }, isCorrect: false, feedback: { uk: 'Він помер на землі, бачачи відкрите небо.', ru: 'Он умер на земле, видя открытое небо.', en: 'He died on earth, seeing the heavens open.' } }
         ]
     },
-    {
-        id: 17,
+{
+        id: 11,
         type: 'single',
         question: {
-            uk: 'Хто ще за життя поставив собі пам’ятник і назвав його своїм ім’ям?',
-            ru: 'Кто еще при жизни поставил себе памятник и назвал его своим именем?',
-            en: 'Who set up a monument to himself and named it after himself while still alive?'
+            uk: 'Не народжувався, не вмирав, але їв подібних собі',
+            ru: 'Не рождался, не умирал, но ел себе подобных',
+            en: 'Was not born, did not die, but ate its own kind'
         },
         hint: {
-            uk: 'Це був син царя Давида.',
-            ru: 'Это был сын царя Давида.',
-            en: 'This was a son of King David.'
+            uk: 'Дивись у книгу Вихід',
+            ru: 'В книге Исход',
+            en: 'In the book of Exodus'
         },
-        image: '/bible-riddles-quiz/illustrations/q15.png',
+        image: '/bible-riddles-quiz/illustrations/q7_moses_staff.png',
         options: [
-            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Соломон будував храни та палаци, але він був занадто мудрий, щоб перетворювати себе на статую!', ru: 'Соломон строил храмы и дворцы, но он был слишком мудрым, чтобы превращать себя в статую!', en: 'Solomon built temples and palaces, but he was too wise to turn himself into a statue!' } },
-            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так! Він поставив собі пам’ятник, бо не мав синів. Пиха та марнославство до добра не доводять.', ru: 'Да! Он поставил себе памятник, так как у него не было сыновей. Гордость и тщеславие до добра не доводят.', en: 'Yes! He set up a pillar for himself because he had no son. Pride and vanity don\'t lead to anything good.' } },
-            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Адонія хотів приміряти корону, а не позувати для скульптора!', ru: 'Адония хотел примерить корону, а не позировать для скульптора!', en: 'Adonijah wanted to try on the crown, not pose for a sculptor!' } },
-            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Амнон думав про зовсім інші речі, пам’ятники його не цікавили.', ru: 'Амнон думал о совсем других вещах, памятники его не интересовали.', en: 'Amnon had other things on his mind; he wasn\'t interested in monuments.' } }
+            { text: { uk: 'Посох Мойсея', ru: 'Посох Моисея', en: 'Moses\'s staff' }, isCorrect: true, feedback: { uk: 'Вірно! Посох Мойсея перетворився на змію і поглинув змій єгипетських чарівників.', ru: 'Верно! Посох Моисея превратился в змею и поглотил змей египетских волхвов.', en: 'Correct! Moses\'s staff turned into a snake and swallowed the snakes of the Egyptian magicians.' } },
+            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Левіафан — грізна істота, але він народжувався і навряд чи займався такими фокусами!', ru: 'Левиафан — грозное существо, но он рождался и вряд ли занимался такими фокусами!', en: 'Leviathan is a fearsome creature, but it was born and unlikely to perform such tricks!' } },
+            { text: { uk: 'Динозавр', ru: 'Динозавр', en: 'Dinosaur' }, isCorrect: false, feedback: { uk: 'Динозаври залишили нам лише кістки, а не загадки про безсмертя!', ru: 'Динозавры оставили нам только кости, а не загадки о бессмертии!', en: 'Dinosaurs only left us bones, not riddles about immortality!' } },
+            { text: { uk: 'Жаба', ru: 'Лягушка', en: 'Frog' }, isCorrect: false, feedback: { uk: 'Жаби вміють квакати, але щоб їсти собі подібних у такому сенсі... це вже фільм жахів!', ru: 'Лягушки умеют квакать, но чтобы есть себе подобных в таком смысле... это уже фильм ужасов!', en: 'Frogs can croak, but eating their own kind in this sense... that\'s a horror movie!' } }
         ]
     },
-    {
-        id: 18,
+{
+        id: 12,
         type: 'single',
         question: {
             uk: 'Хто з біблійних персонажів прокляв день свого народження?',
@@ -412,29 +286,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Петро', ru: 'Петр', en: 'Peter' }, isCorrect: false, feedback: { uk: 'Петро плакав так гірко, що міг би наповнити Галілейське море, але свій день народження він все ж таки цінував!', ru: 'Петр плакал так горько, что мог бы наполнить Галилейское море, но свой день рождения он все же ценил!', en: 'Peter wept so bitterly he could have filled the Sea of Galilee, but he still valued his birthday!' } }
         ]
     },
-    {
-        id: 19,
+{
+        id: 13,
         type: 'single',
         question: {
-            uk: 'Хто в Біблії вигукував "Ага!"?',
-            ru: 'Кто в Библии восклицал "Ага!"?',
-            en: 'Who in the Bible shouted "Aha!"?'
+            uk: 'На якому поверсі в ковчезі були риби?',
+            ru: 'На каком этаже в ковчеге были рыбы?',
+            en: 'On which floor of the ark were the fish?'
         },
         hint: {
-            uk: 'Подивись опис бойової тварини у книзі Йова.',
-            ru: 'Посмотри описание боевого животного в книге Иова.',
-            en: 'Look at the description of a war animal in the book of Job.'
+            uk: 'Чи потрібен рибам ковчег?',
+            ru: 'Нужен ли рыбам ковчег?',
+            en: 'Do fish need an ark?'
         },
-        image: '/bible-riddles-quiz/illustrations/q16.png',
+        image: '/bible-riddles-quiz/illustrations/q4.png',
         options: [
-            { text: { uk: 'Осел', ru: 'Осел', en: 'Donkey' }, isCorrect: false, feedback: { uk: 'Осел видає зовсім інші звуки... Хіба що він намагався пародіювати коня!', ru: 'Осел издает совсем другие звуки... Разве что он пытался пародировать коня!', en: 'A donkey makes completely different sounds... Unless he was trying to parody a horse!' } },
-            { text: { uk: 'Кінь', ru: 'Конь', en: 'Horse' }, isCorrect: true, feedback: { uk: 'Так! У книзі Йова 39:25 бойовий кінь так реагує на запах битви. Скарбничка біблійних звуків поповнена!', ru: 'Да! В книге Иова 39:25 боевой конь так реагирует на запах битвы. Копилка библейских звуков пополнена!', en: 'Yes! In Job 39:25, a war horse reacts this way to the scent of battle. Your collection of biblical sounds is growing!' } },
-            { text: { uk: 'Бегемот', ru: 'Бегемот', en: 'Behemoth' }, isCorrect: false, feedback: { uk: 'Бегемот — солідна тварина, він просто робить "Пф-ф-ф" і всі розбігаються. Бойове мижання — не його стиль!', ru: 'Бегемот — солидное животное, он просто делает "Пф-ф-ф" и все разбегаются. Боевое ржание — не его стиль!', en: 'The Behemoth is a solid beast; he just goes "Pff-f" and everyone scatters. Battle neighing is not his style!' } },
-            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Левіафан дихає вогнем і мешкає в морі. Уявити його кінське ржання під водою... це була б справжня русалонька-мутант!', ru: 'Левиафан дышит огнем и обитает в море. Представить его конское ржание под водой... это была бы настоящая русалочка-мутант!', en: 'Leviathan breathes fire and lives in the sea. Imagining him neighing like a horse underwater... that would be one mutant mermaid!' } }
+            { text: { uk: 'На першому', ru: 'На первом', en: 'On the first' }, isCorrect: false, feedback: { uk: 'Їм би було там затісно! Вони віддавали перевагу відкритому морю.', ru: 'Им бы было там тесновато! Они предпочитали открытое море.', en: 'They would have been quite cramped there! They preferred the open sea.' } },
+            { text: { uk: 'На третьому', ru: 'На третьем', en: 'On the third' }, isCorrect: false, feedback: { uk: 'Пентхаус для золотих рибок? Весело, але не по-біблійному.', ru: 'Пентхаус для золотых рыбок? Весело, но не по-библейски.', en: 'A penthouse for goldfish? Fun, but not biblical.' } },
+            { text: { uk: 'Їх там не було', ru: 'Их там не было', en: 'They weren\'t there' }, isCorrect: true, feedback: { uk: 'Риби плавали у воді навколо ковчега!', ru: 'Рыбы плавали в воде вокруг ковчега!', en: 'The fish were swimming in the water around the ark!' } },
+            { text: { uk: 'В акваріумах', ru: 'В аквариумах', en: 'In aquariums' }, isCorrect: false, feedback: { uk: 'У Ноя не було часу мити скло в акваріумах з усіма цими тваринами!', ru: 'У Ноя не было времени мыть стекла в аквариумах со всеми этими животными!', en: 'Noah didn\'t have time to clean aquariums with all those animals around!' } }
         ]
     },
-    {
-        id: 20,
+{
+        id: 14,
         type: 'single',
         question: {
             uk: 'Хто жив не грішив, а Ісуса носив?',
@@ -454,29 +328,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Ангел', ru: 'Ангел', en: 'An angel' }, isCorrect: false, feedback: { uk: 'Ангели мають крила, а Ісусу потрібен був хтось із копитами для виконання пророцтва!', ru: 'У ангелов есть крылья, а Иисусу нужен был кто-то с копытами для исполнения пророчества!', en: 'Angels have wings, but Jesus needed someone with hooves to fulfill the prophecy!' } }
         ]
     },
-    {
-        id: 21,
+{
+        id: 15,
         type: 'single',
         question: {
-            uk: 'Хто один раз народився і два рази помер?',
-            ru: 'Кто один раз родился и два раза умер?',
-            en: 'Who was born once and died twice?'
+            uk: 'На якій полиці в ковчезі Ной тримав Біблію?',
+            ru: 'На какой полке в ковкеге Ной держал Библию?',
+            en: 'On which shelf in the ark did Noah keep the Bible?'
         },
         hint: {
-            uk: 'Згадай друзів Ісуса.',
-            ru: 'Вспомни друзей Иисуса.',
-            en: 'Remember Jesus\'s friends.'
+            uk: 'Коли була написана Біблія?',
+            ru: 'Когда была написана Библия?',
+            en: 'When was the Bible written?'
         },
-        image: '/bible-riddles-quiz/illustrations/q20.png',
+        image: '/bible-riddles-quiz/illustrations/q14.png',
         options: [
-            { text: { uk: 'Лазар', ru: 'Лазарь', en: 'Lazarus' }, isCorrect: true, feedback: { uk: 'Так! Ісус воскресив його, але згодом Лазар знову помер від старості.', ru: 'Да! Иисус воскресил его, но позже Лазарь снова умер от старости.', en: 'Yes! Jesus resurrected him, but later Lazarus died again of old age.' } },
-            { text: { uk: 'Марія', ru: 'Мария', en: 'Mary' }, isCorrect: false, feedback: { uk: 'Їх було багато, але ніхто з них не вмирав двічі в такому контексті.', ru: 'Их было много, но никто из них не умирал дважды в таком контексте.', en: 'There were many, but none died twice in this context.' } },
-            { text: { uk: 'Іван', ru: 'Иоанн', en: 'John' }, isCorrect: false, feedback: { uk: 'Він дожив до глибокої старості і помер один раз.', ru: 'Он дожил до глубокой старости и умер один раз.', en: 'He lived to a ripe old age and died once.' } },
-            { text: { uk: 'Яків', ru: 'Иаков', en: 'James' }, isCorrect: false, feedback: { uk: 'Він загинув як мученик, але тільки один раз.', ru: 'Он погиб как мученик, но только один раз.', en: 'He died as a martyr, but only once.' } }
+            { text: { uk: 'На верхній', ru: 'На верхней', en: 'On the top shelf' }, isCorrect: false, feedback: { uk: 'Там були пташки, але точно не книги!', ru: 'Там были птицы, но точно не книги!', en: 'There were birds there, but definitely no books!' } },
+            { text: { uk: 'На нижній', ru: 'На нижней', en: 'On the bottom shelf' }, isCorrect: false, feedback: { uk: 'Там панував слонячий тупіт, а не тиша бібліотеки.', ru: 'Там царил слоновий топот, а не тишина библиотеки.', en: 'There was the thumping of elephants there, not the silence of a library.' } },
+            { text: { uk: 'Ні на якій', ru: 'Ни на какой', en: 'On none' }, isCorrect: true, feedback: { uk: 'Правильно! Тоді Біблії ще не існувало. Але творіння Єгови були для Ноя наче відкрита книга.', ru: 'Верно! Тогда Библии еще не существовало. Но творения Иеговы были для Ноя словно открытая книга.', en: 'Correct! The Bible didn\'t exist then. But Jehovah\'s creations were like an open book for Noah.' } },
+            { text: { uk: 'У каюті', ru: 'В каюте', en: 'In the cabin' }, isCorrect: false, feedback: { uk: 'Каюти були, а Біблії — ні.', ru: 'Каюты были, а Біблії — ні.', en: 'There were cabins, but no Bibles.' } }
         ]
     },
-    {
-        id: 22,
+{
+        id: 16,
         type: 'single',
         question: {
             uk: 'Яка морська "тварина" була присутня при страті Ісуса Христа?',
@@ -496,29 +370,29 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Акула', ru: 'Акула', en: 'Shark' }, isCorrect: false, feedback: { uk: 'Акули — грізні хижаки, але в біблійній історії про страту вони не згадуються.', ru: 'Акулы — грозные хищники, но в библейской истории о казни они не упоминаются.', en: 'Sharks are fearsome, but they aren\'t mentioned in the biblical account of the execution.' } }
         ]
     },
-    {
-        id: 23,
+{
+        id: 17,
         type: 'single',
         question: {
-            uk: 'Яка пташка змусила плакати "камінь"?',
-            ru: 'Какая птица заставила плакать "камень"?',
-            en: 'Which bird made a "stone" cry?'
+            uk: 'У якого персонажа "одяг" можна купити в продуктовому магазині?',
+            ru: 'У какого персонажа "одежду" можно купить в продуктовом магазине?',
+            en: 'Which character\'s "clothing" can be bought in a grocery store?'
         },
         hint: {
-            uk: 'Згадай ім’я одного з апостолів.',
-            ru: 'Вспомни имя одного из апостолов.',
-            en: 'Remember the name of one of the apostles.'
+            uk: 'Вона озирнулася на Содом.',
+            ru: 'Она оглянулась на Содом.',
+            en: 'She looked back at Sodom.'
         },
-        image: '/bible-riddles-quiz/illustrations/q27.png',
+        image: '/bible-riddles-quiz/illustrations/q10_salt_pillar.png',
         options: [
-            { text: { uk: 'Півень', ru: 'Петух', en: 'Rooster' }, isCorrect: true, feedback: { uk: 'Так! Коли півень заспівав, Петро (Кіфа — камінь) гірко заплакав.', ru: 'Да! Когда петух пропел, Петр (Кифа — камень) горько заплакал.', en: 'Yes! When the rooster crowed, Peter (Cephas — stone) wept bitterly.' } },
-            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс гілку Ною, а не сльози Петру.', ru: 'Голубь принес ветку Ною, а не слезы Петру.', en: 'The dove brought a branch to Noah, not tears to Peter.' } },
-            { text: { uk: 'Ворон', ru: 'Ворон', en: 'Raven' }, isCorrect: false, feedback: { uk: 'Ворон годував Іллю, а Петру він не допоміг.', ru: 'Ворон кормил Илью, а Петру он не помог.', en: 'The raven fed Elijah, but he didn\'t help Peter.' } },
-            { text: { uk: 'Орел', ru: 'Орел', en: 'Eagle' }, isCorrect: false, feedback: { uk: 'Орел літає високо, він не займається сльозами апостолів.', ru: 'Орел летает высоко, он не занимается слезами апостолов.', en: 'The eagle flies high; he doesn\'t deal with apostles\' tears.' } }
+            { text: { uk: 'Єва', ru: 'Ева', en: 'Eve' }, isCorrect: false, feedback: { uk: 'Єва полюбляла яблука та фігове листя, а не відділ бакалії!', ru: 'Ева любила яблоки и фиговые листья, а не отдел бакалеи!', en: 'Eve liked apples and fig leaves, not the grocery aisle!' } },
+            { text: { uk: 'Дружина Лота', ru: 'Жена Лота', en: 'Lot\'s wife' }, isCorrect: true, feedback: { uk: 'Так! Вона стала соляним стовпом.', ru: 'Да! Она стала соляным столпом.', en: 'Yes! She became a pillar of salt.' } },
+            { text: { uk: 'Сарра', ru: 'Сарра', en: 'Sarah' }, isCorrect: false, feedback: { uk: 'Сарра була принцесою, вона віддавала перевагу прикрасам, а не кулінарним спеціям!', ru: 'Сарра была принцессой, она предпочитала украшения, а не кулинарные специи!', en: 'Sarah was a princess, she preferred jewelry over culinary spices!' } },
+            { text: { uk: 'Ревека', ru: 'Ревекка', en: 'Rebekah' }, isCorrect: false, feedback: { uk: 'Ревека напувала верблюдів, а не перетворювалася на товар для кухні!', ru: 'Ревекка поила верблюдов, а не превращалась в товар для кухни!', en: 'Rebekah watered camels, she didn\'t turn into a kitchen commodity!' } }
         ]
     },
-    {
-        id: 24,
+{
+        id: 18,
         type: 'single',
         question: {
             uk: 'Скільки людей у Біблії називаються "апостолами"?',
@@ -538,7 +412,133 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: '70', ru: '70', en: '70' }, isCorrect: false, feedback: { uk: '70 учнів були послані проповідувати, але Біблія не називає їх усіх апостолами.', ru: '70 учеников были посланы проповедовать, но Библия не называет их всех апостолами.', en: '70 disciples were sent to preach, but the Bible doesn\'t call them all apostles.' } }
         ]
     },
-    {
+{
+        id: 19,
+        type: 'single',
+        question: {
+            uk: 'Яка земля побачила світ лише один раз?',
+            ru: 'Какая земля увидела свет один раз?',
+            en: 'Which land saw the light only once?'
+        },
+        hint: {
+            uk: 'Це сталося під час виходу з Єгипту.',
+            ru: 'Это произошло во время исхода из Египта.',
+            en: 'This happened during the exodus from Egypt.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q8.png',
+        options: [
+            { text: { uk: 'Райський сад', ru: 'Райский сад', en: 'Garden of Eden' }, isCorrect: false, feedback: { uk: 'Він купався в сонячних променях щодня, поки Адама не попросили "з’їхати".', ru: 'Он купался в солнечных лучах каждый день, пока Адама не попросили "съехать".', en: 'It enjoyed sunshine every day until Adam was asked to "move out".' } },
+            { text: { uk: 'Дно Червоного моря', ru: 'Дно Красного моря', en: 'The bottom of the Red Sea' }, isCorrect: true, feedback: { uk: 'Саме так! Коли води розійшлися, це місце вперше і востаннє побачило світло цього світу.', ru: 'Именно так! Когда воды разошлись, это место впервые и в последний раз увидело свет этого мира.', en: 'Exactly! When the waters parted, this place saw the light of this world for the first and last time.' } },
+            { text: { uk: 'Гора Сінай', ru: 'Гора Синай', en: 'Mount Sinai' }, isCorrect: false, feedback: { uk: 'Вона стоїть на видноті тисячі років. Сонце там — постійний гість, а не випадковий перехожий.', ru: 'Она стоит на виду тысячи лет. Солнце там — постоянный гость, а не случайный прохожий.', en: 'It has been in plain sight for thousands of years. The sun is a permanent guest there, not a passerby.' } },
+            { text: { uk: 'Верхівка Арарату', ru: 'Вершина Арарата', en: 'The top of Ararat' }, isCorrect: false, feedback: { uk: 'Верхівка гори першою висунулася з води, щоб Ной міг погрітися на сонечку. Вона бачить світ щодня!', ru: 'Верхушка горы первой высунулась из воды, чтобы Ной мог погреться на солнышке. Она видит свет каждый день!', en: 'The mountain top was the first to pop out of the water so Noah could catch some rays. It sees light every day!' } }
+        ]
+    },
+{
+        id: 20,
+        type: 'single',
+        question: {
+            uk: 'Хто ще за життя поставив собі пам’ятник і назвав його своїм ім’ям?',
+            ru: 'Кто еще при жизни поставил себе памятник и назвал его своим именем?',
+            en: 'Who set up a monument to himself and named it after himself while still alive?'
+        },
+        hint: {
+            uk: 'Це був син царя Давида.',
+            ru: 'Это был сын царя Давида.',
+            en: 'This was a son of King David.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q15.png',
+        options: [
+            { text: { uk: 'Соломон', ru: 'Соломон', en: 'Solomon' }, isCorrect: false, feedback: { uk: 'Соломон будував храни та палаци, але він був занадто мудрий, щоб перетворювати себе на статую!', ru: 'Соломон строил храмы и дворцы, но он был слишком мудрым, чтобы превращать себя в статую!', en: 'Solomon built temples and palaces, but he was too wise to turn himself into a statue!' } },
+            { text: { uk: 'Авессалом', ru: 'Авессалом', en: 'Absalom' }, isCorrect: true, feedback: { uk: 'Так! Він поставив собі пам’ятник, бо не мав синів. Пиха та марнославство до добра не доводять.', ru: 'Да! Он поставил себе памятник, так как у него не было сыновей. Гордость и тщеславие до добра не доводят.', en: 'Yes! He set up a pillar for himself because he had no son. Pride and vanity don\'t lead to anything good.' } },
+            { text: { uk: 'Адонія', ru: 'Адония', en: 'Adonijah' }, isCorrect: false, feedback: { uk: 'Адонія хотів приміряти корону, а не позувати для скульптора!', ru: 'Адония хотел примерить корону, а не позировать для скульптора!', en: 'Adonijah wanted to try on the crown, not pose for a sculptor!' } },
+            { text: { uk: 'Амнон', ru: 'Амнон', en: 'Amnon' }, isCorrect: false, feedback: { uk: 'Амнон думав про зовсім інші речі, пам’ятники його не цікавили.', ru: 'Амнон думал о совсем других вещах, памятники его не интересовали.', en: 'Amnon had other things on his mind; he wasn\'t interested in monuments.' } }
+        ]
+    },
+{
+        id: 21,
+        type: 'multi',
+        question: {
+            uk: 'Які тварини в Біблії розмовляли людською мовою?',
+            ru: 'Какие животные в Библии разговаривали человеческим языком?',
+            en: 'Which animals in the Bible spoke in human language?'
+        },
+        hint: {
+            uk: 'Один в Едемі, інший — на дорозі.',
+            ru: 'Один в Эдеме, другой — на дороге.',
+            en: 'One in Eden, the other — on the road.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q4_talking_animals.png',
+        options: [
+            { text: { uk: 'Змій', ru: 'Змей', en: 'Serpent' }, isCorrect: true, feedback: { uk: 'Так, в Едемі змій заговорив першим.', ru: 'Да, в Эдеме змей заговорил первым.', en: 'Yes, the serpent spoke first in Eden.' } },
+            { text: { uk: 'Лев', ru: 'Лев', en: 'Lion' }, isCorrect: false, feedback: { uk: 'Лев, що розмовляє? Це тобі не Нарнія!', ru: 'Говорящий лев? Это тебе не Нарния!', en: 'A talking lion? This isn\'t Narnia!' } },
+            { text: { uk: 'Ослиця', ru: 'Ослица', en: 'Donkey' }, isCorrect: true, feedback: { uk: 'Вірно! Ослиця Валаама заговорила на дорозі.', ru: 'Верно! Ослица Валаама заговорила на дороге.', en: 'Correct! Balaam\'s donkey spoke on the road.' } },
+            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс оливкову гілку, а не виголошував промову.', ru: 'Голубь принес оливковую ветвь, а не произносил речь.', en: 'The dove brought an olive branch, it didn\'t give a speech.' } }
+        ]
+    },
+{
+        id: 22,
+        type: 'single',
+        question: {
+            uk: 'Хто в Біблії вигукував "Ага!"?',
+            ru: 'Кто в Библии восклицал "Ага!"?',
+            en: 'Who in the Bible shouted "Aha!"?'
+        },
+        hint: {
+            uk: 'Подивись опис бойової тварини у книзі Йова.',
+            ru: 'Посмотри описание боевого животного в книге Иова.',
+            en: 'Look at the description of a war animal in the book of Job.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q16.png',
+        options: [
+            { text: { uk: 'Осел', ru: 'Осел', en: 'Donkey' }, isCorrect: false, feedback: { uk: 'Осел видає зовсім інші звуки... Хіба що він намагався пародіювати коня!', ru: 'Осел издает совсем другие звуки... Разве что он пытался пародировать коня!', en: 'A donkey makes completely different sounds... Unless he was trying to parody a horse!' } },
+            { text: { uk: 'Кінь', ru: 'Конь', en: 'Horse' }, isCorrect: true, feedback: { uk: 'Так! У книзі Йова 39:25 бойовий кінь так реагує на запах битви. Скарбничка біблійних звуків поповнена!', ru: 'Да! В книге Иова 39:25 боевой конь так реагирует на запах битвы. Копилка библейских звуков пополнена!', en: 'Yes! In Job 39:25, a war horse reacts this way to the scent of battle. Your collection of biblical sounds is growing!' } },
+            { text: { uk: 'Бегемот', ru: 'Бегемот', en: 'Behemoth' }, isCorrect: false, feedback: { uk: 'Бегемот — солідна тварина, він просто робить "Пф-ф-ф" і всі розбігаються. Бойове мижання — не його стиль!', ru: 'Бегемот — солидное животное, он просто делает "Пф-ф-ф" и все разбегаются. Боевое ржание — не его стиль!', en: 'The Behemoth is a solid beast; he just goes "Pff-f" and everyone scatters. Battle neighing is not his style!' } },
+            { text: { uk: 'Левіафан', ru: 'Левиафан', en: 'Leviathan' }, isCorrect: false, feedback: { uk: 'Левіафан дихає вогнем і мешкає в морі. Уявити його кінське ржання під водою... це була б справжня русалонька-мутант!', ru: 'Левиафан дышит огнем и обитает в море. Представить его конское ржание под водой... это была бы настоящая русалочка-мутант!', en: 'Leviathan breathes fire and lives in the sea. Imagining him neighing like a horse underwater... that would be one mutant mermaid!' } }
+        ]
+    },
+{
+        id: 23,
+        type: 'single',
+        question: {
+            uk: 'Хто один раз народився і два рази помер?',
+            ru: 'Кто один раз родился и два раза умер?',
+            en: 'Who was born once and died twice?'
+        },
+        hint: {
+            uk: 'Згадай друзів Ісуса.',
+            ru: 'Вспомни друзей Иисуса.',
+            en: 'Remember Jesus\'s friends.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q20.png',
+        options: [
+            { text: { uk: 'Лазар', ru: 'Лазарь', en: 'Lazarus' }, isCorrect: true, feedback: { uk: 'Так! Ісус воскресив його, але згодом Лазар знову помер від старості.', ru: 'Да! Иисус воскресил его, но позже Лазарь снова умер от старости.', en: 'Yes! Jesus resurrected him, but later Lazarus died again of old age.' } },
+            { text: { uk: 'Марія', ru: 'Мария', en: 'Mary' }, isCorrect: false, feedback: { uk: 'Їх було багато, але ніхто з них не вмирав двічі в такому контексті.', ru: 'Их было много, но никто из них не умирал дважды в таком контексте.', en: 'There were many, but none died twice in this context.' } },
+            { text: { uk: 'Іван', ru: 'Иоанн', en: 'John' }, isCorrect: false, feedback: { uk: 'Він дожив до глибокої старості і помер один раз.', ru: 'Он дожил до глубокой старости и умер один раз.', en: 'He lived to a ripe old age and died once.' } },
+            { text: { uk: 'Яків', ru: 'Иаков', en: 'James' }, isCorrect: false, feedback: { uk: 'Він загинув як мученик, але тільки один раз.', ru: 'Он погиб как мученик, но только один раз.', en: 'He died as a martyr, but only once.' } }
+        ]
+    },
+{
+        id: 24,
+        type: 'single',
+        question: {
+            uk: 'Яка пташка змусила плакати "камінь"?',
+            ru: 'Какая птица заставила плакать "камень"?',
+            en: 'Which bird made a "stone" cry?'
+        },
+        hint: {
+            uk: 'Згадай ім’я одного з апостолів.',
+            ru: 'Вспомни имя одного из апостолов.',
+            en: 'Remember the name of one of the apostles.'
+        },
+        image: '/bible-riddles-quiz/illustrations/q27.png',
+        options: [
+            { text: { uk: 'Півень', ru: 'Петух', en: 'Rooster' }, isCorrect: true, feedback: { uk: 'Так! Коли півень заспівав, Петро (Кіфа — камінь) гірко заплакав.', ru: 'Да! Когда петух пропел, Петр (Кифа — камень) горько заплакал.', en: 'Yes! When the rooster crowed, Peter (Cephas — stone) wept bitterly.' } },
+            { text: { uk: 'Голуб', ru: 'Голубь', en: 'Dove' }, isCorrect: false, feedback: { uk: 'Голуб приніс гілку Ною, а не сльози Петру.', ru: 'Голубь принес ветку Ною, а не слезы Петру.', en: 'The dove brought a branch to Noah, not tears to Peter.' } },
+            { text: { uk: 'Ворон', ru: 'Ворон', en: 'Raven' }, isCorrect: false, feedback: { uk: 'Ворон годував Іллю, а Петру він не допоміг.', ru: 'Ворон кормил Илью, а Петру он не помог.', en: 'The raven fed Elijah, but he didn\'t help Peter.' } },
+            { text: { uk: 'Орел', ru: 'Орел', en: 'Eagle' }, isCorrect: false, feedback: { uk: 'Орел літає високо, він не займається сльозами апостолів.', ru: 'Орел летает высоко, он не занимается слезами апостолов.', en: 'The eagle flies high; he doesn\'t deal with apostles\' tears.' } }
+        ]
+    },
+{
         id: 25,
         type: 'single',
         question: {
@@ -559,7 +559,7 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Битва', ru: 'Битва', en: 'Battle' }, isCorrect: false, feedback: { uk: 'У битві смерть всюди, але правила входу та виходу там зовсім інші!', ru: 'В битве смерть повсюду, но правила входа и выхода там совсем другие!', en: 'In battle, death is everywhere, but the rules of entry and exit are quite different!' } }
         ]
     },
-    {
+{
         id: 26,
         type: 'single',
         question: {
@@ -580,7 +580,7 @@ export const quizData: QuizQuestion[] = [
             { text: { uk: 'Алілуя', ru: 'Аллилуйя', en: 'Hallelujah' }, isCorrect: false, feedback: { uk: 'Це слово звучить як головна пісня всього всесвіту. Одного разу було б замало для такого славослів’я!', ru: 'Это слово звучит как главная песня всей вселенной. Одного раза было бы мало для такого славословия!', en: 'This word sounds like the main song of the whole universe. Once would definitely be too little for such praise!' } }
         ]
     },
-    {
+{
         id: 27,
         type: 'finale',
         text: {
