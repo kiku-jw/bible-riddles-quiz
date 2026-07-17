@@ -8,19 +8,19 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-    title: "Біблійна Вікторина: Подорож у часи царя Йосії та пророка Єремії",
-    description: "Захоплююча подорож для дітей! Дізнайся більше про вірних слуг Єгови через цікаві питання та преміальні ілюстрації.",
+    title: "Біблійні загадки — інтерактивна вікторина",
+    description: "27 ілюстрованих біблійних загадок українською, російською та англійською мовами.",
     openGraph: {
-        title: "Біблійна Вікторина для дітей 📖✨",
-        description: "Вирушай у подорож біблійними часами разом із Йосією та Єремією!",
+        title: "Біблійні загадки 📖✨",
+        description: "Перевір знання Біблії та кмітливість у 27 ілюстрованих загадках.",
         url: "https://kiku-jw.github.io/bible-riddles-quiz/",
-        siteName: "Bible Quiz for Kids",
+        siteName: "Bible Riddles Quiz",
         images: [
             {
                 url: "https://kiku-jw.github.io/bible-riddles-quiz/og-preview.png",
                 width: 1200,
                 height: 630,
-                alt: "Біблійна Вікторина: Йосія та Єремія",
+                alt: "Біблійні загадки — інтерактивна вікторина",
             },
         ],
         locale: "uk_UA",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Біблійна Вікторина для дітей 📖✨",
-        description: "Захоплююча подорож біблійними часами!",
+        title: "Біблійні загадки 📖✨",
+        description: "27 ілюстрованих загадок для перевірки знань Біблії та кмітливості.",
         images: ["https://kiku-jw.github.io/bible-riddles-quiz/og-preview.png"],
     },
 };
