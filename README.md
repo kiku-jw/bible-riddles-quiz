@@ -1,6 +1,6 @@
 # Bible Riddles Quiz
 
-A multilingual interactive quiz with 27 Bible riddles, illustrated questions, playful feedback, background music, and a downloadable reward gallery.
+A multilingual interactive quiz with 26 Bible riddles, illustrated questions, playful feedback, background music, and a downloadable reward gallery.
 
 **[Play the live quiz](https://kiku-jw.github.io/bible-riddles-quiz/)**
 
@@ -8,7 +8,7 @@ A multilingual interactive quiz with 27 Bible riddles, illustrated questions, pl
 
 ## Features
 
-- 27 Bible questions and riddles with single- and multiple-choice answers
+- 26 Bible questions and riddles: 24 single-choice and 2 multiple-choice
 - Ukrainian, Russian, and English interfaces
 - Illustrated question cards and story transitions
 - Per-answer feedback instead of generic correct/incorrect messages
@@ -38,7 +38,7 @@ A multilingual interactive quiz with 27 Bible riddles, illustrated questions, pl
 
 ## Run locally
 
-Prerequisites: Node.js 20 or later and npm.
+Prerequisites: Node.js 20.9 or later and npm.
 
 ```bash
 git clone https://github.com/kiku-jw/bible-riddles-quiz.git

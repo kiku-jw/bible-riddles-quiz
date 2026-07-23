@@ -9,10 +9,13 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
     title: "Біблійні загадки — інтерактивна вікторина",
-    description: "27 ілюстрованих біблійних загадок українською, російською та англійською мовами.",
+    description: "26 ілюстрованих біблійних загадок українською, російською та англійською мовами.",
+    alternates: {
+        canonical: "https://kiku-jw.github.io/bible-riddles-quiz/",
+    },
     openGraph: {
         title: "Біблійні загадки 📖✨",
-        description: "Перевір знання Біблії та кмітливість у 27 ілюстрованих загадках.",
+        description: "Перевір знання Біблії та кмітливість у 26 ілюстрованих загадках.",
         url: "https://kiku-jw.github.io/bible-riddles-quiz/",
         siteName: "Bible Riddles Quiz",
         images: [
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Біблійні загадки 📖✨",
-        description: "27 ілюстрованих загадок для перевірки знань Біблії та кмітливості.",
+        description: "26 ілюстрованих загадок для перевірки знань Біблії та кмітливості.",
         images: ["https://kiku-jw.github.io/bible-riddles-quiz/og-preview.png"],
     },
 };
