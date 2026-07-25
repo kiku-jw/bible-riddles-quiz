@@ -1,0 +1,13 @@
+{
+  "merge_sha": "1eb0d1222740588450320df0cfeba20605518878",
+  "pages_run": "https://github.com/kiku-jw/bible-riddles-quiz/actions/runs/30174175598",
+  "workflow": "Deploy to GitHub Pages",
+  "workflow_conclusion": "success",
+  "build_job": "success",
+  "deploy_job": "success",
+  "public_url": "https://kiku-jw.github.io/bible-riddles-quiz/",
+  "http_status": 200,
+  "canonical_url_present": true,
+  "localized_heading_present": true,
+  "non_blocking_warning": "Existing GitHub Actions use the deprecated Node.js 20 action runtime."
+}
